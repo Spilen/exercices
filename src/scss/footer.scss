@@ -2,52 +2,60 @@
 
 .footer{
 	height:300px;
-	width:1000px;
+	width:100%;
+	max-width:1000px;
 	background-color: $white;
 	display:flex;
 	justify-content:center;
 	align-items:center;
-}
-.encadrement-footer{
-	height:290px;
-	width:920px;
-	margin:0;
-	display:flex;
-	flex-wrap:wrap;
-	justify-content:space-between;
+	margin: 0 auto;
+
+	.encadrement-footer{
+		height:290px;
+		width:92%;
+		margin:0;
+		display:flex;
+		flex-wrap:wrap;
+		justify-content:space-between;
+	}
 }
 .column{
 	height:280px;
 	width:280px;
-}
-.column a{
-	text-decoration:none;
-	font-size:90%;
-	color: $black;
-}
-.column p,.column li{
-	font-size:90%;
+
+	& a{
+		text-decoration:none;
+		font-size:90%;
+		color: $black;
+
+		&:hover{
+			text-decoration:underline;
+		}
+	}
+	& > p,
+	& > li{
+		font-size:90%;
+	}
 }
 h3{
 	font-weight:bold;
 }
 .left-column{
 	overflow:hidden;
-}
-.left-column img{
-	margin-right:20px;
-	margin-bottom:10px;
-	float:left;
+
+	& > img{
+		margin-right:20px;
+		margin-bottom:10px;
+		float:left;
+	}
 }
 .center-column{
 	display:flex;
 	flex-direction:column;
-}
-.center-column ul{
-	list-style:none;
-	padding:0;
-	margin:0;
-}
-.column a:hover{
-	text-decoration:underline;
+
+	& > ul{
+		list-style:none;
+		padding:0;
+		margin:0;
+	}
 }
