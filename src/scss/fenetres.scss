@@ -1,0 +1,54 @@
+@import 'common/variables';
+
+.fenetres{
+	height:400px;
+	width:1000px;
+	margin:0;
+	background-color:$mouse-grey;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.encadrement-fenetres{
+	height:340px;
+	width:920px;
+	margin:0;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+}
+.contener-fenetres{
+	height:150px;
+	width:450px;
+	padding:0;
+	position:relative;
+}
+.cadre{
+	height:150px;
+	width:300px;
+	background-color:$white;
+	text-decoration:none;
+	color:#000;
+	position:absolute;
+	display:inline-block;
+}
+.cadre p{
+	margin:40px;
+}
+.cadre a{
+	text-decoration:none;
+	font-size:90%;
+	color:$black;
+}
+strong{
+	font-weight:bold;
+	font-size:110%;
+}
+em{
+	font-style:normal;
+	color:#CECECE;
+	font-size:90%;
+}
+.cadre a:hover{
+	text-decoration:underline;
+}

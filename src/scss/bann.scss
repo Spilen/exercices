@@ -1,0 +1,22 @@
+@import 'common/variables';
+
+.bann{
+	height:375px;
+	width:1000px;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+.contener-img{
+	width:2000px;
+}
+.bann img{
+	position:relative;
+	left: 0;
+	transition:left .5s;
+	width:1000px;
+	float:left;
+}
+.bann:hover img{
+	left:-1000px;
+}
