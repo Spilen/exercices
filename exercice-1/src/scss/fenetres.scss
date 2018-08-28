@@ -1,0 +1,68 @@
+@import 'common/variables';
+
+.fenetres{
+	height:400px;
+	width:100%;
+	max-width:1000px;
+	margin:0 auto;
+	background-color:$mouse-grey;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+
+	@media only screen and (max-width:1000px){
+		height: 800px;
+	}
+
+	.encadrement-fenetres{
+		height:340px;
+		width:92%;
+		margin:0;
+		display:flex;
+		flex-wrap:wrap;
+		justify-content:space-between;
+
+		@media only screen and (max-width:1000px){
+			height: 680px;
+			flex-direction:column;
+		}
+
+		.contener-fenetres{
+			height:150px;
+			width:450px;
+			padding:0;
+			position:relative;
+		}
+	}
+}
+.cadre{
+	height:150px;
+	width:300px;
+	background-color:$white;
+	text-decoration:none;
+	color:#000;
+	position:absolute;
+	display:inline-block;
+
+	& > p{
+		margin:40px;
+
+		& > a{
+			text-decoration:none;
+			font-size:90%;
+			color:$black;
+		}
+		& > a:hover{
+			text-decoration:underline;
+		}
+		& > strong{
+			font-weight:bold;
+			font-size:110%;
+		}
+		& > em{
+			font-style:normal;
+			color:#CECECE;
+			font-size:90%;
+		}
+	}
+}

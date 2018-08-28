@@ -1,0 +1,35 @@
+@import 'common/variables';
+
+.navbar{
+	background-color:$grey;
+	height:50px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+
+	& a{
+		text-decoration:none;
+		transition: color .3s;
+		color:$light-grey;
+
+		&:hover{
+			color:$apple-green;
+		}
+	}
+	& ul{
+		list-style:none;
+		padding:0;
+		margin:0;
+		display:flex;
+		width:600px;
+		justify-content:center;
+	}
+	& li:after{
+		content:'•';
+		margin:0 20px;
+		color:$light-grey;
+	}
+	& li:last-child:after{
+		display:none;
+	}
+}

@@ -1,0 +1,12 @@
+@import 'common/variables';
+
+.header{
+	height:150px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+
+	h1{
+		text-indent:-9999px; 
+	}
+}
