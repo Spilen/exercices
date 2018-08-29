@@ -1,0 +1,40 @@
+@import 'common/variables';
+
+.topbar{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding-top: 20px;
+    z-index: 20;
+
+    h1{
+        font-size: 4.3rem;
+        color: $white;
+        text-align: center;
+        font-family: 'avantgarde';
+    }
+
+    .navbar{
+        display: flex;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        border-bottom: 3px $white solid;
+    
+        & li{
+            font-size: 1.2rem;
+            font-family: 'arial';
+            padding: 10px 15px 20px 15px;
+    
+            & a{
+                color: $white;
+                text-decoration: none;
+                transition: color .3s;
+    
+                &:hover{
+                    color: $light-grey;
+                }
+            }
+        }
+    }
+}
