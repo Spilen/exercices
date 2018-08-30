@@ -2,9 +2,98 @@
 
 .barre{
     position: absolute;
+    display: flex;
     bottom: -90px;
     height: 180px;
-    width: calc(100% - 66px);
-    margin-left: 66px;
+    width: calc(100% - 100px);
+    margin-left: 100px;
     background-color: #EFB667;
+
+    .play-button{
+        position: absolute;
+        display:flex;
+        left: 0;
+        bottom: 0;
+        height: calc(100px/3);
+        width: 160px;
+        background-color: #F6BB6B;
+        transform: rotate(270deg);
+        transform-origin: bottom left;
+        font-family: 'arial';
+        font-size: 1rem;
+        color: $white;
+        align-items: center;
+        padding-left: 20px;
+        text-decoration: none;
+
+        & span{
+            margin-left: 10px;
+        }
+    }
+
+    .titre{
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: calc((100% - 100px)/4);
+        flex: 1;
+
+        h2{
+            font-size: 6rem;
+            font-family: 'Arial Narrow';
+            font-weight: 600;
+            line-height: 30px;
+            margin-left: 50px;
+
+            strong{
+                color: $white;
+                position: relative;
+                z-index: 20;
+            }
+
+            em{
+                color: #E3A85A;
+            }
+        }
+    }
+    .adresse{
+        display: flex;
+        color: $white;
+        height: 100%;
+        width: calc((100% - 100px)/4);
+        justify-content: center;
+
+        & span{
+            font-size: 1.2rem;
+            font-family: 'Arial';
+            position: absolute;
+            bottom: 0;
+            margin-bottom: 50px;
+            line-height: 20px;
+        }
+    }
+
+    .image-defilement{
+        background: url(../img/photo-2.jpg) no-repeat;
+        background-size: cover;
+        display: flex;
+        height: 100%;
+        width: calc((100% - 100px)/4);
+        font-family: 'arial';
+        font-size: 1rem;
+        color: $white;
+
+        & span{
+        position: absolute;
+        margin: 20px;
+        }
+
+        .voile{
+            height: 100%;
+            width: calc((100%/3)*2);
+            background-color: $white;
+            opacity: 0.3;
+        }
+    }
 }
