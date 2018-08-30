@@ -1,6 +1,67 @@
 @import 'common/variables';
 
 .contenu-1{
-    background-color: $mustard;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 1px $light-grey solid;
     height: 25%;
+
+    .entete{
+        font-family: 'arial';
+        color: $black;
+        background-color: red;
+
+        & h3{
+            font-family: 'didot';
+            font-size: 5rem;
+        }
+
+        & p{
+            font-size: 1.4rem;
+            line-height: 25px;
+            margin-top: 20px;
+            margin-bottom: 100px;
+        }
+    }
+
+    .article{
+        display: flex;
+        background-color: grey;
+
+        .portrait{
+            display: flex;
+            width: 427px;
+        }
+
+        .paragraphe{
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            font-family: 'arial';
+            color: $black;
+
+            & .accroche{
+                display: flex;
+                font-size: 2.5rem;
+                border: 2px $black solid;
+                background-color: yellow;
+                padding: 30px;
+
+            }
+
+            & .texte{
+                font-size: 1.4rem;
+                line-height: 25px;
+                max-width: 600px;
+                column-count: 2;
+                column-gap: 80px;
+                background-color: blue;
+            }
+        }
+    }
+
+    .signature{
+        background-color: green;
+    }
 }
