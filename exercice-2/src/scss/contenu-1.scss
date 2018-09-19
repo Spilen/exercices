@@ -11,6 +11,7 @@
         font-family: 'arial';
         color: $black;
         background-color: red;
+        height: 25%;
 
         & h3{
             font-family: 'didot';
@@ -31,13 +32,12 @@
 
         .portrait{
             display: flex;
-            width: 427px;
         }
 
         .paragraphe{
             display: flex;
             flex-direction: column;
-            max-width: 600px;
+            max-width: 500px;
             font-family: 'arial';
             color: $black;
 
@@ -47,7 +47,6 @@
                 border: 2px $black solid;
                 background-color: yellow;
                 padding: 30px;
-
             }
 
             & .texte{
@@ -55,7 +54,7 @@
                 line-height: 25px;
                 max-width: 600px;
                 column-count: 2;
-                column-gap: 80px;
+                column-gap: 50px;
                 background-color: blue;
             }
         }
@@ -63,5 +62,34 @@
 
     .signature{
         background-color: green;
+        font-family: 'arial';
+        font-size: 1.2rem;
+        color: $black;
+        line-height: 15px;
+
+        & em{
+            font-weight: 600;
+        }
+    }
+
+    .date{
+        position: relative;
+        right: 0;
+        bottom: 0;
+        height: 50px;
+        width: calc(400vh/4);
+        min-width: calc(4000px/4);
+        transform: rotate(90deg);
+        transform-origin: top right;
+        background-color: $white;
+        background-color: purple;
+
+        & span{
+            font-family: 'arial';
+            font-size: 1rem;
+            color: $black;
+            position: relative;
+            bottom: 0;
+        }
     }
 }
