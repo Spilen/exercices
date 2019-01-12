@@ -1,0 +1,97 @@
+@import 'common/variables';
+
+.header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: url(../img/baleine.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    // LOGO
+    .logo{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
+
+    // NAVBAR
+    .navbar{
+        display: flex;
+        position: absolute;
+        align-items: center;
+        top: 20px;
+        right: 20px;
+
+        li{
+            font-family: 'arial';
+            font-size: 1rem;
+            padding: 10px 15px;
+
+            a{
+                color: $white;
+                text-decoration: none;
+                transition: color .3s;
+
+                &:hover:not(.button){
+                    color: $apple-green;
+                }
+            }
+            .button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50px;
+                width: 150px;
+                border-radius: 3px;
+                background-color: #78B4D7;
+                transition: background-color .3s;
+
+                &:hover{
+                    background-color: #89CDF7;
+                }
+            }
+        }
+    }
+
+    // ACCUEIL
+    .accueil{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+        font-family: arial;
+        color: $white;
+
+        em{
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        p{
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
+
+        .button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            width: 150px;
+            border-radius: 3px;
+            background-color: #78B4D7;
+            color: $white;
+            text-decoration: none;
+            transition: background-color .3s;
+
+            &:hover{
+                background-color: #89CDF7;
+            }
+        }
+    }
+}
