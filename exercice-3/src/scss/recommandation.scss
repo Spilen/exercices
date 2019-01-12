@@ -1,1 +1,102 @@
 @import 'common/variables';
+
+.recommandation{
+    display: flex;
+    position: relative;
+    padding: 100px 50px;
+    height: 100vh;
+    overflow: hidden;
+
+    .contener-fenetre{
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        width: 525px;
+
+        .fenetre{
+            display: flex;
+            position: relative;
+            align-items: center;
+            background-color: $white;
+            height: 150px;
+            width: 370px;
+            box-shadow: 1px 1px 12px #E7E9EC;
+            margin-bottom: 20px;
+            padding: 30px 20px;
+
+            img{
+                height: 90px;
+                width: 90px;
+                margin-right: 20px;
+            }
+
+            p{
+                font-size: 1rem;
+                line-height: 1.2;
+                font-family: 'arial';
+                color: #606060;
+
+                em{
+                    font-weight: bold;
+                }
+            }
+        }
+
+    }
+
+    .texte{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        position: relative;
+        justify-content: center;
+        font-family: 'arial';
+        margin-left: 50px;
+
+        h2{
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #606060;
+            padding-bottom: 50px;
+        }
+
+        p{
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #606060;
+            padding-bottom: 50px;
+        }
+
+        .button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            width: 150px;
+            border-radius: 3px;
+            background-color: $blue-sky;
+            color: $white;
+            text-decoration: none;
+            transition: background-color .3s;
+
+            &:hover{
+                background-color: #89CDF7;
+            }
+        }
+    }
+
+    &:after{
+        content:'';
+        position: absolute;
+        top: 0;
+        left: -850px;
+        height: 1500px;
+        width: 3000px;
+        background-color: #F1F8FA;
+        border-radius: 100%;
+        z-index: -1;
+    }
+}

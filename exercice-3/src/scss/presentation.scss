@@ -1,1 +1,56 @@
 @import 'common/variables';
+
+.presentation{
+    display: flex;
+    position: relative;
+    padding: 100px 70px;
+
+        .texte{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            position: relative;
+            justify-content: center;
+            padding-right: 50px;
+            font-family: 'arial';
+
+            h2{
+                font-size: 1.8rem;
+                font-weight: bold;
+                color: $blue-sky;
+                padding-bottom: 50px;
+            }
+
+            p{
+                font-size: 1rem;
+                line-height: 1.8;
+                color: $blue-sky;
+                padding-bottom: 50px;
+            }
+
+            .button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50px;
+                width: 150px;
+                border-radius: 3px;
+                background-color: $blue-sky;
+                color: $white;
+                text-decoration: none;
+                transition: background-color .3s;
+    
+                &:hover{
+                    background-color: #89CDF7;
+                }
+            }
+        }
+
+        .vague{
+            width: 550px;
+
+            img{
+                width: 100%;
+            }
+        }
+}
