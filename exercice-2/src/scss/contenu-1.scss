@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     border-left: 1px $light-grey solid;
-    height: 25%;
+    height: 1000px;
     padding-right: 70px;
     padding-left: 60px;
 
@@ -18,11 +18,11 @@
 
          h3{
             font-family: 'didot';
-            font-size: 5rem;
+            font-size: 4rem;
             margin-bottom: 20px;
         }
          p{
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             line-height: 25px;
             margin-bottom: 80px;
         }
@@ -69,7 +69,7 @@
             }
 
              .texte{
-                font-size: 1.4rem;
+                font-size: 1.2rem;
                 line-height: 25px;
                 column-count: 2;
                 column-gap: 50px;

@@ -17,21 +17,21 @@
     .navbar{
         display: flex;
         position: absolute;
-        top: 30px;
+        top: 50px;
         right: 20px;
         border-bottom: 3px $white solid;
     
-        & li{
+        li{
             font-size: 1.2rem;
             font-family: 'arial';
             padding: 10px 15px 20px 15px;
     
-            & a{
+            a{
                 color: $white;
                 text-decoration: none;
                 transition: color .3s;
     
-                &:hover{
+                :hover{
                     color: $light-grey;
                 }
             }
