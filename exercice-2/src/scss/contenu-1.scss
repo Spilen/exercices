@@ -1,95 +1,93 @@
 @import 'common/variables';
 
 .contenu-1{
+    position:relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-left: 1px $light-grey solid;
     height: 25%;
+    padding-right: 70px;
+    padding-left: 60px;
 
     .entete{
+        position: relative;
         font-family: 'arial';
         color: $black;
-        background-color: red;
-        height: 25%;
+        height: 200px;
 
-        & h3{
+         h3{
             font-family: 'didot';
             font-size: 5rem;
+            margin-bottom: 20px;
         }
-
-        & p{
+         p{
             font-size: 1.4rem;
             line-height: 25px;
-            margin-top: 20px;
-            margin-bottom: 100px;
+            margin-bottom: 80px;
+        }
+         .date{
+            position: absolute;
+            transform: rotate(90deg);
+            transform-origin: bottom right;
+            font-family: 'arial';
+            font-size: 1rem;
+            color: $black;
+            bottom: 0;
+            right: -20px;
         }
     }
 
     .article{
         display: flex;
-        background-color: grey;
+        min-height: 427px;
 
-        .portrait{
-            display: flex;
+         .portrait{
+            position: relative;
+            min-width: 500px;
+            overflow: hidden;
+
+            img{
+                position: absolute;
+            }
         }
 
-        .paragraphe{
+         .paragraphe{
             display: flex;
             flex-direction: column;
-            max-width: 500px;
             font-family: 'arial';
             color: $black;
+            width: 100%;
+            padding: 0 40px;
 
-            & .accroche{
+             .accroche{
                 display: flex;
                 font-size: 2.5rem;
                 border: 2px $black solid;
-                background-color: yellow;
                 padding: 30px;
+                box-shadow: 30px 30px $mouse-grey;
             }
 
-            & .texte{
+             .texte{
                 font-size: 1.4rem;
                 line-height: 25px;
-                max-width: 600px;
                 column-count: 2;
                 column-gap: 50px;
-                background-color: blue;
+                height: 100%;
+                padding-top: 60px;
             }
         }
     }
 
     .signature{
-        background-color: green;
         font-family: 'arial';
         font-size: 1.2rem;
         color: $black;
         line-height: 15px;
+        padding-top: 60px;
 
-        & em{
+         em{
             font-weight: 600;
-        }
-    }
-
-    .date{
-        position: relative;
-        right: 0;
-        bottom: 0;
-        height: 50px;
-        width: calc(400vh/4);
-        min-width: calc(4000px/4);
-        transform: rotate(90deg);
-        transform-origin: top right;
-        background-color: $white;
-        background-color: purple;
-
-        & span{
-            font-family: 'arial';
-            font-size: 1rem;
-            color: $black;
-            position: relative;
-            bottom: 0;
         }
     }
 }
