@@ -3,49 +3,98 @@
 .recommandation{
     display: flex;
     position: relative;
-    padding: 100px 50px;
-    height: 100vh;
+    padding: 100px 50px 50px;
+    height: 900px;
     overflow: hidden;
+    width: 100%;
+
+    @media only screen and (max-width: 1024px){
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 0 50px;
+        height: 1000px;
+    }
+
+    @media only screen and (max-width: 640px){
+        height: 1500px;
+    }
 
     // FENETRES
-    .contener-fenetre{
-        display: flex;
-        position: relative;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        position: relative;
-        width: 525px;
+    .contener{
+        @media only screen and (max-width: 1024px){
+            overflow: hidden;
+            overflow-x: auto;
+            height: 300px;
+            width: 100%;
+        }
 
-        .fenetre{
+        @media only screen and (max-width: 640px){
+            overflow: visible;
+            width: 100%;
+            height: 100%;
+        }
+
+        .contener-fenetre{
             display: flex;
             position: relative;
             align-items: center;
-            background-color: $white;
-            height: 150px;
-            width: 370px;
-            box-shadow: 1px 1px 12px #E7E9EC;
-            margin-bottom: 20px;
-            padding: 30px 20px;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            width: 525px;
 
-            img{
-                height: 90px;
-                width: 90px;
-                margin-right: 20px;
+            @media only screen and (max-width: 1024px){
+                flex-direction: row;
+                height: 300px;
+                width: 200%;
             }
 
-            p{
-                font-size: 1rem;
-                line-height: 1.2;
-                font-family: 'arial';
-                color: #606060;
+            @media only screen and (max-width: 640px){
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+            }
 
-                em{
-                    font-weight: bold;
+            .fenetre{
+                display: flex;
+                position: relative;
+                align-items: center;
+                background-color: $white;
+                height: 150px;
+                width: 370px;
+                box-shadow: 1px 1px 12px #E7E9EC;
+                margin-top: 20px;
+                padding: 30px 20px;
+
+                @media only screen and (max-width: 1024px){
+                    margin-top: 0;
+                    margin-right: 20px;
+                }
+
+                @media only screen and (max-width: 640px){
+                    margin: 10px 0;
+                }
+
+                img{
+                    height: 90px;
+                    width: 90px;
+                    margin-right: 20px;
+                }
+
+                p{
+                    font-size: 1rem;
+                    line-height: 1.2;
+                    font-family: 'arial';
+                    color: #606060;
+
+                    em{
+                        font-weight: bold;
+                    }
                 }
             }
-        }
 
+        }
     }
 
     // TEXTE
@@ -58,8 +107,20 @@
         font-family: 'arial';
         margin-left: 50px;
 
+        @media only screen and (max-width: 1024px){
+            max-width: 550px;
+            margin-left: 0;
+            margin-bottom: 50px;
+        }
+
+        @media only screen and (max-width: 768px){
+            padding: 40px 70px;
+            margin-bottom: 0;
+        }
+
         h2{
             font-size: 1.8rem;
+            line-height: 1.8;
             font-weight: bold;
             color: #606060;
             padding-bottom: 50px;
@@ -70,6 +131,11 @@
             line-height: 1.8;
             color: #606060;
             padding-bottom: 50px;
+
+            @media only screen and (max-width: 768px){
+                text-align: justify;
+            }
+
         }
 
         .button{
@@ -84,6 +150,10 @@
             text-decoration: none;
             transition: background-color .3s;
 
+            @media only screen and (max-width: 768px){
+                margin: 0 auto;
+            }
+
             &:hover{
                 background-color: #89CDF7;
             }
@@ -95,10 +165,18 @@
         position: absolute;
         top: 0;
         left: -850px;
-        height: 1500px;
+        height: 3000px;
         width: 3000px;
         background-color: #F1F8FA;
         border-radius: 100%;
         z-index: -1;
+
+        @media only screen and (max-width: 1024px){
+            left: -1000px;
+        }
+
+        @media only screen and (max-width: 768px){
+            left: -1200px;
+        }
     }
 }
