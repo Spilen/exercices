@@ -1,2 +1,77 @@
 @import 'common/variables';
 
+.temoignages{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #276370;
+    padding: 150px 100px;
+
+    .texte{
+        margin-right: 60px;
+        padding-bottom: 130px;
+
+        h2{
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+
+        p{
+            font-size: 0.9em;
+            line-height: 2;
+        }
+    }
+
+    .temoins{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-color: $white;
+        padding: 40px;
+        box-shadow: 8px 8px 20px 5px #EFF3F3;
+        
+        p{
+            font-size: 0.9em;
+            line-height: 2;
+            margin-bottom: 80px;
+        }
+
+        .portrait{
+            display: flex;
+            justify-content: space-between;
+            font-size: 1em;
+            font-weight: bolder;
+
+            p{
+                margin-bottom: inherit;
+
+                em{
+                    color: #85D18E;
+                }
+            }
+        }
+    }
+    .temoin-1:after{
+        content:'';
+        position: absolute;
+        top: -80px;
+        left: -90px;
+        background: url(../img/quote-1.jpg) no-repeat;
+        height: 100px;
+        width: 120px;
+        z-index: -1;
+    }
+
+    .temoin-2:after{
+        content:'';
+        position: absolute;
+        top: 380px;
+        left: 320px;
+        background: url(../img/quote-2.jpg) no-repeat;
+        height: 100px;
+        width: 120px;
+        z-index: -1;
+    }
+}
