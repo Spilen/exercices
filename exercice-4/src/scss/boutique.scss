@@ -1,73 +1,101 @@
 @import 'common/variables';
 
 .boutique{
-    display: flex;
-    justify-content: center;
-    background-color: #F9FAFC;
-    padding-top: 120px;
-    margin: 60px 0 140px;
+    background-color: #F9FBFA;
 
-    .texte{
+    // MAGASIN
+    .magasin{
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;    
+        justify-content: center;
+        background-color: #F9FAFC;
+        padding-top: 120px;
+        margin: 60px 0 140px;
 
-        h2{
-            margin-bottom: 30px;
-            line-height: 1.4;
-        }
-
-        p{
-            font-size: 0.9em;
-            line-height: 2;
-            margin-bottom: 80px;
-        }
-
-        .zip-code{
-            position: relative;
+        .texte{
             display: flex;
-            align-items: center;
-            height: 60px;
-            width: 100%px;
-            border-radius: 50px;
-            background-color: $white;
-            box-shadow: 0 10px 10px 3px #EFF3F3;
-                
-            img{
-                margin: 0 10px 0 20px;
+            flex-direction: column;
+            justify-content: flex-end;    
+
+            h2{
+                margin-bottom: 30px;
+                line-height: 1.4;
             }
 
-            form{
-
-                input{
-                    height: 50px;
-                    font-size: 1em;
-                    border: none;
-                    border-radius: 50px;
-                }
+            p{
+                font-size: 0.9em;
+                line-height: 2;
+                margin-bottom: 80px;
             }
 
-            .button{
-                position: absolute;
+            .zip-code{
+                position: relative;
                 display: flex;
                 align-items: center;
-                justify-content: center;
-                right: 0;
-                margin: auto 0;
+                height: 60px;
+                width: 100%px;
                 border-radius: 50px;
-                padding: 20px 35px;
-                color: $white;
-                background-color: #FB7A6E;
-                box-shadow: inset 100px 0 50px #FCA978;
-                text-decoration: none;
-
-                &:hover{
-                    background-color: $white;
-                    color: #FCA978;
-                    border: 1px #FCA978 solid;
-                    padding: 19px 34px;
-                    box-shadow: none;
+                background-color: $white;
+                box-shadow: 0 10px 10px 3px #EFF3F3;
+                    
+                img{
+                    margin: 0 10px 0 20px;
                 }
+
+                form{
+
+                    input{
+                        height: 50px;
+                        font-size: 1em;
+                        border: none;
+                        border-radius: 50px;
+                    }
+                }
+
+                .button{
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    right: 0;
+                    margin: auto 0;
+                    border-radius: 50px;
+                    padding: 20px 35px;
+                    color: $white;
+                    background-color: #FB7A6E;
+                    box-shadow: inset 100px 0 50px #FCA978;
+                    text-decoration: none;
+
+                    &:hover{
+                        background-color: $white;
+                        color: #FCA978;
+                        border: 1px #FCA978 solid;
+                        padding: 19px 34px;
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+    }
+
+    // PARTENAIRES
+    .partenaires{
+        display: flex;
+        justify-content: center;
+        padding: 60px 0;
+        border-top: 1px #CECECE solid;
+        margin: 0 120px;
+    
+    
+        p{
+            color: #CECECE;
+            line-height: 1.5;
+        }
+    
+        ul{
+            display: flex;
+    
+            li{
+                margin-left: 50px;
             }
         }
     }
