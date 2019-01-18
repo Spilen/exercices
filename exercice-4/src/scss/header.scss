@@ -83,7 +83,7 @@ header{
         }
     }
 
-    // TEXTE
+    // HERO
     .hero{
         color: #70837D;
         line-height: 1.2;
@@ -100,18 +100,35 @@ header{
             margin-bottom: 20px;
         }
 
-        form{
+        .zip-code{
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 60px;
+            width: 300px;
             margin: 40px 0 60px;
+            border-radius: 50px;
+            background-color: $white;
+            box-shadow: 0 10px 10px #EEF9F1;
+            
+            img{
+                margin: 0 10px 0 20px;
+            }
 
-            input{
-                height: 50px;
-                width: 300px;
-                border-radius: 50px;
-                font-size: 0.8em;
-                background: url(../img/btn-arrow.jpg) no-repeat;
-                background-position: right;
-                box-shadow: 0 10px 10px #EEF9F1;
-                border: none;
+            form{
+
+                input{
+                    height: 50px;
+                    font-size: 1em;
+                    border: none;
+                    border-radius: 50px;
+                }
+            }
+
+            .arrow{
+                position: absolute;
+                right: 0;
+                margin: auto 0;
             }
         }
 
