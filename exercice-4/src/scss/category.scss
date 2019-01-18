@@ -1,0 +1,78 @@
+@import 'common/variables';
+
+.category{
+    position: relative;
+    background: url(../img/leaf.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 100px 200px;
+    color: #276370;
+
+    .cadre{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $white;
+        width: 100%;
+        padding: 100px;
+        box-sizing: border-box;
+
+        h2{
+            font-size: 2.2em;
+            margin-bottom: 80px;
+        }
+
+        ul{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 80px;
+
+            li{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img{
+                    margin-bottom: 20px;
+                }
+
+                a{
+                    text-decoration: none;
+                    color: #276370;
+
+                    &:hover{
+                        color: #85D18E;
+                    }
+
+                    &:focus{
+                        color: #85D18E;
+                    }
+                }
+            }
+        }
+
+        .button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            a{
+                border-radius: 50px;
+                padding: 20px 60px;
+                color: $white;
+                background-color: #FB7A6E;
+                box-shadow: inset 220px 0 50px #FCA978;
+                text-decoration: none;
+
+                &:hover{
+                    background-color: $white;
+                    color: #FCA978;
+                    border: 1px #FCA978 solid;
+                    padding: 19px 59px;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
