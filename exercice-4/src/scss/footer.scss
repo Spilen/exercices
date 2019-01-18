@@ -48,12 +48,16 @@ footer{
         padding: 80px 0;
         line-height: 3;
 
+        img{
+            margin-right: 10px;
+        }
+
         a{
             text-decoration: none;
             color: $white;
 
-            img{
-                margin-right: 10px;
+            &:hover{
+                border-bottom: 1px $white solid;
             }
         }
     }
