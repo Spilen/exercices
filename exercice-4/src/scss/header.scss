@@ -9,9 +9,20 @@ header{
     background-size: cover;
     background-position: center;
     width: 100%;
+    min-width: 470px;
     height: 100vh;
     padding: 40px 120px;
     box-sizing: border-box;
+
+    @media only screen and (max-width: 1024px){
+        padding: 40px 80px;
+    }
+
+    @media only screen and (max-width: 640px){
+        align-items: center;
+        justify-content: center;
+        padding: 40px 40px;
+    }
 
     // NAVBAR
     nav{
@@ -22,12 +33,30 @@ header{
         box-sizing: border-box;
         font-size: 0.9em;
 
+        @media only screen and (max-width: 1024px){
+            flex-wrap: wrap;
+
+            .element{
+                margin-bottom: 20px;
+            }
+        }
+
+        @media only screen and (max-width: 640px){
+            flex-direction: column;
+
+            .element:nth-child(3){
+                order: 1;
+            }
+        }
+
         .logo{
             margin-right: 40px;
+            order: 1;
         }
 
         .navbar{
             display: flex;
+            order: 2;
 
             a{
                 color: #276370;
@@ -45,6 +74,11 @@ header{
             position: absolute;
             display: flex;
             right: 0px;
+            order: 3;
+
+            @media only screen and (max-width: 1024px){
+                position: relative;
+            }
     
             a{
                 display: flex;
@@ -63,7 +97,8 @@ header{
                 &:hover{
                     background-color: #85D18E;
                     color: $white;
-                    border: 1px #85D18E solid;
+                    border: none;
+                    padding: 13px 31px;
                 }
             }
 
@@ -93,11 +128,23 @@ header{
             font-size: 3em;
             line-height: 1.2;
             margin-bottom: 20px;
+
+            @media only screen and (max-width: 880px){
+                font-size: 2.8em;
+                line-height: 1;
+                margin-bottom: 10px;
+            }
         }
 
         p{
             line-height: 2;
             margin-bottom: 20px;
+
+            @media only screen and (max-width: 880px){
+                font-size: 0.9em;
+                line-height: 1.5;
+                margin-bottom: 10px;
+            }
         }
 
         .zip-code{
@@ -110,6 +157,14 @@ header{
             border-radius: 50px;
             background-color: $white;
             box-shadow: 0 10px 10px #EEF9F1;
+
+            @media only screen and (max-width: 1024px){
+                box-shadow: none;
+            }
+
+            @media only screen and (max-width: 880px){
+                margin: 20px 0 30px;
+            }
             
             img{
                 margin: 0 10px 0 20px;
@@ -154,9 +209,19 @@ header{
             }
         }
 
-        .app{           
+        .app{      
+            
+            @media only screen and (max-width: 640px){
+                display: flex;
+                justify-content: space-around;
+            }
+
             a{
                 margin-right: 20px;
+
+                @media only screen and (max-width: 640px){
+                    margin-right: none;
+                }
             }
         }
     }
