@@ -123,6 +123,11 @@ header{
         color: #70837D;
         line-height: 1.2;
 
+        @media only screen and (max-width: 660px){
+            display: flex;
+            flex-direction: column;
+        }
+
         h1{
             color: #85D18E;
             font-size: 3em;
@@ -164,6 +169,10 @@ header{
 
             @media only screen and (max-width: 880px){
                 margin: 20px 0 30px;
+            }
+
+            @media only screen and (max-width: 640px){
+                align-self: center;
             }
             
             img{
@@ -220,7 +229,7 @@ header{
                 margin-right: 20px;
 
                 @media only screen and (max-width: 640px){
-                    margin-right: none;
+                    margin-right: 0;
                 }
             }
         }
