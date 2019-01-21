@@ -6,6 +6,7 @@
     // MAGASIN
     .magasin{
         display: flex;
+        flex-wrap: wrap-reverse;
         justify-content: center;
         background-color: #F9FAFC;
         padding-top: 120px;
@@ -81,21 +82,28 @@
     .partenaires{
         display: flex;
         justify-content: center;
-        padding: 60px 0;
+        flex-wrap: wrap;
+        padding: 40px 0 40px;
         border-top: 1px #CECECE solid;
         margin: 0 120px;
-    
     
         p{
             color: #CECECE;
             line-height: 1.5;
+            margin: 20px;
         }
     
         ul{
             display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
     
-            li{
-                margin-left: 50px;
+            .element{
+                display: flex;
+
+                li{
+                    margin: 20px;
+                }
             }
         }
     }
