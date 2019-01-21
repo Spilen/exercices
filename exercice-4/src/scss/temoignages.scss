@@ -4,14 +4,23 @@
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     color: #276370;
     padding: 150px 120px;
+
+    @media only screen and (max-width: 768px){
+        padding: 50px;
+    }
 
     // TEXTE
     .texte{
         margin-right: 60px;
         padding-bottom: 130px;
+
+        @media only screen and (max-width: 1024px){
+            text-align: center;
+        }
 
         h2{
             margin-bottom: 30px;
@@ -25,54 +34,82 @@
     }
 
     // PROFILS
-    .temoins{
-        position: relative;
+    .element{
         display: flex;
-        flex-direction: column;
-        background-color: $white;
-        padding: 40px;
-        box-shadow: 8px 8px 20px 5px #EFF3F3;
-        
-        p{
-            font-size: 0.9em;
-            line-height: 2;
-            margin-bottom: 80px;
+        align-items: center;
+        justify-content: space-around;
+        width: 710px;
+
+        @media only screen and (max-width: 1024px){
+            flex-wrap: wrap;
+            width: 100%;
         }
 
-        .portrait{
+        @media only screen and (max-width: 640px){
+            overflow: hidden;
+        }
+
+        .temoins{
+            position: relative;
             display: flex;
-            justify-content: space-between;
-            font-size: 1em;
-            font-weight: bolder;
+            flex-direction: column;
+            background-color: $white;
+            padding: 40px;
+            box-shadow: 8px 8px 20px 5px #EFF3F3;
 
+            @media only screen and (max-width: 1024px){
+                margin-bottom: 40px;
+            }
+            
             p{
-                margin-bottom: inherit;
+                font-size: 0.9em;
+                line-height: 2;
+                margin-bottom: 80px;
+            }
 
-                em{
-                    color: #85D18E;
+            .portrait{
+                display: flex;
+                justify-content: space-between;
+                font-size: 1em;
+                font-weight: bolder;
+
+                p{
+                    margin-bottom: inherit;
+
+                    em{
+                        color: #85D18E;
+                    }
                 }
             }
         }
-    }
-    .temoin-1:after{
-        content:'';
-        position: absolute;
-        top: -80px;
-        left: -90px;
-        background: url(../img/quote-1.jpg) no-repeat;
-        height: 100px;
-        width: 120px;
-        z-index: -1;
-    }
+        .temoin-1:after{
+            content:'';
+            position: absolute;
+            top: -80px;
+            left: -90px;
+            background: url(../img/quote-1.jpg) no-repeat;
+            height: 100px;
+            width: 120px;
+            z-index: -1;
 
-    .temoin-2:after{
-        content:'';
-        position: absolute;
-        top: 380px;
-        left: 320px;
-        background: url(../img/quote-2.jpg) no-repeat;
-        height: 100px;
-        width: 120px;
-        z-index: -1;
+            @media only screen and (max-width: 640px){
+                background: none;
+            }
+        }
+
+        .temoin-2:after{
+            content:'';
+            position: absolute;
+            top: 380px;
+            left: 320px;
+            background: url(../img/quote-2.jpg) no-repeat;
+            height: 100px;
+            width: 120px;
+            z-index: -1;
+
+            @media only screen and (max-width: 640px){
+                background: none;
+            }
+        }
     }
 }
