@@ -30,7 +30,7 @@
         }
 
         h2{
-            margin-bottom: 80px;
+            margin-bottom: 40px;
             text-align: center;
         }
 
@@ -39,16 +39,17 @@
             display: flex;
             justify-content: column;
             width: 100%;
-            margin-bottom: 80px;
 
             .element{
                 display: flex;
                 justify-content: center;
                 width: 100%;
+                margin: 40px 0;
             }
 
             @media only screen and (max-width: 768px){
                 flex-wrap: wrap;
+                margin: 10px 0;
             }
 
             li{
@@ -81,6 +82,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-top: 40px;
             
             a{
                 border-radius: 50px;
