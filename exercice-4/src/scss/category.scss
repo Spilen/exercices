@@ -8,6 +8,14 @@
     padding: 100px 200px;
     color: #276370;
 
+    @media only screen and (max-width: 1024px){
+        padding: 100px;
+    }
+
+    @media only screen and (max-width: 768px){
+        padding: 50px;
+    }
+
     .cadre{
         display: flex;
         flex-direction: column;
@@ -17,21 +25,37 @@
         padding: 100px;
         box-sizing: border-box;
 
+        @media only screen and (max-width: 1024px){
+            padding: 50px;
+        }
+
         h2{
             margin-bottom: 80px;
+            text-align: center;
         }
 
         // ICONES
         ul{
             display: flex;
-            justify-content: space-between;
+            justify-content: column;
             width: 100%;
             margin-bottom: 80px;
+
+            .element{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+
+            @media only screen and (max-width: 768px){
+                flex-wrap: wrap;
+            }
 
             li{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                width: 50%;
 
                 img{
                     margin-bottom: 20px;
@@ -66,12 +90,20 @@
                 box-shadow: inset 220px 0 50px #FCA978;
                 text-decoration: none;
 
+                @media only screen and (max-width: 640px){
+                    padding: 10px 30px;
+                }
+
                 &:hover{
                     background-color: $white;
                     color: #FCA978;
                     border: 1px #FCA978 solid;
                     padding: 19px 59px;
                     box-shadow: none;
+
+                    @media only screen and (max-width: 640px){
+                        padding: 9px 29px;
+                    }
                 }
             }
         }
