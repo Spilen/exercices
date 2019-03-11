@@ -4,7 +4,7 @@ header{
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: #FDD8AF;
+    background-color: #FCDDB7;
     height: 90vh;
 
     nav{
@@ -12,18 +12,34 @@ header{
         justify-content: space-between;
         padding: 40px;
 
-        h1{
-            font-size: 2em;
-            font-weight: bold;
+        @media only screen and (max-width: 640px){
+            flex-direction: column;
+            align-items: center;
+        }
+
+        img{
+            height: 30px;
+            width: 90px;
+            margin-top: -10px;
         }
 
         ul{
             display: flex;
+            flex-wrap: wrap;
+            line-height: 2.5;
+
+            @media only screen and (max-width: 640px){
+                justify-content: center;
+            }
 
             a{
             text-decoration: none;
             margin-left: 20px;
             color: $black;
+
+            @media only screen and (max-width: 640px){
+                margin: 10px;
+            }
 
                 &:hover{
                     border-bottom: 1px $black solid;
@@ -35,12 +51,15 @@ header{
                 margin-left: 40px;
                 border: 1px $black solid;
 
+                @media only screen and (max-width: 640px){
+                    margin-left: 20px;
+                }
+
                 &:hover{
-                    padding: 9px;
+                    padding: 9px 19px;
                     border: 2px $black solid;
                 }
             }
-
         }
     }
 
@@ -52,10 +71,23 @@ header{
         padding: 0 250px;
         line-height: 1.2;
 
+        @media only screen and (max-width: 1024px){
+            padding: 0 150px;
+        }
+    
+        @media only screen and (max-width: 640px){
+            padding: 0 100px;
+            align-items: center;
+        }
+    
+        @media only screen and (max-width: 500px){
+            padding: 0 50px;
+        }
+
         .text{
             width: 300px;
 
-            h3{
+            h1{
                 font-weight: bold;
                 margin-bottom: 10px;
             }
@@ -83,10 +115,7 @@ header{
                 &:hover{
                     background-color: #B7926F;
                 }
-
             }
         }
-
-
     }
 }

@@ -1,0 +1,139 @@
+@import 'common/variables';
+
+.feedbacks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ECE7E0;
+    padding: 0 250px;
+
+    @media only screen and (max-width: 1024px){
+        padding: 0 150px;
+    }
+
+    @media only screen and (max-width: 640px){
+        padding: 0 100px;
+    }
+
+    @media only screen and (max-width: 500px){
+        padding: 0 50px;
+    }
+
+// IMAGE
+    img{
+        width: 100%;
+        margin-bottom: 100px;
+    }
+
+// FEEDBACKS
+    .contenant-feedbacks{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        @media only screen and (max-width: 1024px){
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .column-feedbacks{
+            display: flex;
+            flex-direction: column;
+            width: 350px;
+
+            @media only screen and (max-width: 500px){
+                width: 100%;
+            }
+
+            h3{
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: #BEB7B9;
+            }
+        
+            h2{
+                font-weight: bold;
+                font-size: 2.5em;
+                line-height: 1.2;
+                color: $black;
+                margin-bottom: 40px;
+            }
+
+            p{
+                color: #BEB7B9;
+                line-height: 1.6;
+                margin-bottom: 40px;
+            }
+
+            .commentaire-left{
+                display: flex;
+
+                img{
+                    height: 60px;
+                    width: 60px;
+                    margin-right: 25px;
+                }
+
+                h4{
+                    color: $black;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+    
+                h5{
+                    font-size: 0.8em;
+                    color: #E6AF96;
+                    margin-bottom: 20px;
+                }
+            }
+            .commentaire-right{
+                display: flex;
+
+                img{
+                    height: 50px;
+                    width: 50px;
+                    margin-right: 15px;
+                }
+
+                h4{
+                    color: $black;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+    
+                h5{
+                    font-size: 0.8em;
+                    color: #E6AF96;
+                    margin-bottom: 10px;
+                }
+
+                p{
+                    font-size: 0.8em;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        .column-right{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+// SPONSORS
+    .sponsors{
+        display: flex;
+        width: 100%;
+        margin-top: 20px;
+
+        @media only screen and (max-width: 1024px){
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+     
+        li{
+            margin: 0 10px;
+        }
+    }
+}

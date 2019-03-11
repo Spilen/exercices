@@ -1,0 +1,117 @@
+@import 'common/variables';
+
+// MENU
+.menu{
+    padding: 30px 250px;
+
+    @media only screen and (max-width: 1024px){
+        padding: 0 150px;
+    }
+
+    @media only screen and (max-width: 640px){
+        padding: 0 100px;
+        align-items: center;
+    }
+
+    @media only screen and (max-width: 500px){
+        padding: 0 50px;
+    }
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+
+        a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: $black;
+
+            &:hover{
+                background-color: #FBF3F7;
+            }
+
+            img{
+                margin-right: 20px;
+            }
+
+            p{
+                color: #BEB7B9;
+                font-size: 0.8em;
+                line-height: 1.8;
+            }
+
+            em{
+                color: $black;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+// OPERATIONS
+.operations{
+    display: flex;
+    align-items: center;
+    padding: 30px 250px 100px;
+
+    @media only screen and (max-width: 1024px){
+        padding: 30px 150px 80px;
+        flex-wrap: wrap;
+        line-height: 2;
+    }
+
+    @media only screen and (max-width: 640px){
+        padding: 30px 100px 60px;
+    }
+
+    @media only screen and (max-width: 500px){
+        padding: 30px 50px 50px;
+    }
+
+    img{
+        height: 420px;
+        margin-right: 40px;
+
+        @media only screen and (max-width: 1024px){
+            height: 100%;
+        }
+    }
+
+    .texte{
+        color: #BEB7B9;
+
+        h3{
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h2{
+            font-weight: bold;
+            font-size: 2.5em;
+            line-height: 1.2;
+            color: $black;
+            margin-bottom: 20px;
+        }
+
+        p{
+            line-height: 1.4;
+            margin-bottom: 42px;
+        }
+
+        .button{
+            text-decoration: none;
+            padding: 12px 30px;
+            color: $white;
+            border: 1px #FB7858 solid;
+            background-color: #FB7858;
+            transition: background-color .3s;
+
+            &:hover{
+                background-color: #B7926F;
+            }
+        }
+    }
+}

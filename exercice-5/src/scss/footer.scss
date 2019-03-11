@@ -1,0 +1,51 @@
+@import 'common/variables';
+
+.footer{
+    display: flex;
+    background-color: #D7D1D0;
+    padding: 100px 250px;
+    flex-wrap: wrap;
+
+    @media only screen and (max-width: 1024px){
+        padding: 80px 150px;
+    }
+
+    @media only screen and (max-width: 640px){
+        padding: 60px 100px;
+    }
+
+    @media only screen and (max-width: 500px){
+        padding: 50px 50px;
+    }
+
+    h3{
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #BEB7B9;
+    }
+
+    .logo-ender{
+        flex: 1;
+
+        img{
+            margin-bottom: 20px;
+        }
+    }
+
+    .column-ender{
+        margin-right: 50px;
+
+        li{
+            margin-bottom: 5px;
+
+            a{
+                text-decoration: none;
+                color: $black;
+
+                &:hover{
+                    border-bottom: 1px $black solid;
+                }
+            }
+        }
+    }
+}
