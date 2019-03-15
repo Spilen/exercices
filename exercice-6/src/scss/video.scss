@@ -1,1 +1,26 @@
 @import 'common/variables';
+
+.video{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: dosis, arial ,sans-serif;
+    background: url(../../dist/img/video.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    width: 1000px;
+    margin-bottom: 100px;
+
+    p{
+        font-size: 3em;
+        text-align: center;
+        line-height: 1.5;
+        font-weight: lighter;
+        color: $white;
+        margin: 50px 180px 0;
+        text-shadow: 0 0 1px $green;
+    }
+}
