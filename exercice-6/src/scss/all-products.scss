@@ -2,10 +2,31 @@
 
 .all-products{
     display: flex;
+    margin-bottom: 50px;
 
     .products{
         display: flex;
         flex-direction: column;
+
+        .preferences{
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            
+            img{
+                height: 10 px;
+                border: 1px $green solid;
+                padding: 5px;
+                margin-right: 8px;
+            }
+
+            p{
+                font-family: dosis, arial ,sans-serif;
+                font-size: 0.8em;
+                font-weight: lighter;
+                color: $grey;
+            }
+        }
 
         .container-products{
             display: flex;
@@ -97,7 +118,7 @@
                     z-index: 2;
                     position: absolute;
                     right: 15px;
-                    bottom: 13px;
+                    bottom: 15px;
                     font-family: arial;
                     font-size: 0.5em;
                     color: $white;
@@ -109,46 +130,88 @@
                     width: 235px;
                     background-color: $white;
                     opacity: 0.7;
-                    bottom: 8px;
+                    bottom: 6px;
                 }
             }
     
             .product-1{
                 background: url(../../dist/img/bonsai-ficus-ginseng.jpg);
+                background-size: cover;
+                background-position: center;
             }
     
             .product-2{
                 background: url(../../dist/img/maidenhair-fern.jpg);
+                background-size: cover;
+                background-position: center;
             }
     
             .product-3{
                 background: url(../../dist/img/maranta-leuconeura.jpg);
+                background-size: cover;
+                background-position: center;
             }
     
             .product-4{
                 background: url(../../dist/img/polyscias-scutellaria.jpg);
+                background-size: cover;
+                background-position: center;
             }
     
             .product-5{
                 background: url(../../dist/img/zantedeschia-calla.jpg);
+                background-size: cover;
+                background-position: center;
             }
     
             .product-6{
                 background: url(../../dist/img/sansevieria-trifasciata.jpg);
+                background-size: cover;
+                background-position: center;
             }
     
             .product-7{
                 background: url(../../dist/img/queen-aglaonema.jpg);
+                background-size: cover;
+                background-position: center;
             }
     
             .product-8{
                 background: url(../../dist/img/peperomia-caperata.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
+        .page{
+            font-family: dosis, arial ,sans-serif;
+            font-weight: lighter;
+            color: $grey;
+
+            ul{
+                display: flex;
+
+                li{
+                    margin-right: 7px;
+
+                    a{
+                        text-decoration: none;
+                        font-family: dosis, arial ,sans-serif;
+                        font-weight: lighter;
+                        color: $grey;
+
+                        &:hover{
+                            color: $green;
+                        }
+                    }
+                }
             }
         }
     }
 
     .menu{
-        width: 205px;
-        background-color: $blue;
+        width: 180px;
+        border-left: 1px $light-grey solid;
+        margin-left: 25px;
     }
 }

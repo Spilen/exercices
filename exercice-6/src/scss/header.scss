@@ -90,6 +90,10 @@ header{
             li{
                 margin: 0 20px;
 
+                .select{
+                    color: $green;
+                }
+
                 a{
                     text-decoration: none;
                     color: $black;

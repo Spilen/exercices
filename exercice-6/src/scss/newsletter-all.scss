@@ -1,18 +1,19 @@
 @import 'common/variables';
 
 .newsletter{
+    position: relative;
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     font-family: dosis, arial ,sans-serif;
     color: $black;
-    margin-bottom: 80px;
+    background-color: $light-grey;
+    padding: 40px 0;
+    margin-bottom: 30px;
 
     h3{
-        font-size: 1.8em;
-        text-align: center;
+        font-size: 1em;
         line-height: 1.4;
-        margin-bottom: 100px;
     }
 
     form{
@@ -22,17 +23,18 @@
             border: none;
             border-bottom: 1px $grey solid;
             font-family: dosis, arial ,sans-serif;
-            font-size: 1.8em;
+            font-size: 1.4em;
             text-align: center;
             color: $grey;
+            background-color: $light-grey;
             padding: 10px 20px;
-            margin-bottom: 50px;
         }
     }
 
     .subscribe{
-        padding: 20px 50px 10px;
+        padding: 14px 30px 8px;
         text-decoration: none;
+        font-size: 0.8em;
         color: $black;
         border: 1px $grey solid;
         border-radius: 25px;
