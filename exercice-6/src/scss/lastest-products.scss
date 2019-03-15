@@ -44,8 +44,47 @@
 
         .product{
             position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 235px;
             width: 235px;
+            overflow: hidden;
+
+            .container{
+                z-index: 1;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 705px;
+                width: 235px;
+                top: -235px;
+                transition: top .3s;
+
+                &:hover{
+                    top: 0;
+                }
+
+                .pop-up{
+                    position: relative;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    height: 30px;
+                    width: 180px;
+                    background-color: $white;
+                    border-radius: 50px;
+
+                    img{
+                        position: relative;
+                        height: 20px;
+                        width: 20px;
+                        right: inherit;
+                        bottom: inherit;
+                    }
+                }
+            }
 
             .name{
                 position: absolute;
