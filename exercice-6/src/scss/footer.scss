@@ -1,1 +1,67 @@
 @import 'common/variables';
+
+.ender{
+    position: relative;
+    width: 100%;
+    font-family: dosis, arial ,sans-serif;
+    font-weight: lighter;
+    color: $grey;
+    border-bottom: 1px $grey solid;
+    padding-bottom: 30px;
+
+    .copyright{
+        position: absolute;
+        left: 0;
+
+        a{
+            text-decoration: none;
+            color: $blue;
+
+            &:hover{
+                color: $green;
+            }
+        }
+    }
+
+    .language{
+        position: absolute;
+        right: 0;
+        display: flex;
+        text-decoration: none;
+        font-family: dosis, arial ,sans-serif;
+        font-weight: lighter;
+        color: $grey;
+
+        img{
+            height: 15px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.footer{
+    position: relative;
+    width: 100%;
+    padding: 50px 0;
+
+    ul{
+        position: absolute;
+        display: flex;
+        left: 0;
+
+        li{
+            margin-right: 30px;
+
+            a{
+                text-decoration: none;
+                font-family: dosis, arial ,sans-serif;
+                font-weight: lighter;
+                color: $black;
+
+                &:hover{
+                    border-bottom: 1px $black solid;
+                }
+            }
+        }
+    }
+}
