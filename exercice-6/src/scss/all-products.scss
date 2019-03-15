@@ -14,7 +14,7 @@
             margin-bottom: 20px;
             
             img{
-                height: 10 px;
+                height: 20px;
                 border: 1px $green solid;
                 padding: 5px;
                 margin-right: 8px;
@@ -211,7 +211,128 @@
 
     .menu{
         width: 180px;
-        border-left: 1px $light-grey solid;
-        margin-left: 25px;
+        border-left: 1px $grey solid;
+        margin-left: 15px;
+        padding: 10px 15px;
+
+        h2{
+            display: inline-block;
+            font-family: dosis, arial ,sans-serif;
+            font-weight: bold;
+            font-size: 0.8em;
+            color: $black;
+            border-bottom: 2px $green solid;
+            padding-bottom: 2px;
+            margin-bottom: 20px;
+        }
+
+        .categories{
+            font-family: dosis, arial ,sans-serif;
+            font-size: 0.8em;
+            color: $black;
+            border-bottom: 1px $light-grey solid;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+
+            input{
+                margin: 0 10px 8px 0;
+            }
+        }
+
+        .by-price{
+            font-family: arial;
+            font-size: 0.8em;
+            color: $green;
+            border-bottom: 1px $light-grey solid;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+
+            input{
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .filter{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                a{
+                    text-decoration: none;
+                    font-family: dosis, arial ,sans-serif;
+                    font-size: 0.8em;
+                    color: $black;
+                    padding: 8px 15px 5px;
+                    border: 1px $grey solid;
+                    border-radius: 25px;
+
+                    &:hover{
+                        color: $green;
+                    }
+                }
+            }
+        }
+
+        .by-color{
+            font-family: dosis, arial ,sans-serif;
+            font-size: 0.8em;
+            color: $black;
+            border-bottom: 1px $light-grey solid;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+
+            input{
+                margin: 0 10px 8px 0;
+            }
+        }
+
+        .brand{
+            font-family: dosis, arial ,sans-serif;
+            font-size: 0.8em;
+            color: $black;
+            border-bottom: 1px $light-grey solid;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+
+            input{
+                margin: 0 10px 8px 0;
+            }
+        }
+
+        .featured-product{
+            font-family: dosis, arial ,sans-serif;
+
+            a{
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                margin-bottom: 5px;
+
+                img{
+                    height: 50px;
+                    margin-right: 3px;
+                }
+
+                .text{
+
+                    .name{
+                        color: $black;
+                        font-size: 0.9em;
+                    }
+        
+                    .price{
+                        color: $green;
+                        font-family: arial;
+                        font-size: 0.7em;
+        
+                        em{
+                            color: $black;
+                            font-size: 0.6em;
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

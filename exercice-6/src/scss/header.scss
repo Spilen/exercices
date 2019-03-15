@@ -54,11 +54,11 @@ header{
                 form{
                     input{
                         height: 30px;
+                        font-family: dosis, arial ,sans-serif;
+                        color: $black;
                         font-size: 1em;
                         border: none;
                         border-radius: 50px;
-                        font-family: dosis, arial ,sans-serif;
-                        color: $black;
                     }
                 }
             }
