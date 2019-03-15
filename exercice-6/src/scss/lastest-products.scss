@@ -52,7 +52,7 @@
             overflow: hidden;
 
             .container{
-                z-index: 1;
+                z-index: 3;
                 position: relative;
                 display: flex;
                 justify-content: center;
@@ -92,8 +92,7 @@
                 position: absolute;
                 left: 20px;
                 bottom: 40px;
-                color: $white;
-                text-shadow: 0 0 1px $green;
+                color: $black;
             }
 
             .price{
@@ -107,10 +106,9 @@
 
                 em{
                     z-index: 1;
-                    color: $white;
+                    color: $black;
                     font-size: 0.6em;
                     text-decoration: line-through;
-                    text-shadow: 0 0 1px $green;
                 }
             }
 
