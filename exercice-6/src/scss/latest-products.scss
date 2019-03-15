@@ -1,1 +1,140 @@
 @import 'common/variables';
+
+.lastest-products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: dosis, arial ,sans-serif;
+    color: $black;
+    margin-bottom: 80px;
+
+    h2{
+        font-size: 2em;
+        font-weight: lighter;
+        margin-bottom: 10px;
+    }
+
+    ul{
+        display: flex;
+        margin-bottom: 30px;
+
+        li{
+            margin: 0 10px;
+
+            a{
+                text-decoration: none;
+                color: $black;
+                font-weight: lighter;
+                font-size: 0.8em;
+                transition: color .3s;
+
+                &:hover{
+                    color: $green;
+                }
+            }
+        }
+    }
+
+    .container-products{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        height: 510px;
+        margin-bottom: 10px;
+
+        .product{
+            position: relative;
+            height: 235px;
+            width: 235px;
+
+            .name{
+                position: absolute;
+                left: 20px;
+                bottom: 40px;
+                color: $white;
+                text-shadow: 0 0 1px $green;
+            }
+
+            .price{
+                position: absolute;
+                left: 20px;
+                bottom: 20px;
+                color: $green;
+                font-family: arial;
+                font-size: 1em;
+
+                em{
+                    color: $white;
+                    font-size: 0.6em;
+                    text-decoration: line-through;
+                    text-shadow: 0 0 1px $green;
+                }
+            }
+
+            img{
+                position: absolute;
+                right: 20px;
+                bottom: 20px;
+            }
+
+            .size{
+                position: absolute;
+                right: 26px;
+                bottom: 24px;
+                font-family: arial;
+                font-size: 0.6em;
+                color: $white;
+            }
+        }
+
+        .product-1{
+            background: url(../../dist/img/bonsai-ficus-ginseng.jpg);
+        }
+
+        .product-2{
+            background: url(../../dist/img/maidenhair-fern.jpg);
+        }
+
+        .product-3{
+            background: url(../../dist/img/maranta-leuconeura.jpg);
+        }
+
+        .product-4{
+            background: url(../../dist/img/polyscias-scutellaria.jpg);
+        }
+
+        .product-5{
+            background: url(../../dist/img/zantedeschia-calla.jpg);
+        }
+
+        .product-6{
+            background: url(../../dist/img/sansevieria-trifasciata.jpg);
+        }
+
+        .product-7{
+            background: url(../../dist/img/queen-aglaonema.jpg);
+        }
+
+        .product-8{
+            background: url(../../dist/img/peperomia-caperata.jpg);
+        }
+    }
+
+    .button{
+        padding: 15px 40px 8px;
+        text-decoration: none;
+        font-weight: lighter;
+        color: $white;
+        border: 1px $white solid;
+        background-color: $green;
+        border-radius: 25px;
+        font-size: 0.8em;
+        box-shadow: 0 5px 10px $grey;
+
+        &:hover{
+            color: $green;
+            background-color: $white;
+            border: 1px $green solid;
+        }
+    }
+}
