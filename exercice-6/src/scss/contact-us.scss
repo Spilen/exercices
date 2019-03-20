@@ -1,0 +1,118 @@
+@import 'common/variables';
+
+.contact{
+    font-family: dosis, arial ,sans-serif;
+    color: $black;
+    padding: 0 120px;
+    
+    .contact-us{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 100px;
+
+        .accueil{
+
+            img{
+                height: 400px;
+            }
+        }
+
+        .contact-information{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+            li{
+                display: flex;
+                align-items: center;
+
+                img{
+                    margin-right: 20px;
+                }
+
+                .text{
+
+                    h2{
+                        font-size: 1.2em;
+                        font-weight: bolder;
+                        margin-bottom: 20px;
+                    }
+
+                    .data{
+                        display: flex;
+                        font-size: 0.8em;
+                        line-height: 1.5;
+
+                        .country{
+                            color: $grey;
+                            margin-right: 20px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    .send-message{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        .personnal-information{
+            display: flex;
+            flex-direction: column;
+            margin-right: 50px;
+
+            h3{
+                font-size: 0.8em;
+                margin-bottom: 5px;
+            }
+
+            .name{
+                display: flex;
+                margin-bottom: 20px;
+
+                .first-name{
+                    margin-right: 10px;
+                }
+            }
+
+            .tel-phone{
+                display: flex;
+                margin-bottom: 20px;
+
+                .tel{
+                    margin-right: 10px;
+                }
+            }
+
+            .your-message{
+                margin-bottom: 30px;
+
+                textarea{
+                    height: 80px;
+                    width: 100%;
+                    resize: none;
+                }
+            }
+
+            .button{
+                padding: 10px 40px 6px;
+                text-decoration: none;
+                font-weight: lighter;
+                color: $white;
+                background-color: $green;
+                border-radius: 25px;
+                font-size: 0.8em;
+        
+                &:hover{
+                    padding: 9px 39px 5px;
+                    color: $green;
+                    background-color: $white;
+                    border: 1px $green solid;
+                }
+            }
+        }
+    }
+}
