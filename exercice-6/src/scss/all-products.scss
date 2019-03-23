@@ -1,4 +1,5 @@
 @import 'common/variables';
+@import 'common/mixins';
 
 .all-products{
     display: flex;
@@ -39,147 +40,99 @@
             .product{
                 position: relative;
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 height: 180px;
                 width: 180px;
                 overflow: hidden;
     
-                .container{
-                    z-index: 3;
-                    position: relative;
+                .img-product {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+                .band{
                     display: flex;
+                    flex-direction: column;
                     justify-content: center;
-                    align-items: center;
-                    height: 460px;
-                    width: 180px;
-                    top: -180px;
-                    transition: top .5s;
+                    margin-top: -80px;
+                    height: 50px;
+                    width: 100%;
+                    background-color: rgba($white, 0.7);
     
-                    &:hover{
-                        top: -45px;
-                    }
+                    .name{
+                        text-decoration: none;
+                        color: $black;
+                        margin: 0 0 5px 20px;
     
-                    .pop-up{
-                        position: relative;
-                        display: flex;
-                        justify-content: space-around;
-                        align-items: center;
-                        height: 30px;
-                        width: 140px;
-                        background-color: $white;
-                        opacity: 0.9;
-                        border-radius: 50px;
-    
-                        img{
-                            position: relative;
-                            height: 20px;
-                            width: 20px;
-                            right: inherit;
-                            bottom: inherit;
+                        &:after{
+                            content:'';
+                            z-index: 2;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            opacity: 0;
                         }
                     }
-                }
-    
-                .name{
-                    z-index: 1;
-                    position: absolute;
-                    left: 10px;
-                    bottom: 30px;
-                    color: $black;
-                }
-    
-                .price{
-                    z-index: 1;
-                    position: absolute;
-                    left: 10px;
-                    bottom: 15px;
-                    color: $green;
-                    font-family: arial;
-                    font-size: 1em;
-    
-                    em{
-                        z-index: 1;
-                        color: $black;
-                        font-size: 0.6em;
-                        text-decoration: line-through;
+        
+                    .price{
+                        color: $green;
+                        font-family: arial;
+                        font-size: 1em;
+                        margin-left: 20px;
+        
+                        em{
+                            color: $black;
+                            font-size: 0.6em;
+                            text-decoration: line-through;
+                        }
+                    }
+        
+                    img{
+                        position: absolute;
+                        right: 10px;
+                        bottom: 20px;
+                        height: 15px;
+                    }
+        
+                    .size{
+                        position: absolute;
+                        right: 16px;
+                        bottom: 24px;
+                        font-family: arial;
+                        font-size: 0.5em;
+                        color: $white;
                     }
                 }
     
-                img{
-                    z-index: 1;
+                .pop-up{
+                    z-index: 3;
                     position: absolute;
-                    height: 15px;
-                    right: 10px;
-                    bottom: 10px;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    background-color: rgba($white, 0.9);
+                    border-radius: 50px;
+                    width: 140px;
+                    padding: 5px;
+                    top: 50px;
+                    transform: translate(0, -90px);
+                    transition: opacity .4s, transform .4s;
+                    box-shadow: 0 5px 10px $black;
+                    opacity: 0;
+
+                    img{
+                        height: 15px;
+                    }
                 }
     
-                .size{
-                    z-index: 2;
-                    position: absolute;
-                    right: 15px;
-                    bottom: 15px;
-                    font-family: arial;
-                    font-size: 0.5em;
-                    color: $white;
+                &:hover .pop-up{
+                    transform: translate(0, 0);
+                    opacity: 1;
                 }
-    
-                .background{
-                    position: absolute;
-                    height: 45px;
-                    width: 235px;
-                    background-color: $white;
-                    opacity: 0.7;
-                    bottom: 6px;
-                }
-            }
-    
-            .product-1{
-                background: url(../../dist/img/bonsai-ficus-ginseng.jpg);
-                background-size: cover;
-                background-position: center;
-            }
-    
-            .product-2{
-                background: url(../../dist/img/maidenhair-fern.jpg);
-                background-size: cover;
-                background-position: center;
-            }
-    
-            .product-3{
-                background: url(../../dist/img/maranta-leuconeura.jpg);
-                background-size: cover;
-                background-position: center;
-            }
-    
-            .product-4{
-                background: url(../../dist/img/polyscias-scutellaria.jpg);
-                background-size: cover;
-                background-position: center;
-            }
-    
-            .product-5{
-                background: url(../../dist/img/zantedeschia-calla.jpg);
-                background-size: cover;
-                background-position: center;
-            }
-    
-            .product-6{
-                background: url(../../dist/img/sansevieria-trifasciata.jpg);
-                background-size: cover;
-                background-position: center;
-            }
-    
-            .product-7{
-                background: url(../../dist/img/queen-aglaonema.jpg);
-                background-size: cover;
-                background-position: center;
-            }
-    
-            .product-8{
-                background: url(../../dist/img/peperomia-caperata.jpg);
-                background-size: cover;
-                background-position: center;
             }
         }
 
@@ -206,6 +159,7 @@
         }
     }
 
+// MENU
     .menu{
         width: 180px;
         border-left: 1px $grey solid;
@@ -223,7 +177,7 @@
             margin-bottom: 20px;
         }
 
-        .categories{
+        ul{
             font-family: dosis, arial ,sans-serif;
             font-size: 0.8em;
             color: $black;
@@ -231,8 +185,45 @@
             padding-bottom: 30px;
             margin-bottom: 30px;
 
-            input{
-                margin: 0 10px 8px 0;
+            li:not(:last-child){
+                margin-bottom: 7px;
+            }
+
+            li{
+                position: relative;
+                padding-left: 20px;
+
+                input{
+                    display: none;
+                }
+
+                label:before{
+                    content:'';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 10px;
+                    width: 10px;
+                    border: 1px $green solid;
+                    border-radius: 2px;
+                }
+
+                input + label:after{
+                    content:'';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 12px;
+                    width: 12px;
+                    background-color: $green;
+                    border-radius: 2px;
+                    opacity: 0;
+                    transition: opacity .3s;
+                }
+
+                input:checked + label:after{
+                    opacity: 1;
+                }
             }
         }
 
@@ -255,44 +246,14 @@
                 align-items: center;
 
                 a{
-                    text-decoration: none;
-                    font-family: dosis, arial ,sans-serif;
-                    font-size: 0.8em;
-                    color: $black;
-                    padding: 8px 15px 5px;
-                    border: 1px $grey solid;
-                    border-radius: 25px;
+                    @include button($black, $white, $grey);
+                    height: 20px;
+                    padding: 0 15px;
 
                     &:hover{
                         color: $green;
                     }
                 }
-            }
-        }
-
-        .by-color{
-            font-family: dosis, arial ,sans-serif;
-            font-size: 0.8em;
-            color: $black;
-            border-bottom: 1px $light-grey solid;
-            padding-bottom: 30px;
-            margin-bottom: 30px;
-
-            input{
-                margin: 0 10px 8px 0;
-            }
-        }
-
-        .brand{
-            font-family: dosis, arial ,sans-serif;
-            font-size: 0.8em;
-            color: $black;
-            border-bottom: 1px $light-grey solid;
-            padding-bottom: 30px;
-            margin-bottom: 30px;
-
-            input{
-                margin: 0 10px 8px 0;
             }
         }
 

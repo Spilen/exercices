@@ -1,4 +1,5 @@
 @import 'common/variables';
+@import 'common/mixins';
 
 .lastest-products{
     display: flex;
@@ -45,143 +46,100 @@
         .product{
             position: relative;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 235px;
             width: 235px;
             overflow: hidden;
 
-            .container{
-                z-index: 3;
-                position: relative;
+            .img-product {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            .band{
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
-                align-items: center;
-                height: 705px;
-                width: 235px;
-                top: -235px;
-                transition: top .5s;
+                margin-top: -80px;
+                height: 50px;
+                width: 100%;
+                background-color: rgba($white, 0.7);
 
-                &:hover{
-                    top: -60px;
-                }
+                .name{
+                    text-decoration: none;
+                    color: $black;
+                    margin: 0 0 5px 20px;
 
-                .pop-up{
-                    position: relative;
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: center;
-                    height: 30px;
-                    width: 180px;
-                    background-color: $white;
-                    opacity: 0.9;
-                    border-radius: 50px;
-
-                    img{
-                        position: relative;
-                        height: 20px;
-                        width: 20px;
-                        right: inherit;
-                        bottom: inherit;
+                    &:after{
+                        content:'';
+                        z-index: 2;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
                     }
                 }
-            }
-
-            .name{
-                z-index: 1;
-                position: absolute;
-                left: 20px;
-                bottom: 40px;
-                color: $black;
-            }
-
-            .price{
-                z-index: 1;
-                position: absolute;
-                left: 20px;
-                bottom: 20px;
-                color: $green;
-                font-family: arial;
-                font-size: 1em;
-
-                em{
-                    z-index: 1;
-                    color: $black;
+    
+                .price{
+                    color: $green;
+                    font-family: arial;
+                    font-size: 1em;
+                    margin-left: 20px;
+    
+                    em{
+                        color: $black;
+                        font-size: 0.6em;
+                        text-decoration: line-through;
+                    }
+                }
+    
+                img{
+                    position: absolute;
+                    right: 10px;
+                    bottom: 20px;
+                }
+    
+                .size{
+                    position: absolute;
+                    right: 16px;
+                    bottom: 24px;
+                    font-family: arial;
                     font-size: 0.6em;
-                    text-decoration: line-through;
+                    color: $white;
                 }
             }
 
-            img{
-                z-index: 1;
+            .pop-up{
+                z-index: 3;
                 position: absolute;
-                right: 20px;
-                bottom: 20px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                background-color: rgba($white, 0.9);
+                border-radius: 50px;
+                width: 200px;
+                padding: 5px;
+                top: 80px;
+                transform: translate(0, -90px);
+                transition: opacity .4s, transform .4s;
+                box-shadow: 0 5px 10px $black;
+                opacity: 0;
             }
 
-            .size{
-                z-index: 2;
-                position: absolute;
-                right: 26px;
-                bottom: 24px;
-                font-family: arial;
-                font-size: 0.6em;
-                color: $white;
+            &:hover .pop-up{
+                transform: translate(0, 0);
+                opacity: 1;
             }
-
-            .background{
-                position: absolute;
-                height: 45px;
-                width: 235px;
-                background-color: $white;
-                opacity: 0.7;
-                bottom: 15px;
-            }
-        }
-
-        .product-1{
-            background: url(../../dist/img/bonsai-ficus-ginseng.jpg);
-        }
-
-        .product-2{
-            background: url(../../dist/img/maidenhair-fern.jpg);
-        }
-
-        .product-3{
-            background: url(../../dist/img/maranta-leuconeura.jpg);
-        }
-
-        .product-4{
-            background: url(../../dist/img/polyscias-scutellaria.jpg);
-        }
-
-        .product-5{
-            background: url(../../dist/img/zantedeschia-calla.jpg);
-        }
-
-        .product-6{
-            background: url(../../dist/img/sansevieria-trifasciata.jpg);
-        }
-
-        .product-7{
-            background: url(../../dist/img/queen-aglaonema.jpg);
-        }
-
-        .product-8{
-            background: url(../../dist/img/peperomia-caperata.jpg);
         }
     }
 
     .button{
-        padding: 15px 40px 8px;
-        text-decoration: none;
-        font-weight: lighter;
-        color: $white;
-        border: 1px $white solid;
-        background-color: $green;
-        border-radius: 25px;
-        font-size: 0.8em;
-        box-shadow: 0 5px 10px $grey;
+
+        @include button($white, $green, $white);
 
         &:hover{
             color: $green;

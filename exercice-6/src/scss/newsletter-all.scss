@@ -1,4 +1,5 @@
 @import 'common/variables';
+@import 'common/mixins';
 
 .newsletter{
     position: relative;
@@ -32,12 +33,7 @@
     }
 
     .subscribe{
-        padding: 14px 30px 8px;
-        text-decoration: none;
-        font-size: 0.8em;
-        color: $black;
-        border: 1px $grey solid;
-        border-radius: 25px;
+        @include button($black, $light-grey, $grey);
 
         &:hover{
             color: $green;
