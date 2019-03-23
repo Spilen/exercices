@@ -1,12 +1,12 @@
-@import 'common/variables';
-@import 'common/mixins';
+@import '../common/variables';
+@import '../common/mixins';
 
 .bann{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url(../../dist/img/plantes.jpg) no-repeat;
+    background: url(../img/plantes.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     height: calc(100vh/1.3);

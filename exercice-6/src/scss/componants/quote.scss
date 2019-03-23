@@ -1,4 +1,4 @@
-@import 'common/variables';
+@import '../common/variables';
 
 .quote{
     position: relative;
@@ -15,7 +15,7 @@
     &:before{
         content: '';
         position: absolute;
-        background: url(../../dist/img/arrow-left-grey.png) no-repeat;
+        background: url(../img/arrow-left-grey.png) no-repeat;
         height: 40px;
         width: 30px;
         left: 30px;
@@ -25,7 +25,7 @@
     &:after{
         content: '';
         position: absolute;
-        background: url(../../dist/img/arrow-right-white.png) no-repeat;
+        background: url(../img/arrow-right-white.png) no-repeat;
         height: 40px;
         width: 30px;
         right: 30px;
@@ -42,7 +42,7 @@
         &:before{
             content: '';
             position: absolute;
-            background: url(../../dist/img/quote.png) no-repeat;
+            background: url(../img/quote.png) no-repeat;
             height: 20px;
             width: 20px;
             left: -40px;

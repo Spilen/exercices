@@ -1,9 +1,120 @@
 @import 'common/variables';
 @import 'common/reset';
+@import 'common/mixins';
 
-@import 'main';
-@import 'header';
-@import 'banner-contact';
-@import 'contact-us';
-@import 'newsletter-all';
-@import 'footer';
+@import 'componants/main';
+@import 'componants/header';
+@import 'componants/banner-contact';
+@import 'componants/newsletter-all';
+@import 'componants/footer';
+
+.contact{
+    font-family: dosis, arial ,sans-serif;
+    color: $black;
+    padding: 0 120px;
+    
+    .contact-us{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 80px;
+
+        .accueil{
+
+            img{
+                height: 400px;
+            }
+        }
+
+        .contact-information{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+            li{
+                display: flex;
+                align-items: center;
+
+                img{
+                    margin-right: 20px;
+                }
+
+                .text{
+
+                    h2{
+                        font-size: 1.2em;
+                        font-weight: bolder;
+                        margin-bottom: 20px;
+                    }
+
+                    ul{
+                        font-size: 0.8em;
+                        line-height: 1.5;
+
+                        strong{
+                            color: $grey;
+                            margin-right: 20px;
+                            width: 60px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    .send-message{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        .personnal-information{
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: 50px;
+            font-size: 0.8em;
+            margin-bottom: 5px;
+
+            li{
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 15px;
+                padding: 0 5px;
+                width: 50%;
+                box-sizing: border-box;
+
+                &:nth-child(5){
+                  width: 100%;
+                }
+
+                input{
+                    margin-top: 10px;
+                }
+
+                textarea{
+                  margin-top: 10px;
+                  height: 80px;
+                  width: 100%;
+                  resize: none;
+                }
+            }
+
+            .submit{
+              width: initial;
+
+              .button{
+                @include button($white, $green, $green);
+        
+                &:hover{
+                    color: $green;
+                    background-color: $white;
+                    border: 1px $green solid;
+                }
+              }
+            }
+        }
+
+        img{
+          width: 700px;
+        }
+    }
+}

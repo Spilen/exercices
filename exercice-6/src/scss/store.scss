@@ -1,9 +1,313 @@
 @import 'common/variables';
 @import 'common/reset';
+@import 'common/mixins';
 
-@import 'main';
-@import 'header';
-@import 'banner-store';
-@import 'all-products';
-@import 'newsletter-all';
-@import 'footer';
+@import 'componants/main';
+@import 'componants/header';
+@import 'componants/banner-store';
+@import 'componants/newsletter-all';
+@import 'componants/footer';
+
+.all-products{
+    display: flex;
+    margin-bottom: 50px;
+
+    .products{
+        display: flex;
+        flex-direction: column;
+
+        .preferences{
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            
+            img{
+                height: 20px;
+                border: 1px $green solid;
+                padding: 5px;
+                margin-right: 8px;
+            }
+
+            p{
+                font-family: dosis, arial ,sans-serif;
+                font-size: 0.8em;
+                font-weight: lighter;
+                color: $grey;
+            }
+        }
+
+        .container-products{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            height: 1020px;
+            max-width: 795px;
+            margin-bottom: 10px;
+    
+            .product{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 180px;
+                width: 180px;
+                overflow: hidden;
+    
+                .img-product {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+                .band{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-top: -80px;
+                    height: 50px;
+                    width: 100%;
+                    background-color: rgba($white, 0.7);
+    
+                    .name{
+                        text-decoration: none;
+                        color: $black;
+                        margin: 0 0 5px 20px;
+    
+                        &:after{
+                            content:'';
+                            z-index: 2;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            opacity: 0;
+                        }
+                    }
+        
+                    .price{
+                        color: $green;
+                        font-family: arial;
+                        font-size: 1em;
+                        margin-left: 20px;
+        
+                        em{
+                            color: $black;
+                            font-size: 0.6em;
+                            text-decoration: line-through;
+                        }
+                    }
+        
+                    img{
+                        position: absolute;
+                        right: 10px;
+                        bottom: 20px;
+                        height: 15px;
+                    }
+        
+                    .size{
+                        position: absolute;
+                        right: 16px;
+                        bottom: 24px;
+                        font-family: arial;
+                        font-size: 0.5em;
+                        color: $white;
+                    }
+                }
+    
+                .pop-up{
+                    z-index: 3;
+                    position: absolute;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    background-color: rgba($white, 0.9);
+                    border-radius: 50px;
+                    width: 140px;
+                    padding: 5px;
+                    top: 50px;
+                    transform: translate(0, -90px);
+                    transition: opacity .4s, transform .4s;
+                    box-shadow: 0 5px 10px $black;
+                    opacity: 0;
+
+                    img{
+                        height: 15px;
+                    }
+                }
+    
+                &:hover .pop-up{
+                    transform: translate(0, 0);
+                    opacity: 1;
+                }
+            }
+        }
+
+        .page{
+            display: flex;
+            font-family: dosis, arial ,sans-serif;
+            font-weight: lighter;
+            color: $grey;
+
+            li{
+                margin-right: 7px;
+
+                a{
+                    text-decoration: none;
+                    font-family: dosis, arial ,sans-serif;
+                    font-weight: lighter;
+                    color: $grey;
+
+                    &:hover{
+                        color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+// MENU
+    .menu{
+        width: 180px;
+        border-left: 1px $grey solid;
+        margin-left: 15px;
+        padding: 10px 15px;
+
+        div:not(:last-child){
+            border-bottom: 1px $light-grey solid;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+        }
+
+        h2{
+            display: inline-block;
+            font-family: dosis, arial ,sans-serif;
+            font-weight: bold;
+            font-size: 0.8em;
+            color: $black;
+            border-bottom: 2px $green solid;
+            padding-bottom: 2px;
+            margin-bottom: 20px;
+        }
+
+        ul{
+            font-family: dosis, arial ,sans-serif;
+            font-size: 0.8em;
+            color: $black;
+
+            li:not(:last-child){
+                margin-bottom: 7px;
+            }
+
+            li{
+                position: relative;
+                padding-left: 20px;
+
+                input{
+                    display: none;
+                }
+
+                label:before{
+                    content:'';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 10px;
+                    width: 10px;
+                    border: 1px $green solid;
+                    border-radius: 2px;
+                }
+
+                input + label:after{
+                    content:'';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 12px;
+                    width: 12px;
+                    background-color: $green;
+                    border-radius: 2px;
+                    opacity: 0;
+                    transition: opacity .3s;
+                }
+
+                input:checked + label:after{
+                    opacity: 1;
+                }
+            }
+        }
+
+        .by-price{
+            justify-content: space-between;
+            font-family: arial;
+            font-size: 0.8em;
+            color: $green;
+            border-bottom: 1px $light-grey solid;
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+
+            form{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+
+                input{
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+    
+                a{
+                    @include button($black, $white, $grey);
+                    height: 20px;
+                    padding: 0 15px;
+    
+                    &:hover{
+                        color: $green;
+                    }
+                }
+            }
+        }
+
+        .featured-product{
+            font-family: dosis, arial ,sans-serif;
+
+            li{
+                padding-left: 0;
+            }
+
+            a{
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                margin-bottom: 5px;
+
+                img{
+                    height: 50px;
+                    margin-right: 8px;
+                }
+
+                .text{
+
+                    .name{
+                        color: $black;
+                        font-size: 1em;
+                    }
+        
+                    .price{
+                        color: $green;
+                        font-family: arial;
+                        font-size: 0.8em;
+                        line-height: 1.2;
+        
+                        em{
+                            color: $black;
+                            font-size: 0.7em;
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
