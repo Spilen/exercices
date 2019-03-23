@@ -98,19 +98,35 @@
                     }
                 }
     
-                img{
+                .green-arrow{
                     position: absolute;
-                    right: 10px;
-                    bottom: 20px;
-                }
-    
-                .size{
-                    position: absolute;
-                    right: 16px;
-                    bottom: 24px;
-                    font-family: arial;
-                    font-size: 0.6em;
-                    color: $white;
+                    display: flex;
+                    right: 5px;
+                    bottom: 5px;
+            
+                    .triangle{
+                        display : inline-block;
+                        height : 0;
+                        width : 0;
+                        border-top : 10px solid transparent;
+                        border-right : 12px solid $green;
+                        border-bottom : 10px solid transparent;
+                    }
+
+                    .rectangle{
+                        height : 20px;
+                        width : 30px;
+                        background-color: $green;
+                    }
+
+                    .size{
+                        position: absolute;
+                        right: 4px;
+                        bottom: 5px;
+                        font-family: arial;
+                        font-size: 0.6em;
+                        color: $white;
+                    }
                 }
             }
 

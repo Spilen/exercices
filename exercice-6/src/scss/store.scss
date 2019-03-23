@@ -98,20 +98,35 @@
                         }
                     }
         
-                    img{
+                    .green-arrow{
                         position: absolute;
-                        right: 10px;
-                        bottom: 8px;
-                        height: 15px;
-                    }
-        
-                    .size{
-                        position: absolute;
-                        right: 15px;
-                        bottom: 12px;
-                        font-family: arial;
-                        font-size: 0.5em;
-                        color: $white;
+                        display: flex;
+                        right: 5px;
+                        bottom: 5px;
+                
+                        .triangle{
+                            display : inline-block;
+                            height : 0;
+                            width : 0;
+                            border-top : 8px solid transparent;
+                            border-right : 10px solid $green;
+                            border-bottom : 7px solid transparent;
+                        }
+
+                        .rectangle{
+                            height : 15px;
+                            width : 25px;
+                            background-color: $green;
+                        }
+
+                        .size{
+                            position: absolute;
+                            right: 4px;
+                            bottom: 3px;
+                            font-family: arial;
+                            font-size: 0.5em;
+                            color: $white;
+                        }
                     }
                 }
     
@@ -215,7 +230,7 @@
                     height: 10px;
                     width: 10px;
                     border: 1px $green solid;
-                    border-radius: 2px;
+                    border-radius: 3px;
                 }
 
                 input + label:after{
@@ -226,7 +241,7 @@
                     height: 12px;
                     width: 12px;
                     background-color: $green;
-                    border-radius: 2px;
+                    border-radius: 3px;
                     opacity: 0;
                     transition: opacity .3s;
                 }
@@ -238,13 +253,6 @@
         }
 
         .by-price{
-            justify-content: space-between;
-            font-family: arial;
-            font-size: 0.8em;
-            color: $green;
-            border-bottom: 1px $light-grey solid;
-            padding-bottom: 30px;
-            margin-bottom: 30px;
 
             form{
                 display: flex;
@@ -256,9 +264,15 @@
                     width: 100%;
                     margin-bottom: 10px;
                 }
+
+                label{
+                    font-family: arial;
+                    color: $green;
+                }
     
                 a{
                     @include button($black, $white, $grey);
+                    font-family: dosis, arial ,sans-serif;
                     height: 20px;
                     padding: 0 15px;
     
@@ -270,7 +284,6 @@
         }
 
         .featured-product{
-            font-family: dosis, arial ,sans-serif;
 
             li{
                 padding-left: 0;
@@ -292,6 +305,7 @@
                     .name{
                         color: $black;
                         font-size: 1em;
+                        margin-bottom: 3px;
                     }
         
                     .price{

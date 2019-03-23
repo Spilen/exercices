@@ -195,7 +195,7 @@
                     height: 10px;
                     width: 10px;
                     border: 1px $green solid;
-                    border-radius: 2px;
+                    border-radius: 3px;
                 }
 
                 input + label:after{
@@ -206,7 +206,7 @@
                     height: 12px;
                     width: 12px;
                     background-color: $green;
-                    border-radius: 2px;
+                    border-radius: 3px;
                     opacity: 0;
                     transition: opacity .3s;
                 }
@@ -218,13 +218,6 @@
         }
 
         .by-price{
-            justify-content: space-between;
-            font-family: arial;
-            font-size: 0.8em;
-            color: $green;
-            border-bottom: 1px $light-grey solid;
-            padding-bottom: 30px;
-            margin-bottom: 30px;
 
             form{
                 display: flex;
@@ -237,11 +230,17 @@
                     margin-bottom: 10px;
                 }
 
+                label{
+                    font-family: arial;
+                    color: $green;
+                }
+    
                 a{
                     @include button($black, $white, $grey);
+                    font-family: dosis, arial ,sans-serif;
                     height: 20px;
                     padding: 0 15px;
-
+    
                     &:hover{
                         color: $green;
                     }
@@ -250,7 +249,6 @@
         }
 
         .featured-product{
-            font-family: dosis, arial ,sans-serif;
 
             li{
                 padding-left: 0;
@@ -272,6 +270,7 @@
                     .name{
                         color: $black;
                         font-size: 1em;
+                        margin-bottom: 3px;
                     }
         
                     .price{
