@@ -37,11 +37,10 @@
     }
 
     .container-products{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        height: 510px;
-        margin-bottom: 10px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 15px;
+        margin-bottom: 20px;
 
         .product{
             position: relative;
@@ -59,13 +58,15 @@
                 height: 100%;
             }
             .band{
+                position: absolute;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                margin-top: -80px;
                 height: 50px;
                 width: 100%;
                 background-color: rgba($white, 0.7);
+                bottom: 20px;
+                left: 0;
 
                 .name{
                     text-decoration: none;
