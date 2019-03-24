@@ -59,12 +59,12 @@ gulp.task('opti', function () {
 });
 
 // SVG TASK
-// gulp.task('sprites', function () {
-//     return gulp.src('./src/assets/src/img/icons/*.svg')
-//         .pipe(svgSprite({mode: "symbols"}))
-//         .pipe(gulp.dest(IMG_FILES_DIR))
-//     del([IMG_FILES_DIR + '/icons/'], cb)
-// });
+gulp.task('sprites', function () {
+    return gulp.src('./src/img/icons/*.svg')
+        .pipe(svgSprite({mode: "symbols"}))
+        .pipe(gulp.dest(IMG_FILES_DIR))
+    del([IMG_FILES_DIR + '/icons/'], cb)
+});
 
 // -----------------------------------------------------------------------------
 // Final
@@ -77,6 +77,6 @@ gulp.task('watch', function(){
 });
 
 // BUILD TASK
-gulp.task('build', ['css','watch','opti'], function (){
+gulp.task('build', ['css','sprites','watch','opti'], function (){
     console.log('Building files');
 });

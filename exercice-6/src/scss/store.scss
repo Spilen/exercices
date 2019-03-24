@@ -129,7 +129,7 @@
                         }
                     }
                 }
-    
+
                 .pop-up{
                     z-index: 3;
                     position: absolute;
@@ -145,9 +145,45 @@
                     transition: opacity .4s, transform .4s;
                     box-shadow: 0 5px 10px $black;
                     opacity: 0;
-
-                    img{
+    
+                    svg{
+                        display: block;
                         height: 15px;
+                        width: 15px;
+                    }
+    
+                    .icon-search{
+                        color: $black;
+    
+                        &:hover{
+                            color: $green;
+                        }
+                    }
+    
+                    .icon-heart{
+    
+                        input{
+                            display: none;
+                        }
+    
+                        input + label .heart-form{
+                            position: absolute;
+                            opacity: 0;
+                            color: $red;
+                            transition: opacity .3s;
+                        }
+    
+                        input:checked + label .heart-form{
+                            opacity: 1;
+                        }
+    
+                        label{
+                            cursor: pointer;
+    
+                            &:hover .heart-border{
+                                color: $red;
+                            }
+                        }
                     }
                 }
     
@@ -156,7 +192,7 @@
                     opacity: 1;
                 }
             }
-        }
+        }    
 
         .page{
             display: flex;

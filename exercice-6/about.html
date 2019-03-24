@@ -10,32 +10,41 @@
 
     <body>
 
-        <!-- HEADER -->
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute;display:none;">
+            <symbol id="search" viewBox="0 0 23 24">
+                <path d="M22.871 23.233a.455.455 0 0 1-.325.767.446.446 0 0 1-.325-.14l-6.717-7.019a9.4 9.4 0 0 1-6.035 2.19c-5.222 0-9.47-4.269-9.47-9.516S4.247 0 9.469 0c5.221 0 9.47 4.268 9.47 9.515a9.508 9.508 0 0 1-2.769 6.715l6.701 7.003zM9.469 18.124c4.724 0 8.567-3.862 8.567-8.609S14.193.906 9.47.906C4.744.906.9 4.768.9 9.516c0 4.746 3.843 8.608 8.568 8.608z" fill="currentColor" fill-rule="evenodd"></path>
+            </symbol>        
+        </svg>
+
+
+<!-- HEADER -->
         <header>
-                
+
             <!-- topbar -->
             <div class="topbar">
                 <div class="phone">
                     <img src="dist/img/phone.png" alt="phone"/>
                     <p>Call us 24/7</br><span class="phone-number">070-7782-9137</span></p>
                 </div>
-                <a class="logo" href="exercice-6.html"><img src="dist/img/logo.png" alt="logo"/></a>
+                <a class="logo" href="#"><img src="dist/img/logo.png" alt="logo"></a>
                 <div class="cart">
-                    <div class="search">
-                        <form method="post">
-                            <input type="search" placeholder="Enter your search"/>
-                        </form>
-                        <a href="#"><img src="dist/img/loupe.png" alt="search"/></a>
-                    </div>
+                    <form class="search" method="post">
+                        <input type="search" placeholder="Enter your search"/>
+                        <a href="#">
+                            <svg>
+                                <use href="#search"></use>
+                            </svg>
+                        </a>
+                    </form>
                     <a class="cart-button" href="#">Cart</a>
                 </div>
             </div>
-                
+
             <!-- navbar -->
             <nav>
                 <ul>
                     <li><a href="store.html">Store</a></li>
-                    <li><a class="select" href="about.html">About</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="news.html">News</a></li>
                     <li><a href="pages.html">Pages</a></li>
                     <li><a href="contact.html">Contact</a></li>

@@ -9,32 +9,46 @@
     </head>
 
     <body>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute;display:none;">
+            <symbol id="heart-border" viewBox="0 0 20 18">
+                <path d="M18.38 1.67a5.678 5.678 0 0 1 1.616 4.01 5.704 5.704 0 0 1-1.624 4.01l-7.976 8.14a.566.566 0 0 1-.402.168.567.567 0 0 1-.403-.174L1.63 9.673A5.696 5.696 0 0 1 .005 5.667a5.683 5.683 0 0 1 1.62-4.01A5.432 5.432 0 0 1 5.53-.004c1.479 0 2.873.596 3.92 1.668l.555.569.547-.56A5.437 5.437 0 0 1 14.469.01c1.48 0 2.865.586 3.912 1.658zm-.813 7.192a4.502 4.502 0 0 0 1.284-3.182 4.52 4.52 0 0 0-1.284-3.182 4.322 4.322 0 0 0-3.102-1.315 4.32 4.32 0 0 0-3.107 1.32l-.95.972a.56.56 0 0 1-.809 0l-.957-.98a4.321 4.321 0 0 0-6.21-.006 4.504 4.504 0 0 0-1.284 3.178c0 1.202.458 2.33 1.289 3.182l7.557 7.739 7.573-7.726z" fill="currentColor" fill-rule="evenodd"></path>
+            </symbol>
+            <symbol id="heart-form" viewBox="0 0 20 18">
+                <path d="M18.38 1.67A5.424 5.424 0 0 0 14.47.01c-1.48 0-2.87.59-3.916 1.662l-.547.56-.555-.568a5.449 5.449 0 0 0-3.92-1.667 5.43 5.43 0 0 0-3.908 1.658 5.683 5.683 0 0 0-1.619 4.01c0 1.516.58 2.935 1.628 4.007l7.959 8.151c.11.114.258.174.403.174a.566.566 0 0 0 .402-.169l7.976-8.138a5.704 5.704 0 0 0 1.624-4.01 5.678 5.678 0 0 0-1.615-4.012z" fill="currentColor" fill-rule="evenodd"></path>
+            </symbol>
+            <symbol id="search" viewBox="0 0 23 24">
+                <path d="M22.871 23.233a.455.455 0 0 1-.325.767.446.446 0 0 1-.325-.14l-6.717-7.019a9.4 9.4 0 0 1-6.035 2.19c-5.222 0-9.47-4.269-9.47-9.516S4.247 0 9.469 0c5.221 0 9.47 4.268 9.47 9.515a9.508 9.508 0 0 1-2.769 6.715l6.701 7.003zM9.469 18.124c4.724 0 8.567-3.862 8.567-8.609S14.193.906 9.47.906C4.744.906.9 4.768.9 9.516c0 4.746 3.843 8.608 8.568 8.608z" fill="currentColor" fill-rule="evenodd"></path>
+            </symbol>        
+        </svg>
 
-        <!-- HEADER -->
+
+<!-- HEADER -->
         <header>
-                
+
             <!-- topbar -->
             <div class="topbar">
                 <div class="phone">
                     <img src="dist/img/phone.png" alt="phone"/>
                     <p>Call us 24/7</br><span class="phone-number">070-7782-9137</span></p>
                 </div>
-                <a class="logo" href="exercice-6.html"><img src="dist/img/logo.png" alt="logo"></a>
+                <a class="logo" href="#"><img src="dist/img/logo.png" alt="logo"></a>
                 <div class="cart">
-                    <div class="search">
-                        <form method="post">
-                            <input type="search" placeholder="Enter your search"/>
-                        </form>
-                        <a href="#"><img src="dist/img/loupe.png" alt="search"></a>
-                    </div>
+                    <form class="search" method="post">
+                        <input type="search" placeholder="Enter your search"/>
+                        <a href="#">
+                            <svg>
+                                <use href="#search"></use>
+                            </svg>
+                        </a>
+                    </form>
                     <a class="cart-button" href="#">Cart</a>
                 </div>
             </div>
-                
+
             <!-- navbar -->
             <nav>
                 <ul>
-                    <li><a class="select" href="store.html">Store</a></li>
+                    <li><a href="store.html">Store</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="news.html">News</a></li>
                     <li><a href="pages.html">Pages</a></li>
@@ -72,8 +86,22 @@
                         </div>
                         <div class="pop-up">
                             <a href="store.html"><img src="dist/img/caddie.png" alt="caddie"/></a>
-                            <a href="#"><img src="dist/img/coeur.png" alt="coeur"/></a>
-                            <a href="#"><img src="dist/img/loupe.png" alt="loupe"/></a>
+                            <form class="icon-heart" href="#">
+                                <input id="heart-1" type="checkbox"/>
+                                <label for="heart-1">                            
+                                    <svg class="heart-form">
+                                        <use href="#heart-form"></use>
+                                    </svg>
+                                    <svg class="heart-border">
+                                        <use href="#heart-border"></use>
+                                    </svg>
+                                </label>
+                            </form>
+                            <a class="icon-search" href="#">
+                                <svg>
+                                    <use href="#search"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                     <div class="product">
@@ -89,8 +117,22 @@
                         </div>
                         <div class="pop-up">
                             <a href="store.html"><img src="dist/img/caddie.png" alt="caddie"/></a>
-                            <a href="#"><img src="dist/img/coeur.png" alt="coeur"/></a>
-                            <a href="#"><img src="dist/img/loupe.png" alt="loupe"/></a>
+                            <form class="icon-heart" href="#">
+                                <input id="heart-2" type="checkbox"/>
+                                <label for="heart-2">                            
+                                    <svg class="heart-form">
+                                        <use href="#heart-form"></use>
+                                    </svg>
+                                    <svg class="heart-border">
+                                        <use href="#heart-border"></use>
+                                    </svg>
+                                </label>
+                            </form>
+                            <a class="icon-search" href="#">
+                                <svg>
+                                    <use href="#search"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                     <div class="product">
@@ -106,8 +148,22 @@
                         </div>
                         <div class="pop-up">
                             <a href="store.html"><img src="dist/img/caddie.png" alt="caddie"/></a>
-                            <a href="#"><img src="dist/img/coeur.png" alt="coeur"/></a>
-                            <a href="#"><img src="dist/img/loupe.png" alt="loupe"/></a>
+                            <form class="icon-heart" href="#">
+                                <input id="heart-3" type="checkbox"/>
+                                <label for="heart-3">                            
+                                    <svg class="heart-form">
+                                        <use href="#heart-form"></use>
+                                    </svg>
+                                    <svg class="heart-border">
+                                        <use href="#heart-border"></use>
+                                    </svg>
+                                </label>
+                            </form>
+                            <a class="icon-search" href="#">
+                                <svg>
+                                    <use href="#search"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                     <div class="product">
@@ -123,8 +179,22 @@
                         </div>
                         <div class="pop-up">
                             <a href="store.html"><img src="dist/img/caddie.png" alt="caddie"/></a>
-                            <a href="#"><img src="dist/img/coeur.png" alt="coeur"/></a>
-                            <a href="#"><img src="dist/img/loupe.png" alt="loupe"/></a>
+                            <form class="icon-heart" href="#">
+                                <input id="heart-4" type="checkbox"/>
+                                <label for="heart-4">                            
+                                    <svg class="heart-form">
+                                        <use href="#heart-form"></use>
+                                    </svg>
+                                    <svg class="heart-border">
+                                        <use href="#heart-border"></use>
+                                    </svg>
+                                </label>
+                            </form>
+                            <a class="icon-search" href="#">
+                                <svg>
+                                    <use href="#search"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                     <div class="product">
@@ -140,8 +210,22 @@
                         </div>
                         <div class="pop-up">
                             <a href="store.html"><img src="dist/img/caddie.png" alt="caddie"/></a>
-                            <a href="#"><img src="dist/img/coeur.png" alt="coeur"/></a>
-                            <a href="#"><img src="dist/img/loupe.png" alt="loupe"/></a>
+                            <form class="icon-heart" href="#">
+                                <input id="heart-5" type="checkbox"/>
+                                <label for="heart-5">                            
+                                    <svg class="heart-form">
+                                        <use href="#heart-form"></use>
+                                    </svg>
+                                    <svg class="heart-border">
+                                        <use href="#heart-border"></use>
+                                    </svg>
+                                </label>
+                            </form>
+                            <a class="icon-search" href="#">
+                                <svg>
+                                    <use href="#search"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                     <div class="product">
@@ -157,8 +241,22 @@
                         </div>
                         <div class="pop-up">
                             <a href="store.html"><img src="dist/img/caddie.png" alt="caddie"/></a>
-                            <a href="#"><img src="dist/img/coeur.png" alt="coeur"/></a>
-                            <a href="#"><img src="dist/img/loupe.png" alt="loupe"/></a>
+                            <form class="icon-heart" href="#">
+                                <input id="heart-6" type="checkbox"/>
+                                <label for="heart-6">                            
+                                    <svg class="heart-form">
+                                        <use href="#heart-form"></use>
+                                    </svg>
+                                    <svg class="heart-border">
+                                        <use href="#heart-border"></use>
+                                    </svg>
+                                </label>
+                            </form>
+                            <a class="icon-search" href="#">
+                                <svg>
+                                    <use href="#search"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                     <div class="product">
@@ -174,8 +272,22 @@
                         </div>
                         <div class="pop-up">
                             <a href="store.html"><img src="dist/img/caddie.png" alt="caddie"/></a>
-                            <a href="#"><img src="dist/img/coeur.png" alt="coeur"/></a>
-                            <a href="#"><img src="dist/img/loupe.png" alt="loupe"/></a>
+                            <form class="icon-heart" href="#">
+                                <input id="heart-7" type="checkbox"/>
+                                <label for="heart-7">                            
+                                    <svg class="heart-form">
+                                        <use href="#heart-form"></use>
+                                    </svg>
+                                    <svg class="heart-border">
+                                        <use href="#heart-border"></use>
+                                    </svg>
+                                </label>
+                            </form>
+                            <a class="icon-search" href="#">
+                                <svg>
+                                    <use href="#search"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                     <div class="product">
@@ -191,8 +303,22 @@
                         </div>
                         <div class="pop-up">
                             <a href="store.html"><img src="dist/img/caddie.png" alt="caddie"/></a>
-                            <a href="#"><img src="dist/img/coeur.png" alt="coeur"/></a>
-                            <a href="#"><img src="dist/img/loupe.png" alt="loupe"/></a>
+                            <form class="icon-heart" href="#">
+                                <input id="heart-8" type="checkbox"/>
+                                <label for="heart-8">                            
+                                    <svg class="heart-form">
+                                        <use href="#heart-form"></use>
+                                    </svg>
+                                    <svg class="heart-border">
+                                        <use href="#heart-border"></use>
+                                    </svg>
+                                </label>
+                            </form>
+                            <a class="icon-search" href="#">
+                                <svg>
+                                    <use href="#search"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                     <div class="product">
@@ -208,8 +334,22 @@
                         </div>
                         <div class="pop-up">
                             <a href="store.html"><img src="dist/img/caddie.png" alt="caddie"/></a>
-                            <a href="#"><img src="dist/img/coeur.png" alt="coeur"/></a>
-                            <a href="#"><img src="dist/img/loupe.png" alt="loupe"/></a>
+                            <form class="icon-heart" href="#">
+                                <input id="heart-9" type="checkbox"/>
+                                <label for="heart-9">                            
+                                    <svg class="heart-form">
+                                        <use href="#heart-form"></use>
+                                    </svg>
+                                    <svg class="heart-border">
+                                        <use href="#heart-border"></use>
+                                    </svg>
+                                </label>
+                            </form>
+                            <a class="icon-search" href="#">
+                                <svg>
+                                    <use href="#search"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                     <div class="product">
@@ -225,8 +365,22 @@
                         </div>
                         <div class="pop-up">
                             <a href="store.html"><img src="dist/img/caddie.png" alt="caddie"/></a>
-                            <a href="#"><img src="dist/img/coeur.png" alt="coeur"/></a>
-                            <a href="#"><img src="dist/img/loupe.png" alt="loupe"/></a>
+                            <form class="icon-heart" href="#">
+                                <input id="heart-10" type="checkbox"/>
+                                <label for="heart-10">                            
+                                    <svg class="heart-form">
+                                        <use href="#heart-form"></use>
+                                    </svg>
+                                    <svg class="heart-border">
+                                        <use href="#heart-border"></use>
+                                    </svg>
+                                </label>
+                            </form>
+                            <a class="icon-search" href="#">
+                                <svg>
+                                    <use href="#search"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                     <div class="product">
@@ -242,8 +396,22 @@
                         </div>
                         <div class="pop-up">
                             <a href="store.html"><img src="dist/img/caddie.png" alt="caddie"/></a>
-                            <a href="#"><img src="dist/img/coeur.png" alt="coeur"/></a>
-                            <a href="#"><img src="dist/img/loupe.png" alt="loupe"/></a>
+                            <form class="icon-heart" href="#">
+                                <input id="heart-11" type="checkbox"/>
+                                <label for="heart-11">                            
+                                    <svg class="heart-form">
+                                        <use href="#heart-form"></use>
+                                    </svg>
+                                    <svg class="heart-border">
+                                        <use href="#heart-border"></use>
+                                    </svg>
+                                </label>
+                            </form>
+                            <a class="icon-search" href="#">
+                                <svg>
+                                    <use href="#search"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                     <div class="product">
@@ -259,8 +427,22 @@
                         </div>
                         <div class="pop-up">
                             <a href="store.html"><img src="dist/img/caddie.png" alt="caddie"/></a>
-                            <a href="#"><img src="dist/img/coeur.png" alt="coeur"/></a>
-                            <a href="#"><img src="dist/img/loupe.png" alt="loupe"/></a>
+                            <form class="icon-heart" href="#">
+                                <input id="heart-12" type="checkbox"/>
+                                <label for="heart-12">                            
+                                    <svg class="heart-form">
+                                        <use href="#heart-form"></use>
+                                    </svg>
+                                    <svg class="heart-border">
+                                        <use href="#heart-border"></use>
+                                    </svg>
+                                </label>
+                            </form>
+                            <a class="icon-search" href="#">
+                                <svg>
+                                    <use href="#search"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                     <div class="product">
@@ -276,8 +458,22 @@
                         </div>
                         <div class="pop-up">
                             <a href="store.html"><img src="dist/img/caddie.png" alt="caddie"/></a>
-                            <a href="#"><img src="dist/img/coeur.png" alt="coeur"/></a>
-                            <a href="#"><img src="dist/img/loupe.png" alt="loupe"/></a>
+                            <form class="icon-heart" href="#">
+                                <input id="heart-13" type="checkbox"/>
+                                <label for="heart-13">                            
+                                    <svg class="heart-form">
+                                        <use href="#heart-form"></use>
+                                    </svg>
+                                    <svg class="heart-border">
+                                        <use href="#heart-border"></use>
+                                    </svg>
+                                </label>
+                            </form>
+                            <a class="icon-search" href="#">
+                                <svg>
+                                    <use href="#search"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                     <div class="product">
@@ -293,8 +489,22 @@
                         </div>
                         <div class="pop-up">
                             <a href="store.html"><img src="dist/img/caddie.png" alt="caddie"/></a>
-                            <a href="#"><img src="dist/img/coeur.png" alt="coeur"/></a>
-                            <a href="#"><img src="dist/img/loupe.png" alt="loupe"/></a>
+                            <form class="icon-heart" href="#">
+                                <input id="heart-14" type="checkbox"/>
+                                <label for="heart-14">                            
+                                    <svg class="heart-form">
+                                        <use href="#heart-form"></use>
+                                    </svg>
+                                    <svg class="heart-border">
+                                        <use href="#heart-border"></use>
+                                    </svg>
+                                </label>
+                            </form>
+                            <a class="icon-search" href="#">
+                                <svg>
+                                    <use href="#search"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                     <div class="product">
@@ -310,8 +520,22 @@
                         </div>
                         <div class="pop-up">
                             <a href="store.html"><img src="dist/img/caddie.png" alt="caddie"/></a>
-                            <a href="#"><img src="dist/img/coeur.png" alt="coeur"/></a>
-                            <a href="#"><img src="dist/img/loupe.png" alt="loupe"/></a>
+                            <form class="icon-heart" href="#">
+                                <input id="heart-15" type="checkbox"/>
+                                <label for="heart-15">                            
+                                    <svg class="heart-form">
+                                        <use href="#heart-form"></use>
+                                    </svg>
+                                    <svg class="heart-border">
+                                        <use href="#heart-border"></use>
+                                    </svg>
+                                </label>
+                            </form>
+                            <a class="icon-search" href="#">
+                                <svg>
+                                    <use href="#search"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                     <div class="product">
@@ -327,8 +551,22 @@
                         </div>
                         <div class="pop-up">
                             <a href="store.html"><img src="dist/img/caddie.png" alt="caddie"/></a>
-                            <a href="#"><img src="dist/img/coeur.png" alt="coeur"/></a>
-                            <a href="#"><img src="dist/img/loupe.png" alt="loupe"/></a>
+                            <form class="icon-heart" href="#">
+                                <input id="heart-16" type="checkbox"/>
+                                <label for="heart-16">                            
+                                    <svg class="heart-form">
+                                        <use href="#heart-form"></use>
+                                    </svg>
+                                    <svg class="heart-border">
+                                        <use href="#heart-border"></use>
+                                    </svg>
+                                </label>
+                            </form>
+                            <a class="icon-search" href="#">
+                                <svg>
+                                    <use href="#search"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                     <div class="product">
@@ -344,8 +582,22 @@
                         </div>
                         <div class="pop-up">
                             <a href="store.html"><img src="dist/img/caddie.png" alt="caddie"/></a>
-                            <a href="#"><img src="dist/img/coeur.png" alt="coeur"/></a>
-                            <a href="#"><img src="dist/img/loupe.png" alt="loupe"/></a>
+                            <form class="icon-heart" href="#">
+                                <input id="heart-17" type="checkbox"/>
+                                <label for="heart-17">                            
+                                    <svg class="heart-form">
+                                        <use href="#heart-form"></use>
+                                    </svg>
+                                    <svg class="heart-border">
+                                        <use href="#heart-border"></use>
+                                    </svg>
+                                </label>
+                            </form>
+                            <a class="icon-search" href="#">
+                                <svg>
+                                    <use href="#search"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                     <div class="product">
@@ -361,8 +613,22 @@
                         </div>
                         <div class="pop-up">
                             <a href="store.html"><img src="dist/img/caddie.png" alt="caddie"/></a>
-                            <a href="#"><img src="dist/img/coeur.png" alt="coeur"/></a>
-                            <a href="#"><img src="dist/img/loupe.png" alt="loupe"/></a>
+                            <form class="icon-heart" href="#">
+                                <input id="heart-18" type="checkbox"/>
+                                <label for="heart-18">                            
+                                    <svg class="heart-form">
+                                        <use href="#heart-form"></use>
+                                    </svg>
+                                    <svg class="heart-border">
+                                        <use href="#heart-border"></use>
+                                    </svg>
+                                </label>
+                            </form>
+                            <a class="icon-search" href="#">
+                                <svg>
+                                    <use href="#search"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                     <div class="product">
@@ -378,8 +644,22 @@
                         </div>
                         <div class="pop-up">
                             <a href="store.html"><img src="dist/img/caddie.png" alt="caddie"/></a>
-                            <a href="#"><img src="dist/img/coeur.png" alt="coeur"/></a>
-                            <a href="#"><img src="dist/img/loupe.png" alt="loupe"/></a>
+                            <form class="icon-heart" href="#">
+                                <input id="heart-19" type="checkbox"/>
+                                <label for="heart-19">                            
+                                    <svg class="heart-form">
+                                        <use href="#heart-form"></use>
+                                    </svg>
+                                    <svg class="heart-border">
+                                        <use href="#heart-border"></use>
+                                    </svg>
+                                </label>
+                            </form>
+                            <a class="icon-search" href="#">
+                                <svg>
+                                    <use href="#search"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                     <div class="product">
@@ -395,8 +675,22 @@
                         </div>
                         <div class="pop-up">
                             <a href="store.html"><img src="dist/img/caddie.png" alt="caddie"/></a>
-                            <a href="#"><img src="dist/img/coeur.png" alt="coeur"/></a>
-                            <a href="#"><img src="dist/img/loupe.png" alt="loupe"/></a>
+                            <form class="icon-heart" href="#">
+                                <input id="heart-20" type="checkbox"/>
+                                <label for="heart-20">                            
+                                    <svg class="heart-form">
+                                        <use href="#heart-form"></use>
+                                    </svg>
+                                    <svg class="heart-border">
+                                        <use href="#heart-border"></use>
+                                    </svg>
+                                </label>
+                            </form>
+                            <a class="icon-search" href="#">
+                                <svg>
+                                    <use href="#search"></use>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </div>
