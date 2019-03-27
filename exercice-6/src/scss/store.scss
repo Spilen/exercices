@@ -21,11 +21,29 @@
             align-items: center;
             margin-bottom: 20px;
             
-            img{
-                height: 20px;
-                border: 1px $green solid;
-                padding: 5px;
+            a{
+                height: 32px;
+                width: 30px;
                 margin-right: 8px;
+                color: $black;
+                border: 1px $green solid;
+
+                &:hover{
+                    color: $green;
+                }
+
+                svg{
+                    height: 30px;
+                    width: 30px;
+                }
+
+                .cadre{
+                    color: $grey;
+                }
+
+                .select{
+                    color: $green;
+                }
             }
 
             p{
@@ -152,6 +170,14 @@
                         width: 15px;
                     }
     
+                    .icon-cart{
+                        color: $black;
+    
+                        &:hover{
+                            color: $green;
+                        }
+                    }
+                    
                     .icon-search{
                         color: $black;
     

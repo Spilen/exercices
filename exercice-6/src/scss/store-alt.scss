@@ -21,11 +21,25 @@
             align-items: center;
             margin-bottom: 20px;
             
-            img{
-                height: 20px;
-                border: 1px $green solid;
-                padding: 5px;
+            a{
+                height: 32px;
+                width: 30px;
                 margin-right: 8px;
+                color: $black;
+                border: 1px $green solid;
+
+                &:hover{
+                    color: $green;
+                }
+
+                svg{
+                    height: 30px;
+                    width: 30px;
+                }
+
+                .select{
+                    color: $green;
+                }
             }
 
             p{
@@ -47,6 +61,12 @@
 
             li{
                 display: flex;
+                transition: box-shadow .3s, transform .3s;
+                
+                &:hover{
+                    transform: translate3d(0, -2px, 0);
+                    box-shadow: 0 4px 17px rgba($black, 0.4)
+                }
 
                 img{
                     height: 235px;
@@ -102,20 +122,55 @@
                             margin-right: 10px;
                         }
 
-                        .coeur, .loupe{
+                        svg{
+                            display: block;
                             height: 15px;
                             width: 15px;
-                            padding: 5px;
+                            padding: 5px 6px 5px 5px;
+                        }
+        
+                        .icon-search{
+                            color: $black;
                             border: 1px $grey solid;
                             border-radius: 50px;
-
+                            margin-right: 10px;
+        
                             &:hover{
+                                color: $green;
                                 border: 1px $green solid;
                             }
+                        }
+        
+                        .icon-heart{
+                            border: 1px $grey solid;
+                            border-radius: 50px;
+                            margin-right: 10px;
 
-                            img{
-                                height: 15px;
-                                width: 15px;
+                            &:hover{
+                                border: 1px $red solid;
+                            }
+        
+                            input{
+                                display: none;
+                            }
+        
+                            input + label .heart-form{
+                                position: absolute;
+                                opacity: 0;
+                                color: $red;
+                                transition: opacity .3s;
+                            }
+        
+                            input:checked + label .heart-form{
+                                opacity: 1;
+                            }
+        
+                            label{
+                                cursor: pointer;
+        
+                                &:hover .heart-border{
+                                    color: $red;
+                                }
                             }
                         }
                     }
@@ -252,6 +307,12 @@
 
             li{
                 padding-left: 0;
+                transition: box-shadow .3s, transform .3s;
+                
+                &:hover{
+                    transform: translate3d(0, -2px, 0);
+                    box-shadow: 0 4px 17px rgba($black, 0.4)
+                }
             }
 
             a{

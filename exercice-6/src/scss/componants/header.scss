@@ -21,6 +21,11 @@ header{
             display: flex;
             align-items: center;
 
+            svg{
+                height: 35px;
+                width: 35px;
+            }
+
             p{
                 margin-left: 20px;
                 font-weight: lighter;
@@ -44,35 +49,55 @@ header{
 
             .search{
                 display: flex;
+                flex-direction: row-reverse;
                 align-items: center;
-                justify-content: center;
-                height: 30px;
-                width: 150px; 
+                height: 30px; 
                 margin-right: 30px;
+                padding: 0 7px 0 4px;
                 border: 1px $grey solid;
                 border-radius: 50px;
 
-                input{
-                  height: 30px;
-                  font-family: dosis, arial ,sans-serif;
-                  color: $black;
-                  font-size: 1em;
-                  border: none;
-                  border-radius: 50px;
+                .search-area{
+                    height: 30px;
+                    font-family: dosis, arial ,sans-serif;
+                    color: $black;
+                    font-size: 1em;
+                    border: none;
+                    width: 0;
+                    opacity: 0;
+                    border-radius: 50px;
+                    transition: width .4s, opacity .9s;
                 }
 
-                a{
-                    color: $black;
+                #search-button{
+                    display: none;
+                }
 
-                    &:hover{
-                      color: $green;
-                    }
+                label{
+                    color: $black;
+                    cursor: pointer;
+                    transition: margin-right .4s;
 
                     svg{
                         display: block;
                         height: 18px;
                         width: 18px;
                     }
+
+                    &:hover{
+                        color: $green;
+                    }
+                }
+
+                #search-button:checked + label + .search-area{
+                    width: 130px;
+                    opacity: 1;
+                    margin-left: 10px;
+                }
+
+                #search-button:checked + label{
+                    color: $green;
+                    margin-right: 5px;
                 }
             }
 
