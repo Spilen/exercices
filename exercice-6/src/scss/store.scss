@@ -156,11 +156,11 @@
                     align-items: center;
                     background-color: rgba($white, 0.9);
                     border-radius: 50px;
-                    width: 140px;
+                    width: 70px;
                     padding: 5px;
                     top: 50px;
                     transform: translate(0, -90px);
-                    transition: opacity .4s, transform .4s;
+                    transition: opacity .4s, transform .4s, width .4s;
                     box-shadow: 0 5px 10px $black;
                     opacity: 0;
     
@@ -216,6 +216,7 @@
                 &:hover .pop-up{
                     transform: translate(0, 0);
                     opacity: 1;
+                    width: 140px;
                 }
             }
         }    
@@ -349,6 +350,12 @@
 
             li{
                 padding-left: 0;
+                transition: box-shadow .3s, transform .3s;
+                
+                &:hover{
+                    transform: translate3d(0, -2px, 0);
+                    box-shadow: 0 4px 17px rgba($black, 0.4)
+                }
             }
 
             a{

@@ -139,11 +139,11 @@
                 align-items: center;
                 background-color: rgba($white, 0.9);
                 border-radius: 50px;
-                width: 200px;
+                width: 100px;
                 padding: 5px;
                 top: 80px;
                 transform: translate(0, -90px);
-                transition: opacity .4s, transform .4s;
+                transition: opacity .4s, transform .4s, width .4s;
                 box-shadow: 0 5px 10px $black;
                 opacity: 0;
 
@@ -199,6 +199,7 @@
             &:hover .pop-up{
                 transform: translate(0, 0);
                 opacity: 1;
+                width: 200px;
             }
         }
     }
