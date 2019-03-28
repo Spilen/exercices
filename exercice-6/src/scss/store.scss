@@ -196,7 +196,7 @@
                             position: absolute;
                             opacity: 0;
                             color: $red;
-                            transition: opacity .3s;
+                            transition: opacity .5s;
                         }
     
                         input:checked + label .heart-form{

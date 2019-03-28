@@ -1,0 +1,251 @@
+@import 'common/variables';
+@import 'common/reset';
+@import 'common/mixins';
+
+@import 'componants/main';
+@import 'componants/header';
+@import 'componants/newsletter-all';
+@import 'componants/footer';
+
+.cart{
+    display: flex;
+    justify-content: space-between;
+    font-family: dosis, arial ,sans-serif;
+    border-top: 1px $light-grey solid;
+    padding-top: 50px;
+
+    h2{
+        font-weight: bolder;
+        margin-bottom: 20px;
+    }
+
+    .shopping-cart{
+        width: 70%;
+        margin-right: 20px;
+
+        li{
+            display: flex;
+            border-top: 1px $light-grey solid;
+            padding-top: 20px;
+            margin-bottom: 20px;
+            overflow: hidden;
+
+            img{
+                display: absolute;
+                height: 100px;
+                margin-right: 30px;
+            }
+
+            .text-container{
+                display: flex;
+                flex-direction: column;
+                height: 0;
+                width: 100%;
+
+                .name{
+                    font-size: 1.2em;
+                    color: $black;
+                    margin-bottom: 10px;
+                }
+
+                .price{
+                    text-align: right;
+                    color: $green;
+                    font-family: arial;
+                    font-size: 1em;
+                    margin-bottom: 20px;
+                }
+            }
+
+            a{
+                @include button($black, $white, $grey);
+                font-weight: bolder;
+                height: 40px;
+                padding: 0 100px;
+        
+                &:hover{
+                    color: $green;
+                }
+            }
+
+            form{
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: center;
+                width: 100%;
+
+                .delete{
+                    display: none;
+                }
+
+                label{
+                    cursor: pointer;
+                    color: $grey;
+                    margin: 0 10px;
+
+                    &:hover{
+                        color: $black;
+                    }
+                }
+
+                input + label{
+                    height: 100px;
+                }
+
+                input:checked + label{
+                    height: 0;
+                }
+
+                input:checked + label + div+ img{
+                    height: 0;
+                }
+
+                .number{
+                    border: none;
+                    width: 30px;
+                }
+            }
+        }
+
+        li:last-child{
+            justify-content: space-between;
+        }
+    }
+
+    .price-cart{
+        width: 25%;
+
+        .coupon{
+            margin-bottom: 50px;
+
+            form{
+                display: flex;
+                flex-direction: column;
+                background-color: $light-grey;
+                padding: 30px;
+
+                input{
+                    color: $grey;
+                    padding: 8px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            a{
+                @include button($white, $green, $green);
+                font-size: 0.8em;
+
+                &:hover{
+                    color: $green;
+                    border: 1px $green solid;
+                    background-color: $white;
+                }
+            }
+        }
+    }
+
+    .cart-totals{
+        margin-bottom: 50px;
+        
+
+        ul{
+            background-color: $light-grey;
+            font-size: 0.8em;
+            padding: 5px 30px;
+
+            li{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+                padding-bottom: 20px;
+
+                em{
+                    display: inline-block;
+                    font-family: 'arial';
+                }
+
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+
+                    span{
+                        margin-bottom: 10px;
+                    }
+
+                    input{
+                        display: none;
+                    }
+    
+                    label{
+                        position: relative;
+                        display: flex;
+                        justify-content: space-between;
+                        cursor: pointer;
+                        font-size: 0.8em;
+                        color: $grey;
+                        padding-left: 15px;
+                    }
+
+                    label:not(:last-child){
+                        margin-bottom: 5px;
+                    }
+
+                    label:before{
+                        content:'';
+                        position: absolute;
+                        left: 0;
+                        top: 2px;
+                        height: 5px;
+                        width: 5px;
+                        border: 1px $grey solid;
+                        border-radius: 50%;
+                    }
+    
+                    input + label:after{
+                        content:'';
+                        position: absolute;
+                        left: 0;
+                        top: 2px;
+                        height: 7px;
+                        width: 7px;
+                        background-color: $black;
+                        border-radius: 50%;
+                        opacity: 0;
+                        transition: opacity .3s;
+                    }
+    
+                    input:checked + label:after{
+                        opacity: 1;
+                    }
+
+                    a{
+                        text-decoration: underline $green;
+                        color: $black;
+                        font-size: 0.9em;
+                        margin-top: 10px;
+                        
+                    }
+                }
+            }
+
+            li:not(:last-child){
+                border-bottom: 1px rgba($grey, 0.2) solid;
+            }
+        }
+
+        .send-shipping{
+            @include button($white, $green, $green);
+            display: flex;
+            height: 45px;
+            font-size: 0.8em;
+            margin-top: 10px;
+
+            &:hover{
+                color: $green;
+                border: 1px $green solid;
+                background-color: $white;
+            }
+        }
+    }
+}
