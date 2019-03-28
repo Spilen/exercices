@@ -107,11 +107,10 @@
 
               .button{
                 @include button($white, $green, $green);
+                transition: background-color .3s;
         
                 &:hover{
-                    color: $green;
-                    background-color: $white;
-                    border: 1px $green solid;
+                    background-color: $light-green;
                 }
               }
             }

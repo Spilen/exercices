@@ -34,9 +34,14 @@
 
     .subscribe{
         @include button($black, $light-grey, $grey);
+        transition: color .3s;
 
         &:hover{
             color: $green;
+        }
+
+        &:active{
+            box-shadow: inset 0 0 5px rgba($black, 0.4);
         }
     }
 }

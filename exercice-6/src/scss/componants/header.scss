@@ -76,7 +76,7 @@ header{
                 label{
                     color: $black;
                     cursor: pointer;
-                    transition: margin-right .4s;
+                    transition: margin-right .4s, color .3s;
 
                     svg{
                         display: block;
@@ -103,7 +103,7 @@ header{
 
             .cart-button{
                 @include button($black, $white, $grey);
-                transition: box-shadow .3s, transform .3s;
+                transition: box-shadow .3s, transform .3s, color .3s, border .3s;
 
                 &:hover{
                     color: $green;
