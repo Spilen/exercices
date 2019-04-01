@@ -24,6 +24,10 @@
         letter-spacing: 0.1em;
         margin-bottom: 20px;
         text-shadow: 0 0 1px $green;
+
+        @media only screen and (max-width: 500px){
+            font-size: 2.5em;
+        }
     }
 
     a{
