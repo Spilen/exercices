@@ -18,9 +18,20 @@
     ul{
         display: flex;
         margin-bottom: 30px;
+        max-width: 620px;
+
+        @media only screen and (max-width: 620px){
+            flex-direction: column;
+            align-items: center;
+            line-height: 20px;
+        }
 
         li{
             margin: 0 10px;
+
+            @media only screen and (max-width: 620px){
+                margin: 0;
+            }
 
             a{
                 text-decoration: none;
@@ -42,6 +53,18 @@
         grid-gap: 15px;
         margin-bottom: 20px;
 
+        @media only screen and (max-width: 1000px){
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media only screen and (max-width: 760px){
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media only screen and (max-width: 400px){
+            grid-gap: 10px;
+        }
+
         .product{
             position: relative;
             display: flex;
@@ -51,6 +74,16 @@
             height: 235px;
             width: 235px;
             overflow: hidden;
+
+            @media only screen and (max-width: 515px){
+                height: 180px;
+                width: 180px;
+            }
+
+            @media only screen and (max-width: 400px){
+                height: 150px;
+                width: 150px;
+            }
 
             .img-product {
                 display: block;
@@ -74,6 +107,10 @@
                     color: $black;
                     margin: 0 0 5px 20px;
 
+                    @media only screen and (max-width: 515px){
+                        font-size: 0.8em;
+                    }
+
                     &:after{
                         content:'';
                         z-index: 2;
@@ -91,6 +128,10 @@
                     font-family: arial;
                     font-size: 1em;
                     margin-left: 20px;
+
+                    @media only screen and (max-width: 515px){
+                        font-size: 0.8em;
+                    }
     
                     em{
                         color: $black;
@@ -112,12 +153,23 @@
                         border-top : 10px solid transparent;
                         border-right : 12px solid $green;
                         border-bottom : 10px solid transparent;
+
+                        @media only screen and (max-width: 515px){
+                            border-top : 8px solid transparent;
+                            border-right : 8px solid $green;
+                            border-bottom : 8px solid transparent;
+                        }
                     }
 
                     .rectangle{
                         height : 20px;
                         width : 30px;
                         background-color: $green;
+
+                        @media only screen and (max-width: 515px){
+                            height : 16px;
+                            width : 20px;
+                        }
                     }
 
                     .size{
@@ -127,6 +179,10 @@
                         font-family: arial;
                         font-size: 0.6em;
                         color: $white;
+
+                        @media only screen and (max-width: 515px){
+                            font-size: 0.4em;
+                        }
                     }
                 }
             }
@@ -151,6 +207,11 @@
                     display: block;
                     height: 20px;
                     width: 20px;
+
+                    @media only screen and (max-width: 400px){
+                        height: 15px;
+                        width: 15px;
+                    }
                 }
 
                 .icon-cart{
@@ -206,6 +267,16 @@
                 transform: translate(0, 0);
                 opacity: 1;
                 width: 200px; 
+
+                @media only screen and (max-width: 515px){
+                    transform: translate(0, -40px);
+                    width: 150px;
+                }
+    
+                @media only screen and (max-width: 400px){
+                    transform: translate(0, -50px);
+                    width: 100px;
+                }
             }
         }
     }
