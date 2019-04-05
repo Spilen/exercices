@@ -12,16 +12,34 @@
     font-family: dosis, arial ,sans-serif;
     color: $black;
     padding: 0 120px;
+
+    @media only screen and (max-width: 940px){
+        padding: 0 10px;
+    }
+
+    @media only screen and (max-width: 440px){
+        display: flex;
+        flex-direction: column;
+    }
     
     .contact-us{
         display: flex;
         justify-content: space-between;
         margin-bottom: 80px;
 
-        .accueil{
+        @media only screen and (max-width: 940px){
+            justify-content: center;
+        }
 
-            img{
-                height: 400px;
+        @media only screen and (max-width: 440px){
+            height: 900px;
+        }
+
+        .accueil img{
+            height: 400px;
+
+            @media only screen and (max-width: 940px){
+                display: none;
             }
         }
 
@@ -30,17 +48,36 @@
             justify-content: space-between;
             flex-direction: column;
 
-            li{
+            @media only screen and (max-width: 940px){
+                height: 400px;
+            }
+
+            .contact-container{
                 display: flex;
                 align-items: center;
+
+                @media only screen and (max-width: 440px){
+                    flex-direction: column;
+                    margin-bottom: 20px;
+                }
 
                 svg{
                     height: 100px;
                     width: 80px;
                     margin-right: 20px;
+
+                    @media only screen and (max-width: 440px){
+                        margin: 0 0 20px 0;
+                    }
                 }
 
                 .text{
+                    display: flex;
+                    flex-direction: column;
+                    
+                    @media only screen and (max-width: 440px){
+                        align-items: center;
+                    }
 
                     h2{
                         font-size: 1.2em;
@@ -49,15 +86,39 @@
                     }
 
                     ul{
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
                         font-size: 0.8em;
                         line-height: 1.5;
+
+                        @media only screen and (max-width: 440px){
+                            align-items: center;
+                            padding-bottom: 20px;
+                            margin-bottom: 10px;
+                            border-bottom: 1px $grey solid;
+                            width: 290px;
+                        }
+
+                        li{
+                            display: flex;
+
+                            @media only screen and (max-width: 440px){
+                                display: flex;
+                                flex-direction: column;
+                                align-items: left;
+                            }
+                        }
 
                         strong{
                             color: $grey;
                             margin-right: 20px;
                             width: 60px;
-                        }
 
+                            @media only screen and (max-width: 480px){
+                                margin: 0;
+                            }
+                        }
                     }
                 }
             }
@@ -69,11 +130,24 @@
         justify-content: space-between;
         margin-bottom: 50px;
 
+        @media only screen and (max-width: 1000px){
+            justify-content: center;
+        }
+
         .personnal-information{
             display: flex;
             flex-wrap: wrap;
             margin-right: 50px;
             font-size: 0.8em;
+
+            @media only screen and (max-width: 1000px){
+                width: 500px;
+                margin: 0;
+            }
+
+            @media only screen and (max-width: 530px){
+                width: auto;
+            }
 
             li{
                 display: flex;
@@ -118,6 +192,10 @@
 
         img{
             width: 100%;
+
+            @media only screen and (max-width: 1000px){
+                display: none;
+            }
         }
     }
 }
