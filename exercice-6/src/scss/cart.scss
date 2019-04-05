@@ -14,6 +14,11 @@
     border-top: 1px $light-grey solid;
     padding-top: 50px;
 
+    @media only screen and (max-width: 1030px){
+        flex-direction: column;
+        align-items: center;
+    }
+
     h2{
         font-weight: bolder;
         margin-bottom: 20px;
@@ -22,6 +27,13 @@
     .shopping-cart{
         width: 70%;
         margin-right: 20px;
+
+        @media only screen and (max-width: 1030px){
+            margin: 0 0 40px;
+            width: 100%;
+            padding: 0 30px;
+            box-sizing: border-box;
+        }
 
         li{
             display: flex;
@@ -34,6 +46,10 @@
                 display: absolute;
                 height: 100px;
                 margin-right: 30px;
+
+                @media only screen and (max-width: 400px){
+                    margin-right: 20px;
+                }
             }
 
             .text-container{
@@ -46,6 +62,14 @@
                     font-size: 1.2em;
                     color: $black;
                     margin-bottom: 10px;
+
+                    @media only screen and (max-width: 460px){
+                        font-size: 1em;
+                    }
+
+                    @media only screen and (max-width: 400px){
+                        margin-bottom: 20px;
+                    }
                 }
 
                 .price{
@@ -54,6 +78,14 @@
                     font-family: arial;
                     font-size: 1em;
                     margin-bottom: 20px;
+
+                    @media only screen and (max-width: 460px){
+                        font-size: 0.8em;
+                    }
+
+                    @media only screen and (max-width: 400px){
+                        text-align: left;
+                    }
                 }
             }
 
@@ -63,6 +95,18 @@
                 height: 40px;
                 padding: 0 100px;
                 transition: color .3s;
+
+                @media only screen and (max-width: 1030px){
+                    padding: 0 50px;
+                }
+
+                @media only screen and (max-width: 810px){
+                    padding: 0 20px;
+                }
+
+                @media only screen and (max-width: 400px){
+                    margin-bottom: 20px;
+                }
         
                 &:hover{
                     color: $green;
@@ -113,15 +157,41 @@
         }
 
         li:last-child{
-            justify-content: space-between;
+            justify-content: space-around;
+
+            @media only screen and (max-width: 400px){
+                flex-direction: column;
+                align-items: center;
+            }
         }
     }
 
     .price-cart{
         width: 25%;
 
+        @media only screen and (max-width: 1030px){
+            display: flex;
+            justify-content: space-around;
+            padding: 0 30px;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 780px){
+            flex-direction: column;
+            align-items: center;
+        }
+
         .coupon{
             margin-bottom: 50px;
+
+            @media only screen and (max-width: 1030px){
+                width: 350px;
+            }
+
+            @media only screen and (max-width: 400px){
+                width: 300px;
+            }
 
             form{
                 display: flex;
@@ -140,114 +210,122 @@
                 @include button($white, $green, $green);
                 font-size: 0.8em;
                 transition: background-color .3s;
+                width: auto;
 
                 &:hover{
                     background-color: $light-green;
                 }
             }
         }
-    }
 
-    .cart-totals{
-        margin-bottom: 50px;
-        
+        .cart-totals{
+            margin-bottom: 50px;
 
-        ul{
-            background-color: $light-grey;
-            font-size: 0.8em;
-            padding: 5px 30px;
+            @media only screen and (max-width: 1030px){
+                width: 350px;
+            }
 
-            li{
-                display: flex;
-                justify-content: space-between;
-                margin-top: 20px;
-                padding-bottom: 20px;
+            @media only screen and (max-width: 400px){
+                width: 300px;
+            }
+            
+            ul{
+                background-color: $light-grey;
+                font-size: 0.8em;
+                padding: 5px 30px;
 
-                em{
-                    display: inline-block;
-                    font-family: 'arial';
-                }
-
-                form{
+                li{
                     display: flex;
-                    flex-direction: column;
-                    width: 100%;
+                    justify-content: space-between;
+                    margin-top: 20px;
+                    padding-bottom: 20px;
 
-                    span{
-                        margin-bottom: 10px;
+                    em{
+                        display: inline-block;
+                        font-family: 'arial';
                     }
 
-                    input{
-                        display: none;
-                    }
-    
-                    label{
-                        position: relative;
+                    form{
                         display: flex;
-                        justify-content: space-between;
-                        cursor: pointer;
-                        font-size: 0.8em;
-                        color: $grey;
-                        padding-left: 15px;
-                    }
+                        flex-direction: column;
+                        width: 100%;
 
-                    label:not(:last-child){
-                        margin-bottom: 5px;
-                    }
+                        span{
+                            margin-bottom: 10px;
+                        }
 
-                    label:before{
-                        content:'';
-                        position: absolute;
-                        left: 0;
-                        top: 2px;
-                        height: 5px;
-                        width: 5px;
-                        border: 1px $grey solid;
-                        border-radius: 50%;
-                    }
-    
-                    input + label:after{
-                        content:'';
-                        position: absolute;
-                        left: 0;
-                        top: 2px;
-                        height: 7px;
-                        width: 7px;
-                        background-color: $black;
-                        border-radius: 50%;
-                        opacity: 0;
-                        transition: opacity .3s;
-                    }
-    
-                    input:checked + label:after{
-                        opacity: 1;
-                    }
+                        input{
+                            display: none;
+                        }
+        
+                        label{
+                            position: relative;
+                            display: flex;
+                            justify-content: space-between;
+                            cursor: pointer;
+                            font-size: 0.8em;
+                            color: $grey;
+                            padding-left: 15px;
+                        }
 
-                    a{
-                        text-decoration: underline $green;
-                        color: $black;
-                        font-size: 0.9em;
-                        margin-top: 10px;
-                        
+                        label:not(:last-child){
+                            margin-bottom: 5px;
+                        }
+
+                        label:before{
+                            content:'';
+                            position: absolute;
+                            left: 0;
+                            top: 2px;
+                            height: 5px;
+                            width: 5px;
+                            border: 1px $grey solid;
+                            border-radius: 50%;
+                        }
+        
+                        input + label:after{
+                            content:'';
+                            position: absolute;
+                            left: 0;
+                            top: 2px;
+                            height: 7px;
+                            width: 7px;
+                            background-color: $black;
+                            border-radius: 50%;
+                            opacity: 0;
+                            transition: opacity .3s;
+                        }
+        
+                        input:checked + label:after{
+                            opacity: 1;
+                        }
+
+                        a{
+                            text-decoration: underline $green;
+                            color: $black;
+                            font-size: 0.9em;
+                            margin-top: 10px;
+                            
+                        }
                     }
+                }
+
+                li:not(:last-child){
+                    border-bottom: 1px rgba($grey, 0.2) solid;
                 }
             }
 
-            li:not(:last-child){
-                border-bottom: 1px rgba($grey, 0.2) solid;
-            }
-        }
+            .send-shipping{
+                @include button($white, $green, $green);
+                display: flex;
+                height: 45px;
+                font-size: 0.8em;
+                margin-top: 10px;
+                transition: background-color .3s;
 
-        .send-shipping{
-            @include button($white, $green, $green);
-            display: flex;
-            height: 45px;
-            font-size: 0.8em;
-            margin-top: 10px;
-            transition: background-color .3s;
-
-            &:hover{
-                background-color: $light-green;
+                &:hover{
+                    background-color: $light-green;
+                }
             }
         }
     }
