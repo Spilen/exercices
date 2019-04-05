@@ -12,6 +12,14 @@
     width: 100%;
     margin-bottom: 50px;
 
+    @media only screen and (max-width: 610px){
+        height: 300px;
+    }
+
+    @media only screen and (max-width: 500px){
+        height: 250px;
+    }
+
     &:before{
         content: '';
         position: absolute;
@@ -20,6 +28,10 @@
         width: 30px;
         left: 30px;
         top: 160px;
+
+        @media only screen and (max-width: 720px){
+            left: 10px;
+        }
     }
 
     &:after{
@@ -30,6 +42,10 @@
         width: 30px;
         right: 30px;
         top: 160px;
+
+        @media only screen and (max-width: 720px){
+            right: 10px;
+        }
     }
 
     .citation{
@@ -37,7 +53,18 @@
         font-size: 1.5em;
         font-weight: lighter;
         line-height: 1.4;
+        width: 500px;
         margin-bottom: 40px;
+
+        @media only screen and (max-width: 610px){
+            width: 350px;
+            font-size: 1.2em;
+        }
+
+        @media only screen and (max-width: 500px){
+            width: 240px;
+            font-size: 1em;
+        }
 
         &:before{
             content: '';
@@ -46,19 +73,28 @@
             height: 20px;
             width: 20px;
             left: -40px;
+
+            @media only screen and (max-width: 720px){
+                display: none;
+            }
         }
     }
 
     p{
         color: $white;
-        width: 500px;
+        font-size: 0.8em;
 
-        strong{
-            font-size: 0.8em;
+        @media only screen and (max-width: 610px){
+            width: 350px;
+            font-size: 0.7em;
+        }
+
+        @media only screen and (max-width: 500px){
+            width: 240px;
+            font-size: 0.5em;
         }
 
         em{
-            font-size: 0.8em;
             font-weight: lighter;
             line-height: 3;
             color: $grey;
