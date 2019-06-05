@@ -18,31 +18,41 @@
 		justify-content:space-between;
 	}
 }
+
 .column{
 	height:280px;
 	width:280px;
 
-	& a{
+	a{
 		text-decoration:none;
 		font-size:90%;
+		letter-spacing: 1px;
 		color: $black;
 
 		&:hover{
 			text-decoration:underline;
 		}
 	}
-	& > p,
-	& > li{
-		font-size:90%;
+
+	li{
+		font-size:70%;
+		line-height: 1.2rem;
 	}
 }
-h3{
+
+h4{
 	font-weight:bold;
 }
+
 .left-column{
 	overflow:hidden;
 
-	& > img{
+	h5{
+		font-size: 110%;
+		color: $light-grey;
+	}
+
+	img{
 		margin-right:20px;
 		margin-bottom:10px;
 		float:left;
@@ -52,7 +62,7 @@ h3{
 	display:flex;
 	flex-direction:column;
 
-	& > ul{
+	ul{
 		list-style:none;
 		padding:0;
 		margin:0;
