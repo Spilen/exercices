@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="cache-control" content="max-age=0"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <title>Icon kit preview | gulp-svg-sprites</title>
+    <link href="css/sprite.css" rel="stylesheet" type="text/css" media="all"/>
+    <style type="text/css">@CHARSET "UTF-8";
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        padding: 0;
+        margin: 0;
+        color: #666;
+        background: #fafafa;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+        line-height: 1.4
+    }
+
+    header {
+        display: block;
+        padding: 3em 3em 2em 3em;
+        background-color: #fff
+    }
+
+    header p {
+        margin: 0 0 0 0;
+    }
+
+    nav {
+        font-size: .7em;
+        display: block;
+        width: 100%;
+        margin: 0 0 2em 0
+    }
+
+    nav a {
+        display: inline-block;
+        text-decoration: none;
+        margin-left: 2em;
+        color: #0f7595;
+        white-space: nowrap
+    }
+
+    nav a:hover {
+        text-decoration: underline
+    }
+
+    nav a.current {
+        font-weight: bold;
+        text-decoration: underline;
+        color: #666
+    }
+
+    section {
+        border-top: 1px solid #eee;
+        padding: 2em 3em 0 3em
+    }
+
+    ul {
+        margin: 0;
+        padding: 0
+    }
+
+    .icon-boxes li {
+        display: inline-block;
+        background-color: #fff;
+        position: relative;
+        margin: 0 2em 2em 0;
+        vertical-align: top;
+        border: 1px solid #ccc;
+        padding: 1em 1em 1em 1em;
+        cursor: default
+    }
+
+    .icon-box {
+        margin: 0;
+        width: 144px;
+        height: 144px;
+        position: relative;
+        background: #ccc url(data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=) top left repeat;
+        border: 1px solid #ccc;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center
+    }
+    .icon-box.inverted {
+        background: black;
+    }
+
+    .icon {
+        display: inline;
+        display: inline-block
+    }
+
+    .snippet-popover {
+        position: absolute;
+        display: none;
+        opacity: 0;
+        bottom: 0;
+        left: 0;
+        background: white;
+        border: 1px solid #ccc;
+        padding: 16px;
+        z-index: 1;
+        transition: all .3s;
+    }
+    .snippet-popover.active {
+        display: block;
+        opacity: 1;
+    }
+
+    pre {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        margin: 0;
+        padding: 5px 0;
+        font-size: 1em;
+        font-weight: normal;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    h4 {
+        margin: 0;
+    }
+
+    footer {
+        display: block;
+        margin: 0;
+        padding: 0 3em 3em 3em
+    }
+
+    footer p {
+        margin: 0;
+        font-size: .7em
+    }
+
+    footer a {
+        color: #0f7595;
+        margin-left: 0
+    }
+    </style>
+
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0" style="position:absolute">
+	
+		<symbol id="adress" viewBox="0 0 80 100">
+			<g fill="none" fill-rule="evenodd"><path d="M.5.5v99h79V.5H.5z" stroke="#EEE"></path><path d="M51.137 51.357a1.04 1.04 0 0 1 1.044 1.038v11.567A1.04 1.04 0 0 1 51.137 65H27.864a1.04 1.04 0 0 1-1.044-1.038V52.395a1.04 1.04 0 0 1 1.044-1.038 1.04 1.04 0 0 1 1.044 1.038v10.53h21.185v-10.53a1.04 1.04 0 0 1 1.044-1.038zm5.557.304a1.033 1.033 0 0 1 0 1.468 1.048 1.048 0 0 1-1.476 0L39.5 37.505 23.782 53.129a1.044 1.044 0 0 1-1.476 0 1.033 1.033 0 0 1 0-1.468L38.76 35.304a1.048 1.048 0 0 1 1.476 0L56.694 51.66z" fill="#80B435"></path></g>
+		</symbol>
+	
+		<symbol id="caddie" viewBox="0 0 18 23">
+			<g fill="#80B435" fill-rule="evenodd"><path d="M17.995 19.88a.216.216 0 0 1 .005.057c0 1.688-1.513 3.061-3.376 3.061H3.375C1.513 22.998 0 21.625 0 19.937c0-.02.004-.038.004-.057L1.292 5.05a.622.622 0 0 1 .616-.578h2.65C4.593 1.998 6.571-.002 9-.002c2.428 0 4.406 2 4.442 4.474h2.65c.317 0 .588.248.616.578l1.287 14.83zM9 1.268c-1.743 0-3.164 1.43-3.2 3.204h6.4c-.036-1.774-1.457-3.204-3.2-3.204zm5.624 20.46c1.164 0 2.116-.79 2.134-1.764L15.521 5.746h-2.079v1.928a.626.626 0 0 1-.62.635.625.625 0 0 1-.621-.635V5.746H5.795v1.928a.625.625 0 0 1-.621.635.625.625 0 0 1-.621-.635V5.746H2.474L1.242 19.964c.018.974.965 1.764 2.133 1.764h11.25z"></path><path d="M13 14.57H9.571v3.428H8.428V14.57H5v-1.143h3.428V9.999h1.143v3.428H13z"></path></g>
+		</symbol>
+	
+		<symbol id="email" viewBox="0 0 80 100">
+			<g fill="none" fill-rule="evenodd"><path d="M.5.5v99h79V.5H.5z" stroke="#EEE"></path><path d="M52.2 40c1.544 0 2.8 1.23 2.8 2.744v14.512C55 58.77 53.744 60 52.2 60H27.8c-1.544 0-2.8-1.23-2.8-2.744V42.744C25 41.23 26.256 40 27.8 40h24.4zm-2.484 3.887a.947.947 0 0 1 1.317.081.902.902 0 0 1-.083 1.291l-10.332 8.922a.942.942 0 0 1-.617.228.942.942 0 0 1-.617-.228L29.05 45.259a.902.902 0 0 1-.083-1.29.947.947 0 0 1 1.317-.082l9.717 8.389 9.715-8.39zm3.417 13.37V42.743a.925.925 0 0 0-.933-.915H27.8a.925.925 0 0 0-.933.915v14.512c0 .504.418.915.933.915h24.4c.514 0 .933-.41.933-.915z" fill="#80B435"></path></g>
+		</symbol>
+	
+		<symbol id="heart" viewBox="0 0 20 18">
+			<path class="heart-border" d="M18.38 1.67A5.424 5.424 0 0 0 14.47.01c-1.48 0-2.87.59-3.916 1.662l-.547.56-.555-.568a5.449 5.449 0 0 0-3.92-1.667 5.43 5.43 0 0 0-3.908 1.658 5.683 5.683 0 0 0-1.619 4.01c0 1.516.58 2.935 1.628 4.007l7.959 8.151c.11.114.258.174.403.174a.566.566 0 0 0 .402-.169l7.976-8.138a5.704 5.704 0 0 0 1.624-4.01 5.678 5.678 0 0 0-1.615-4.012z" fill="currentColor" fill-rule="evenodd"></path><path class="heart-form" d="M18.38 1.67a5.678 5.678 0 0 1 1.616 4.01 5.704 5.704 0 0 1-1.624 4.01l-7.976 8.14a.566.566 0 0 1-.402.168.567.567 0 0 1-.403-.174L1.63 9.673A5.696 5.696 0 0 1 .005 5.667a5.683 5.683 0 0 1 1.62-4.01A5.432 5.432 0 0 1 5.53-.004c1.479 0 2.873.596 3.92 1.668l.555.569.547-.56A5.437 5.437 0 0 1 14.469.01c1.48 0 2.865.586 3.912 1.658zm-.813 7.192a4.502 4.502 0 0 0 1.284-3.182 4.52 4.52 0 0 0-1.284-3.182 4.322 4.322 0 0 0-3.102-1.315 4.32 4.32 0 0 0-3.107 1.32l-.95.972a.56.56 0 0 1-.809 0l-.957-.98a4.321 4.321 0 0 0-6.21-.006 4.504 4.504 0 0 0-1.284 3.178c0 1.202.458 2.33 1.289 3.182l7.557 7.739 7.573-7.726z" fill="currentColor" fill-rule="evenodd"></path>
+		</symbol>
+	
+		<symbol id="heart-border" viewBox="0 0 20 18">
+			<path d="M18.38 1.67a5.678 5.678 0 0 1 1.616 4.01 5.704 5.704 0 0 1-1.624 4.01l-7.976 8.14a.566.566 0 0 1-.402.168.567.567 0 0 1-.403-.174L1.63 9.673A5.696 5.696 0 0 1 .005 5.667a5.683 5.683 0 0 1 1.62-4.01A5.432 5.432 0 0 1 5.53-.004c1.479 0 2.873.596 3.92 1.668l.555.569.547-.56A5.437 5.437 0 0 1 14.469.01c1.48 0 2.865.586 3.912 1.658zm-.813 7.192a4.502 4.502 0 0 0 1.284-3.182 4.52 4.52 0 0 0-1.284-3.182 4.322 4.322 0 0 0-3.102-1.315 4.32 4.32 0 0 0-3.107 1.32l-.95.972a.56.56 0 0 1-.809 0l-.957-.98a4.321 4.321 0 0 0-6.21-.006 4.504 4.504 0 0 0-1.284 3.178c0 1.202.458 2.33 1.289 3.182l7.557 7.739 7.573-7.726z" fill="#333" fill-rule="evenodd"></path>
+		</symbol>
+	
+		<symbol id="heart-form" viewBox="0 0 20 18">
+			<path d="M18.38 1.67A5.424 5.424 0 0 0 14.47.01c-1.48 0-2.87.59-3.916 1.662l-.547.56-.555-.568a5.449 5.449 0 0 0-3.92-1.667 5.43 5.43 0 0 0-3.908 1.658 5.683 5.683 0 0 0-1.619 4.01c0 1.516.58 2.935 1.628 4.007l7.959 8.151c.11.114.258.174.403.174a.566.566 0 0 0 .402-.169l7.976-8.138a5.704 5.704 0 0 0 1.624-4.01 5.678 5.678 0 0 0-1.615-4.012z" fill="#D0021B" fill-rule="evenodd"></path>
+		</symbol>
+	
+		<symbol id="liste" viewBox="0 0 50 50">
+			<g fill="none" fill-rule="evenodd"><path d="M.5.5v49h49V.5H.5z" stroke="#D6D6D6" fill="#FFF"></path><path d="M13.669 20.194a1.64 1.64 0 0 1-1.638-1.639V14.64c0-.904.735-1.64 1.638-1.64h3.912a1.64 1.64 0 0 1 1.637 1.64v3.916a1.64 1.64 0 0 1-1.637 1.64H13.67zm-.388-5.555v3.916c0 .215.173.389.388.389h3.912a.388.388 0 0 0 .388-.389V14.64a.388.388 0 0 0-.388-.388H13.67a.388.388 0 0 0-.388.388zM12.03 27.46v-3.916c0-.904.735-1.64 1.638-1.64h3.912a1.64 1.64 0 0 1 1.637 1.64v3.916a1.64 1.64 0 0 1-1.637 1.64h-3.91a1.64 1.64 0 0 1-1.638-1.64zm1.25-3.921v3.917c0 .214.173.387.388.387h3.912a.388.388 0 0 0 .388-.387v-3.917a.388.388 0 0 0-.388-.388h-3.91a.388.388 0 0 0-.388.388zM12.03 36.36v-3.916a1.64 1.64 0 0 1 1.638-1.639h3.912a1.64 1.64 0 0 1 1.637 1.64v3.915A1.64 1.64 0 0 1 17.581 38H13.67a1.64 1.64 0 0 1-1.638-1.64zm1.25-3.916v3.916c0 .215.173.389.388.389h3.912a.388.388 0 0 0 .388-.389v-3.916a.388.388 0 0 0-.388-.388h-3.91a.388.388 0 0 0-.388.388zm23.123-17.836a.627.627 0 1 1 0 1.256H22.35a.627.627 0 1 1 0-1.256h14.054zm0 2.727a.627.627 0 1 1 0 1.256H22.35a.627.627 0 1 1 0-1.256h14.053zm0 6.173a.627.627 0 1 1 0 1.256H22.35a.627.627 0 1 1 0-1.256h14.053zm0 2.732a.627.627 0 1 1 0 1.256H22.35a.627.627 0 1 1 0-1.256h14.053zm0 6.174a.627.627 0 1 1 0 1.256H22.35a.627.627 0 1 1 0-1.256h14.053zm.622 3.354a.63.63 0 0 1-.622.628H22.35a.627.627 0 1 1 0-1.256H36.4c.347 0 .627.28.627.628z" fill="#2B2B2B"></path></g>
+		</symbol>
+	
+		<symbol id="phone" viewBox="0 0 38 38">
+			<path d="M31.012 27.664a14.986 14.986 0 0 0 2.776-2.756 14.533 14.533 0 0 0 3.066-8.964c0-8.17-6.752-14.819-15.055-14.819a15.28 15.28 0 0 0-7.199 1.8.57.57 0 0 1-.772-.223.556.556 0 0 1 .227-.76A16.427 16.427 0 0 1 21.799.004c8.93 0 16.196 7.15 16.196 15.94 0 3.518-1.141 6.851-3.3 9.644a16.119 16.119 0 0 1-2.783 2.808c1.267 1.13 1.908 2.244 1.957 3.391.079 1.886-1.447 3.311-2.793 4.571-.221.208-.439.41-.64.608-.7.685-1.812 1.03-3.217 1.03-1.41 0-3.112-.348-4.983-1.043-4.106-1.524-8.572-4.534-12.577-8.475-4.006-3.942-7.063-8.339-8.612-12.379-1.409-3.673-1.412-6.69-.011-8.068.201-.2.408-.413.62-.631 1.28-1.324 2.752-2.827 4.642-2.747 1.322.054 2.602.861 3.914 2.465 3.87 4.74 2.126 6.43.107 8.388l-.357.348c-.33.325-.956 1.831 4.855 7.55 1.896 1.866 3.513 3.232 4.806 4.058.815.522 2.268 1.308 2.865.72l.359-.356c1.94-1.936 3.62-3.612 8.165-.162zm-.398 1.115c-3.982-3.138-5.101-2.02-6.956-.17l-.364.363c-.888.876-2.333.681-4.292-.572-1.359-.87-3.039-2.286-4.99-4.207-4.822-4.746-6.366-7.649-4.855-9.137l.362-.353c1.89-1.83 3.03-2.936-.195-6.885C8.246 6.5 7.214 5.811 6.252 5.772h-.088c-1.362 0-2.593 1.273-3.681 2.4-.219.225-.432.446-.64.651-1.044 1.026-.937 3.727.27 6.88 1.494 3.894 4.459 8.15 8.352 11.983 3.893 3.83 8.215 6.75 12.173 8.218 3.206 1.19 5.948 1.292 6.992.266.208-.206.432-.414.66-.63 1.171-1.094 2.498-2.334 2.44-3.71-.039-.938-.727-1.945-2.046-2.996a.564.564 0 0 1-.07-.055zM18.63 9.881c.68-.202 1.331-.328 2.034-.328 1.819 0 2.931.894 2.931 2.419 0 .843-.474 1.486-1.485 2.14l-2.034 1.348c-.628.416-.91 1.071-.91 1.776h4.16c.09 0 .14.051.14.138v.97c0 .088-.05.139-.14.139H17.86c-.09 0-.14-.05-.14-.138v-.605c0-1.537.511-2.645 1.662-3.388l2.023-1.323c.512-.34.74-.668.74-1.057 0-.706-.562-1.16-1.484-1.16a5.1 5.1 0 0 0-1.612.265l-.742.24c-.076.024-.14-.014-.167-.09l-.319-.944c-.039-.075 0-.139.089-.163l.719-.24zm12.865 6.21c0 .088-.051.138-.14.138h-.793v2.117c0 .087-.052.138-.141.138h-1.152c-.09 0-.14-.05-.14-.138v-2.117h-4.29c-.088 0-.14-.05-.14-.139v-1.057c0-.076.014-.126.066-.177.319-.364.6-.705.908-1.12l2.368-2.998c.243-.315.434-.618.652-.97a.209.209 0 0 1 .179-.088h1.547c.09 0 .142.05.142.138v5.164h.793c.089 0 .14.05.14.139v.97h.001zm-2.367-3.288c0-.403.025-.807.077-1.235.025-.152-.09-.19-.192-.05l-2.074 2.594c-.166.226-.41.516-.588.68-.09.1-.039.188.064.188h2.713v-2.177z" fill="#232323" fill-rule="evenodd"></path>
+		</symbol>
+	
+		<symbol id="phone-number" viewBox="0 0 80 100">
+			<g fill="none" fill-rule="evenodd"><path d="M.5.5v99h79V.5H.5z" stroke="#EEE"></path><path d="M51.092 38.93A13.368 13.368 0 0 1 55 48.419a1.06 1.06 0 0 1-1.057 1.063 1.06 1.06 0 0 1-1.058-1.063 11.25 11.25 0 0 0-3.288-7.985 11.122 11.122 0 0 0-7.94-3.308 1.06 1.06 0 0 1-1.057-1.063A1.06 1.06 0 0 1 41.657 35a13.22 13.22 0 0 1 9.435 3.93zm-4.35 9.489c0-2.82-2.28-5.114-5.085-5.115a1.06 1.06 0 0 1-1.057-1.063 1.06 1.06 0 0 1 1.057-1.063c3.97 0 7.2 3.249 7.2 7.24a1.06 1.06 0 0 1-1.057 1.064 1.06 1.06 0 0 1-1.057-1.063zm-2.339 5.42c1.692.093 6.165 3.397 6.744 4.98.259.7.263 1.438.011 2.191-.57 1.701-1.584 2.928-2.934 3.55a4.81 4.81 0 0 1-2.036.44c-.76 0-1.554-.165-2.36-.495-4.028-1.651-7.553-3.96-10.478-6.863a.831.831 0 0 1-.022-.02c-2.891-2.945-5.191-6.494-6.835-10.55-.637-1.575-.656-3.104-.056-4.421.62-1.358 1.84-2.379 3.53-2.95.75-.254 1.485-.25 2.183.012 1.57.58 4.856 5.079 4.948 6.777.083 1.626-1.115 2.45-1.691 2.845a1.053 1.053 0 0 1-1.47-.278 1.067 1.067 0 0 1 .277-1.478c.68-.467.787-.678.772-.976-.107-.91-2.747-4.534-3.576-4.899-.24-.09-.479-.087-.77.011-1.122.38-1.91 1.01-2.28 1.822-.352.77-.32 1.716.091 2.733 1.536 3.79 3.68 7.103 6.37 9.844 0 .002.002.003.003.004 2.729 2.711 6.027 4.87 9.801 6.417 1.011.414 1.95.446 2.717.093.807-.372 1.434-1.166 1.812-2.295.097-.292.1-.532.01-.776-.36-.83-3.965-3.486-4.88-3.594-.286-.014-.496.094-.961.778-.33.484-.988.608-1.47.277a1.067 1.067 0 0 1-.276-1.478c.394-.579 1.215-1.784 2.826-1.7z" fill="#80B435"></path></g>
+		</symbol>
+	
+		<symbol id="play" viewBox="0 0 116 116">
+			<g fill="none" fill-rule="evenodd"><path d="M58 .5C26.244.5.5 26.243.5 58c0 31.756 25.744 57.5 57.5 57.5s57.5-25.744 57.5-57.5S89.756.5 58 .5z" stroke="#F7F7F7"></path><path d="M50 66.95V50.07c0-.784.823-1.368 1.636-.909.652.368 13.682 7.788 14.794 8.423.73.417.718 1.411 0 1.828-.8.466-13.88 7.924-14.827 8.442-.694.38-1.603-.04-1.603-.904z" fill="#F7F7F7"></path></g>
+		</symbol>
+	
+		<symbol id="search" viewBox="0 0 23 24">
+			<path d="M22.871 23.233a.455.455 0 0 1-.325.767.446.446 0 0 1-.325-.14l-6.717-7.019a9.4 9.4 0 0 1-6.035 2.19c-5.222 0-9.47-4.269-9.47-9.516S4.247 0 9.469 0c5.221 0 9.47 4.268 9.47 9.515a9.508 9.508 0 0 1-2.769 6.715l6.701 7.003zM9.469 18.124c4.724 0 8.567-3.862 8.567-8.609S14.193.906 9.47.906C4.744.906.9 4.768.9 9.516c0 4.746 3.843 8.608 8.568 8.608z" fill="currentColor" fill-rule="evenodd"></path>
+		</symbol>
+	
+		<symbol id="tableau" viewBox="0 0 50 50">
+			<g fill="none" fill-rule="evenodd"><path d="M.5.5v49h49V.5H.5z" stroke="#D6D6D6" fill="#FFF"></path><path d="M20.199 14.643h-.005v3.913A1.65 1.65 0 0 1 18.55 20.2h-3.914a1.65 1.65 0 0 1-1.644-1.644v-3.913c0-.904.74-1.643 1.644-1.643h3.92c.903 0 1.643.74 1.643 1.643zm-1.259 3.919h-.005v-3.919a.388.388 0 0 0-.385-.385h-3.914a.388.388 0 0 0-.385.385v3.919c0 .21.174.385.385.385h3.92c.21 0 .384-.175.384-.385zm1.259 4.981h-.005v3.914c0 .903-.74 1.643-1.644 1.643h-3.914c-.904 0-1.644-.74-1.644-1.643v-3.914c0-.904.74-1.643 1.644-1.643h3.92c.903 0 1.643.739 1.643 1.643zm-1.259 3.914h-.005v-3.914a.388.388 0 0 0-.385-.385h-3.914a.388.388 0 0 0-.385.385v3.914c0 .21.174.384.385.384h3.92c.21 0 .384-.174.384-.384zm-.385 3.337c.904 0 1.644.74 1.639 1.644v3.913a1.65 1.65 0 0 1-1.644 1.644h-3.914a1.65 1.65 0 0 1-1.644-1.644v-3.913c0-.904.74-1.644 1.644-1.644h3.92zm.385 5.562h-.005v-3.913a.388.388 0 0 0-.385-.385h-3.914a.388.388 0 0 0-.385.385v3.913c0 .211.174.385.385.385h3.92c.21 0 .384-.174.384-.385zm2.954-8.9v-3.913c0-.904.74-1.643 1.644-1.643h3.914c.904 0 1.643.739 1.643 1.643v3.914c0 .903-.74 1.643-1.643 1.643h-3.914c-.904 0-1.644-.74-1.644-1.643zm1.258-3.913v3.914c0 .21.175.384.386.384h3.914c.21 0 .385-.174.385-.384v-3.914a.388.388 0 0 0-.385-.385h-3.914a.388.388 0 0 0-.386.385zm-1.258 12.813v-3.913c0-.904.74-1.643 1.644-1.643h3.914c.904 0 1.643.74 1.643 1.643v3.913c0 .904-.74 1.644-1.643 1.644h-3.914a1.65 1.65 0 0 1-1.644-1.644zm1.258-3.918v3.913c0 .21.175.385.386.385h3.914c.21 0 .385-.174.385-.385v-3.913a.388.388 0 0 0-.385-.385h-3.914a.388.388 0 0 0-.386.385zm7.639-4.981v-3.914c0-.904.74-1.643 1.643-1.643h3.914c.904 0 1.644.739 1.644 1.643v3.914c0 .903-.74 1.643-1.644 1.643h-3.914c-.904 0-1.643-.74-1.643-1.643zm1.258-3.914v3.914c0 .21.175.384.385.384h3.914a.388.388 0 0 0 .386-.384v-3.914a.388.388 0 0 0-.386-.385h-3.914a.388.388 0 0 0-.385.385zm-1.258 12.813v-3.913c0-.904.74-1.643 1.643-1.643h3.914c.904 0 1.644.74 1.644 1.643v3.913A1.65 1.65 0 0 1 36.348 38h-3.914c-.904 0-1.643-.74-1.643-1.644zm1.258-3.918v3.913c0 .21.175.385.385.385h3.914a.388.388 0 0 0 .386-.385v-3.913a.388.388 0 0 0-.386-.385h-3.914a.388.388 0 0 0-.385.385zM21.894 14.643c0-.904.734-1.643 1.644-1.643h3.914c.904 0 1.643.74 1.643 1.643v3.913c0 .904-.74 1.644-1.643 1.644h-3.914a1.65 1.65 0 0 1-1.644-1.644v-3.913zm1.258 0v3.913c0 .211.175.386.386.386h3.914c.21 0 .385-.175.385-.386v-3.913a.388.388 0 0 0-.385-.385h-3.914a.388.388 0 0 0-.386.385zm9.282 5.562a1.65 1.65 0 0 1-1.643-1.649v-3.913c0-.904.74-1.643 1.643-1.643h3.914c.904 0 1.644.74 1.644 1.643v3.919c0 .904-.74 1.643-1.644 1.643h-3.914zm-.385-5.562v3.913c0 .211.175.386.385.386h3.914a.389.389 0 0 0 .386-.386v-3.913a.388.388 0 0 0-.386-.385h-3.914a.388.388 0 0 0-.385.385z" fill="#7FB441"></path></g>
+		</symbol>
+	
+</svg>
+
+<header>
+    <h1 id="logo">Gulp SVG Sprites <small>(12 icons in &lt;symbol&gt; mode)</small></h1>
+    <h4>Files Generated:</h4>
+    <ol>
+        <li><a href="svg/symbols.svg">svg/symbols.svg</a></li>
+    </ol>
+    <h4>Usage:</h4>
+    <ol>
+        <li>
+            Include the <strong>contents</strong> of the <a href="svg/symbols.svg">SVG file</a> just after the opening <code>&lt;body&gt;</code> tag.
+        </li>
+        <li>
+            Paste one of the snippets anywhere into your website.
+        </li>
+    </ol>
+
+</header>
+<section>
+    <ul class="icon-boxes">
+        
+
+        <li title="adress">
+            <div class="icon-box" id="icon-box-adress">
+                <svg class="icon adress">
+                    <use xlink:href="#adress" />
+                </svg>
+            </div>
+            <h2>adress</h2>
+            <button onclick="showPopover('snippet-adress')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-adress')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-adress">
+                <pre><code>&lt;svg class=&quot;icon adress&quot;&gt;&lt;use xlink:href=&quot;#adress&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="caddie">
+            <div class="icon-box" id="icon-box-caddie">
+                <svg class="icon caddie">
+                    <use xlink:href="#caddie" />
+                </svg>
+            </div>
+            <h2>caddie</h2>
+            <button onclick="showPopover('snippet-caddie')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-caddie')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-caddie">
+                <pre><code>&lt;svg class=&quot;icon caddie&quot;&gt;&lt;use xlink:href=&quot;#caddie&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="email">
+            <div class="icon-box" id="icon-box-email">
+                <svg class="icon email">
+                    <use xlink:href="#email" />
+                </svg>
+            </div>
+            <h2>email</h2>
+            <button onclick="showPopover('snippet-email')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-email')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-email">
+                <pre><code>&lt;svg class=&quot;icon email&quot;&gt;&lt;use xlink:href=&quot;#email&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="heart">
+            <div class="icon-box" id="icon-box-heart">
+                <svg class="icon heart">
+                    <use xlink:href="#heart" />
+                </svg>
+            </div>
+            <h2>heart</h2>
+            <button onclick="showPopover('snippet-heart')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-heart')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-heart">
+                <pre><code>&lt;svg class=&quot;icon heart&quot;&gt;&lt;use xlink:href=&quot;#heart&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="heart-border">
+            <div class="icon-box" id="icon-box-heart-border">
+                <svg class="icon heart-border">
+                    <use xlink:href="#heart-border" />
+                </svg>
+            </div>
+            <h2>heart-border</h2>
+            <button onclick="showPopover('snippet-heart-border')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-heart-border')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-heart-border">
+                <pre><code>&lt;svg class=&quot;icon heart-border&quot;&gt;&lt;use xlink:href=&quot;#heart-border&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="heart-form">
+            <div class="icon-box" id="icon-box-heart-form">
+                <svg class="icon heart-form">
+                    <use xlink:href="#heart-form" />
+                </svg>
+            </div>
+            <h2>heart-form</h2>
+            <button onclick="showPopover('snippet-heart-form')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-heart-form')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-heart-form">
+                <pre><code>&lt;svg class=&quot;icon heart-form&quot;&gt;&lt;use xlink:href=&quot;#heart-form&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="liste">
+            <div class="icon-box" id="icon-box-liste">
+                <svg class="icon liste">
+                    <use xlink:href="#liste" />
+                </svg>
+            </div>
+            <h2>liste</h2>
+            <button onclick="showPopover('snippet-liste')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-liste')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-liste">
+                <pre><code>&lt;svg class=&quot;icon liste&quot;&gt;&lt;use xlink:href=&quot;#liste&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="phone">
+            <div class="icon-box" id="icon-box-phone">
+                <svg class="icon phone">
+                    <use xlink:href="#phone" />
+                </svg>
+            </div>
+            <h2>phone</h2>
+            <button onclick="showPopover('snippet-phone')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-phone')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-phone">
+                <pre><code>&lt;svg class=&quot;icon phone&quot;&gt;&lt;use xlink:href=&quot;#phone&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="phone-number">
+            <div class="icon-box" id="icon-box-phone-number">
+                <svg class="icon phone-number">
+                    <use xlink:href="#phone-number" />
+                </svg>
+            </div>
+            <h2>phone-number</h2>
+            <button onclick="showPopover('snippet-phone-number')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-phone-number')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-phone-number">
+                <pre><code>&lt;svg class=&quot;icon phone-number&quot;&gt;&lt;use xlink:href=&quot;#phone-number&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="play">
+            <div class="icon-box" id="icon-box-play">
+                <svg class="icon play">
+                    <use xlink:href="#play" />
+                </svg>
+            </div>
+            <h2>play</h2>
+            <button onclick="showPopover('snippet-play')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-play')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-play">
+                <pre><code>&lt;svg class=&quot;icon play&quot;&gt;&lt;use xlink:href=&quot;#play&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="search">
+            <div class="icon-box" id="icon-box-search">
+                <svg class="icon search">
+                    <use xlink:href="#search" />
+                </svg>
+            </div>
+            <h2>search</h2>
+            <button onclick="showPopover('snippet-search')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-search')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-search">
+                <pre><code>&lt;svg class=&quot;icon search&quot;&gt;&lt;use xlink:href=&quot;#search&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+
+        <li title="tableau">
+            <div class="icon-box" id="icon-box-tableau">
+                <svg class="icon tableau">
+                    <use xlink:href="#tableau" />
+                </svg>
+            </div>
+            <h2>tableau</h2>
+            <button onclick="showPopover('snippet-tableau')">Show Snippet</button>
+            <br/>
+            <button onclick="invertBackground('icon-box-tableau')">Invert Background</button>
+            <div class="snippet-popover" id="snippet-tableau">
+                <pre><code>&lt;svg class=&quot;icon tableau&quot;&gt;&lt;use xlink:href=&quot;#tableau&quot;&gt;&lt;/use&gt;&lt;/svg&gt;</code></pre>
+                <button onclick="hidePopover()">Close</button>
+            </div>
+        </li>
+        
+    </ul>
+</section>
+<footer>
+    <p>Generated by <a href="https://github.com/shakyshane/gulp-svg-sprites">Gulp Svg Sprites</a> - Preview page courtesy of <a href="http://iconizr.com" target="_blank">iconizr</a>.</p>
+</footer>
+<script type="text/javascript">
+    var openSnippet;
+    function showPopover(id) {
+        openSnippet = document.getElementById(id);
+        openSnippet.classList.add("active");
+    }
+    function hidePopover() {
+
+        openSnippet.classList.remove("active");
+    }
+    function invertBackground(id) {
+        var elem = document.getElementById(id);
+        elem.classList.toggle("inverted");
+    }
+</script>
+</body>
+</html>
