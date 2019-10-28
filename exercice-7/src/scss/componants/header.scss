@@ -1,0 +1,70 @@
+@import '../common/variables';
+
+header{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: poppins, arial, sans-serif;
+  font-size: 0.9rem;
+  padding: 40px 0;
+
+  nav{
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+
+    ul{
+      display:flex;
+
+      li{
+        margin: 0 20px;
+
+        a{
+          text-decoration: none;
+          color: $black;
+          border-bottom: 1px solid rgba(0, 0, 0, 0);
+          transition: border-bottom .3s;
+
+          &:hover{
+            border-bottom: 1px solid $black;
+          }
+        }
+      }
+    }
+  }
+
+  #topbar{
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+
+    a{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 15px;
+      border-radius: 50%;
+      color: $black;
+
+      svg{
+        height: 22px;
+        width: 22px;
+      }
+    }
+
+    .loupe:hover{
+      color: $grey;
+    }
+
+    .heart-border:hover{
+      color: $red;
+    }
+
+    .caddie:hover{
+      color: $blue;
+    }
+  }
+}
