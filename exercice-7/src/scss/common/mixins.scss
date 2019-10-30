@@ -1,0 +1,14 @@
+//--------------------------------------------------------------
+// Mixins scss
+//--------------------------------------------------------------
+
+@mixin button($color, $background-color){
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 30px;
+  height: 30px;
+  text-decoration: none;
+  color: $color;
+  background-color: $background-color;
+}

@@ -1,0 +1,64 @@
+@import '../common/variables';
+@import '../common/mixins';
+
+.slider-picture{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(../img/slide-1.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  font-family: poppins, arial ,sans-serif;
+  color: $white;
+
+  h2{
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+
+  a{
+    position: absolute;
+    @include button($black, $white);
+    font-weight: 400;
+    bottom: calc(100% / 5);
+
+    &:hover{
+      background-color: $light-grey;
+    }
+  }
+}
+
+.slider-dot{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+
+  ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  input{
+    display: none;
+  }
+
+  label{
+      cursor: pointer;
+      display: block;
+      height: 4px;
+      width: 50px;
+      border-radius: 100px;
+      background-color: $light-grey;
+      margin: 0 15px;
+  }
+
+  input:checked + label{
+    background-color: $grey;
+  } 
+}
