@@ -1,0 +1,105 @@
+@import '../common/variables';
+@import '../common/mixins';
+
+.banners{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2{
+    font-family: poppins, arial ,sans-serif;
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: $white;
+  }
+
+  .banner-img{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a{
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      right: 15px;
+      bottom: 15px;
+      height: 50px;
+      width: 50px;
+      border-radius: 50px;
+      background-color: $white;
+      transition: background-color .2s;
+
+      &:hover{
+        background-color: $light-grey;
+      }
+
+      svg{
+        color: $black;
+        height: 15px;
+      }
+    }
+  }
+
+  .container-banner{
+    display: flex;
+    justify-content: space-between;
+    height: 490px;
+    width: 100%;
+
+    .first-container-banner{
+      width: 490px;
+      background: url(../img/new-textures.jpg) no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .second-container-banner{
+      display: flex;
+      justify-content: space-between;
+      width: 490px;
+
+      .second-container-banner-left{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 235px;
+
+        .second-container-banner-left-top{
+          height: 235px;
+          background: url(../img/summer-hats.jpg) no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+
+        .second-container-banner-left-bot{
+          height: 235px;
+          background: url(../img/party-shoes.jpg) no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+      }
+
+      .second-container-banner-right{
+        width: 235px;
+        background: url(../img/natural-fibers.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+    }
+  }
+
+  p{
+    font-family: poppins, arial, sans-serif;
+    color: $black;
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 20px;
+    margin: 50px 140px;
+  }
+}
