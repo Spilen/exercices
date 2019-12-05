@@ -1,0 +1,59 @@
+@import '../common/variables';
+@import '../common/mixins';
+
+.subscribe{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FDD2C1;
+  height: 300px;
+  margin: 50px 0 80px; 
+
+  h2{
+    margin-bottom: 50px;
+  }
+
+  .submit{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 250px;
+    background-color: $white;
+    padding: 0 25px;
+
+    input{
+      height: 40px;
+      width: 100%;
+      font-size: 1rem;
+      border: none;
+      font-family: poppins, arial ,sans-serif;
+      font-weight: 300;
+    }
+
+    .submit-button{
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      right: -25px;
+      color: $white;
+      background-color: $black;
+      height: 48px;
+      width: 48px;
+      border-radius: 50px;
+      border: 1px solid $black;
+      transition: background-color .3s, color .3s;
+
+      &:hover{
+        color: $black;
+        background-color: $light-grey;
+      }
+
+      svg{
+        height: 15px;
+      }
+    }
+  }
+}
