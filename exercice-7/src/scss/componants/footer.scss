@@ -1,0 +1,57 @@
+@import '../common/variables';
+@import '../common/mixins';
+
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  border-top: 1px solid $light-grey;
+
+/* ENDER */
+  ul{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    transition: border-bottom .3s;
+    
+    li:not(last-child){
+      margin-right: 40px;
+    }
+    
+    a{
+      text-decoration: none;
+      color: $grey;
+      font-family: poppins, arial ,sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+
+      &:hover{
+        border-bottom: 1px solid $grey;
+      }
+    }
+  }
+
+  .social-network a{
+    color: $black;
+
+    &:hover{
+      border-bottom: 1px solid $black;
+    }
+  }
+
+/* SIGNATURE */  
+  .signature{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    color: grey;
+    background-color: $light-grey;
+    font-family: poppins, arial ,sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+  }
+}
