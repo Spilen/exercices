@@ -77,16 +77,16 @@
     <form class="slider-dot">
       <ul>
         <li>
-          <input id="slide-1" type="radio" name="hero" checked="checked"/>
-          <label for="slide-1"></label>
+          <input id="slide-banner-1" type="radio" name="hero" checked="checked"/>
+          <label for="slide-banner-1"></label>
         </li>
         <li>
-          <input id="slide-2" type="radio" name="hero"/>
-          <label for="slide-2"></label>
+          <input id="slide-banner-2" type="radio" name="hero"/>
+          <label for="slide-banner-2"></label>
         </li>
         <li>
-          <input id="slide-3" type="radio" name="hero"/>
-          <label for="slide-3"></label>
+          <input id="slide-banner-3" type="radio" name="hero"/>
+          <label for="slide-banner-3"></label>
         </li>
       </ul>
     </form>
@@ -95,7 +95,7 @@
     <div class="banners">
       <div class="container-banner">
         <div class="first-container-banner banner-img">
-          <h2>New Textures</h2>
+          <h3>New Textures</h2>
           <a href="#">
             <svg>
              <use href="#arrow-right"></use>
@@ -105,7 +105,7 @@
         <div class="second-container-banner">
           <div class="second-container-banner-left">
             <div class="second-container-banner-left-top banner-img">
-              <h2>Summer<br/> Hats</h2>  
+              <h3>Summer<br/> Hats</h2>  
               <a href="#">
                 <svg>
                   <use href="#arrow-right"></use>
@@ -113,7 +113,7 @@
               </a>            
             </div>
             <div class="second-container-banner-left-bot banner-img">
-              <h2>Party Shoes</h2>
+              <h3>Party Shoes</h2>
               <a href="#">
                 <svg>
                   <use href="#arrow-right"></use>
@@ -122,7 +122,7 @@
             </div>
           </div>
           <div class="second-container-banner-right banner-img">
-            <h2>Natural<br/> Fibers</h2>
+            <h3>Natural<br/> Fibers</h2>
             <a href="#">
               <svg>
                 <use href="#arrow-right"></use>
@@ -134,14 +134,114 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed fermentum nibh, vel aliquet massa. Etiam in magna id risus lacinia luctus eget eu est.</p>
     </div>
 
-<!-- TEXT -->
-    <div class="text">
-
-    </div>
-
 <!-- FEATURED -->
     <div class="featured">
-
+      <h2>Featured Products</h2>
+      <ul class="product-nav">
+        <li><a href="#">All</a></li>
+        <li><a href="#">Popular</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Sale</a></li>
+      </ul>
+      <ul class="container-products">
+        <li class="product-window">
+          <div class="product-window-picture">
+            <img class="img-product" src="dist/img/product-1.jpg" alt="robe"/>
+            <form class="icon-heart">
+              <input id="heart-1" type="checkbox"/>
+              <label for="heart-1">
+                <svg class="heart-border">
+                  <use href="#heart-border"></use>
+                </svg>
+                <svg class="heart-form">
+                    <use href="#heart-form"></use>
+                  </svg>
+              </label>
+            </form>
+          </div>
+          <div class="product-window-legend">
+            <span class="product-name">Satine Dress</span>
+            <span class="product-price">$29.00</span>
+          </div>
+        </li>
+        <li class="product-window">
+          <div class="product-window-picture">
+            <img class="img-product" src="dist/img/product-2.jpg" alt="chaussures"/>
+            <span class="sale">SALE</span>
+            <form class="icon-heart">
+              <input id="heart-2" type="checkbox"/>
+              <label for="heart-2">
+                <svg class="heart-border">
+                  <use href="#heart-border"></use>
+                </svg>
+                <svg class="heart-form">
+                    <use href="#heart-form"></use>
+                  </svg>
+              </label>
+            </form>
+          </div>
+          <div class="product-window-legend">
+            <span class="product-name">High heel ankle boots</span>
+            <span class="product-price">$49.00 <em>$89.00</em></span>
+          </div>
+        </li>
+        <li class="product-window">
+          <div class="product-window-picture">
+            <img class="img-product" src="dist/img/product-3.jpg" alt="chemisier"/>
+            <form class="icon-heart">
+              <input id="heart-3" type="checkbox"/>
+              <label for="heart-3">
+                <svg class="heart-border">
+                  <use href="#heart-border"></use>
+                </svg>
+                <svg class="heart-form">
+                    <use href="#heart-form"></use>
+                  </svg>
+              </label>
+            </form>
+          </div>
+          <div class="product-window-legend">
+            <span class="product-name">Light blouse</span>
+            <span class="product-price">$39.00</span>
+          </div>           
+        </li>
+        <li class="product-window">
+          <div class="product-window-picture">
+            <img class="img-product" src="dist/img/product-4.jpg" alt="sac"/>
+            <form class="icon-heart">
+              <input id="heart-4" type="checkbox"/>
+              <label for="heart-4">
+                <svg class="heart-border">
+                  <use href="#heart-border"></use>
+                </svg>
+                <svg class="heart-form">
+                    <use href="#heart-form"></use>
+                  </svg>
+              </label>
+            </form>
+          </div>
+          <div class="product-window-legend">
+            <span class="product-name">Wicker tote bag</span>
+            <span class="product-price">$29.00</span>
+          </div>          
+        </li>
+      </ul>
+      <form class="slider-dot">
+          <ul>
+            <li>
+              <input id="slide-product-1" type="radio" name="hero" checked="checked"/>
+              <label for="slide-product-1"></label>
+            </li>
+            <li>
+              <input id="slide-product-2" type="radio" name="hero"/>
+              <label for="slide-product-2"></label>
+            </li>
+            <li>
+              <input id="slide-product-3" type="radio" name="hero"/>
+              <label for="slide-product-3"></label>
+            </li>
+          </ul>
+        </form>
     </div>
 
 <!-- SUBSCRIBE -->
