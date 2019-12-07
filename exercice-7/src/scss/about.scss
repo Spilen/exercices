@@ -1,0 +1,78 @@
+@import 'common/variables';
+@import 'common/reset';
+
+@import 'componants/main';
+@import 'componants/header';
+@import 'componants/subscribe';
+@import 'componants/footer';
+
+.bann-about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: $light-grey;
+}
+
+p{
+  font-family: poppins, arial, sans-serif;
+  color: $black;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 20px;
+  max-width: 700px;
+  margin: 60px auto;
+}
+
+.about-us{
+  max-width: 1000px;
+  margin: 0 auto;
+
+  li{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 500px;
+
+    img{
+      height: 450px;
+      width: 450px;
+    }
+  }
+
+  li:nth-child(even){
+    flex-direction: row-reverse;
+  }
+
+  p{
+    text-align: center;
+    max-width: 450px;
+    margin: inherit;
+    padding-top: 100px;
+  }
+
+  .boss-text:before{
+    content:'';
+    position: absolute;
+    top: 100px;
+    right: 200px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: #FDD2C1;
+  }
+
+  .showroom-text:before{
+    content:'';
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: #FDD2C1;
+  }
+}
