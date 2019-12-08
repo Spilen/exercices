@@ -1,0 +1,87 @@
+@import 'common/variables';
+@import 'common/reset';
+
+@import 'componants/main';
+@import 'componants/header';
+@import 'componants/subscribe';
+@import 'componants/footer';
+
+.bann-contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: $light-grey;
+}
+
+p{
+  font-family: poppins, arial, sans-serif;
+  color: $black;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 20px;
+  max-width: 700px;
+  margin: 60px auto;
+}
+
+.contact{
+  display: flex;
+  justify-content: space-between;
+  font-family: poppins, arial, sans-serif;
+  font-size: 0.9rem;
+  max-width: 1000px;
+  margin: 0 auto 60px;
+
+  div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    border: 1px solid $black;
+    height: 200px;
+    width: 320px;
+    padding: 60px;
+    box-sizing: border-box;
+
+    h3{
+      text-align: center;
+      color: $grey;
+    }
+
+    span{
+      color: $black;
+      font-weight: 500;
+    }
+  }
+}
+
+.map{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/map.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  max-width: 1000px;
+  margin: 0 auto 60px;
+
+  .address{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $beige;
+    height: 100px;
+    width: 200px;
+
+    span{
+      font-family: poppins, arial, sans-serif;
+      color: $black;
+      text-align: center;
+      line-height: 20px;
+    }
+  }
+}
