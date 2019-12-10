@@ -1,0 +1,76 @@
+@import 'common/variables';
+@import 'common/reset';
+@import 'common/mixins';
+
+@import 'componants/main';
+@import 'componants/header';
+@import 'componants/subscribe';
+@import 'componants/footer';
+
+.bann-catalog{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  max-width: 1000px;
+  margin: 0 auto 25px;
+  background-color: $light-grey;
+}
+
+.catalog{
+  display: flex;
+  flex-direction: column;
+  font-family: poppins, arial ,sans-serif;
+  max-width: 1000px;
+  margin: 0 auto 40px;
+
+  .products-menu{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin: 0 auto 40px;
+    
+    fieldset{
+      display: flex;
+      flex-direction: column;
+      
+      label{
+        font-size: 0.7rem;
+        margin-bottom: 5px;
+      }
+
+      select{
+        height: 50px;
+        width: 230px;
+      }
+    }
+  }
+
+  .container-products{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin: 0 auto 40px;
+    @include product;
+  }
+
+  a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8rem;
+    line-height: 15px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    background-color: $black;
+    color: $white;
+    margin: 0 auto 40px;
+
+    &:hover{
+      background-color: $grey;
+    }
+  }
+}
