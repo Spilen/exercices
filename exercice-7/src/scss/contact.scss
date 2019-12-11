@@ -6,16 +6,6 @@
 @import 'componants/subscribe';
 @import 'componants/footer';
 
-.bann-contact{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  max-width: 1000px;
-  margin: 0 auto;
-  background-color: $light-grey;
-}
-
 p{
   font-family: poppins, arial, sans-serif;
   color: $black;
