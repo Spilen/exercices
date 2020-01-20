@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport">
-    <link rel="stylesheet" href="dist/css/catalog.min.css">
+    <link rel="stylesheet" href="dist/css/faq.min.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
     <title>SHILA</title>
   </head>
@@ -19,6 +19,16 @@
         </symbol>
         <symbol id="loupe" viewBox="0 0 20 20">
           <path d="M8.448 0a8.442 8.442 0 0 1 8.443 8.443 8.409 8.409 0 0 1-1.914 5.354l4.775 4.775a.833.833 0 1 1-1.179 1.179l-4.775-4.774a8.415 8.415 0 0 1-5.354 1.913C3.784 16.886 0 13.108 0 8.443 0 3.78 3.783 0 8.448 0zm0 15.221a6.78 6.78 0 0 0 6.778-6.778 6.78 6.78 0 0 0-6.778-6.778 6.778 6.778 0 1 0 0 13.556z" fill="currentColor" fill-rule="evenodd"></path>
+        </symbol>
+        <symbol id="arrow-right" viewBox="0 0 18 16">
+          <path d="M14.502 9H0V7h14.502L9.008 1.505 10.505.008l7.487 7.487-.505.505.505.505-7.487 7.487-1.497-1.497L14.502 9z" fill="currentColor" fill-rule="evenodd"></path>
+        </symbol>
+        <symbol id="faq-button" viewBox="0 0 60 60">
+          <g fill="none" fill-rule="evenodd">
+            <path d="M30 0C46.57 0 60 13.431 60 30 60 46.57 46.57 60 30 60 13.432 60 0 46.57 0 30 0 13.431 13.432 0 30 0z" fill="#000"></path>
+            <path fill="#FFF" d="M22 29h16v2H22z"></path>
+            <path fill="currentColor" d="M31.5 22.5v16h-2v-16z"></path>
+          </g>
         </symbol>
       </svg>
 
@@ -58,26 +68,97 @@
     </div>
 
 <!-- FAQ -->
-    <ul class="faq">
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-
-<!-- SUBSCRIBE -->
-    <div class="subscribe">
-      <h2>Subscribe and Get 15% Off</h2>
-      <form class="submit" method="post">
-        <input type="email" placeholder="Your email">
-        <a class="submit-button" href="#">
-          <svg>
-            <use href="#arrow-right"></use>
-          </svg>
-        </a>
-      </form>
-    </div>
+    <form>
+      <ul class="faq">
+        <li>
+          <input id="q1" class="q" type="checkbox"/>
+          <label for="q1">
+            <svg>
+              <use href="#faq-button"></use>
+            </svg>
+          </label>
+          <div class="question">
+            <span>ipsum dolor sit amet, consectetur adipiscing elit?</span>
+            <p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/><br/>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </li>
+        <li>
+          <input id="q2" class="q" type="checkbox"/>
+          <label for="q2">
+            <svg>
+              <use href="#faq-button"></use>
+            </svg>
+          </label>
+          <div class="question">
+            <span>Vestibulum posuere, velit nec posuere ullamcorper, lorem nisl interdum enim, at
+              fringilla massa  lectus efficitur quam?</span>
+            <p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/><br/>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </li>
+        <li>
+          <input id="q3" class="q" type="checkbox"/>
+          <label for="q3">
+            <svg>
+              <use href="#faq-button"></use>
+            </svg>
+          </label>
+          <div class="question">
+            <span>ipsum dolor sit amet, consectetur adipiscing elit?</span>
+            <p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/><br/>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </li>
+        <li>
+          <input id="q4" class="q" type="checkbox"/>
+          <label for="q4">
+            <svg>
+              <use href="#faq-button"></use>
+            </svg>
+          </label>
+          <div class="question">
+            <span>Vestibulum posuere, velit nec posuere ullamcorper, lorem nisl interdum enim, at
+              fringilla massa  lectus efficitur quam?</span>
+            <p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/><br/>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </li>
+        <li>
+          <input id="q5" class="q" type="checkbox"/>
+          <label for="q5">
+            <svg>
+              <use href="#faq-button"></use>
+            </svg>
+          </label>
+          <div class="question">
+            <span>ipsum dolor sit amet, consectetur adipiscing elit?</span>
+            <p class="answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br/><br/>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </li>
+      </ul>
+    </form>
 
 <!-- FOOTER -->
     <footer>

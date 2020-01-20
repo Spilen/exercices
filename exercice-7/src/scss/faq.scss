@@ -7,3 +7,58 @@
 @import 'componants/subscribe';
 @import 'componants/footer';
 
+.faq{
+  font-family: poppins, arial, sans-serif;
+  color: $black;
+  max-width: 1000px;
+  margin: 40px auto;
+  
+  li:not(:last-child){
+    margin-bottom: 20px;
+  }
+
+  li{
+    display: flex;
+    border: 1px $black solid;
+    padding: 30px;
+
+    input{
+      display: none;
+    }
+
+    label{
+      cursor: pointer;
+      display: flex;
+      height: 40px;
+      width: 40px;
+      color: $white;
+      margin: 0 30px 0 0;
+    }
+
+    .question{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 800px;
+      overflow: hidden;
+
+      .answer{
+        opacity: 0;
+        color: $grey;
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+        height: 0px;
+      }
+    }
+
+    .q:checked + label{
+      color: rgba(0, 0, 0, 0);
+    }
+
+    .q:checked + label + .question > .answer{
+      opacity: 1;
+      height: 100%;
+      margin-top: 20px;
+    }
+  }
+}

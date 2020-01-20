@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice 1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M30.000186,6.4e-05 C46.568632,6.4e-05 60.000064,13.431296 60.000064,30.000064 C60.000064,46.568512 46.568632,60.000064 30.000186,60.000064 C13.43174,60.000064 0.000308,46.568512 0.000308,30.000064 C0.000308,13.431296 13.43174,6.4e-05 30.000186,6.4e-05 Z" id="Ellipse" fill="#000000"></path>
+        <polygon id="Minus" fill="#FFFFFF" points="21.99964 28.999915 38 28.999915 38 30.999915 21.99964 30.999915"></polygon>
+        <polygon id="Minus" fill="#FFFFFF" transform="translate(30.000000, 30.500000) rotate(90.000000) translate(-30.000000, -30.500000) " points="21.99964 28.999915 38 28.999915 38 30.999915 21.99964 30.999915"></polygon>
+    </g>
+</svg>
