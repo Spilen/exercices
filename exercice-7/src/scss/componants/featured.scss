@@ -12,6 +12,10 @@
 
   h2{
     margin-bottom: 40px;
+
+    @media only screen and (max-width: 740px){
+      margin-bottom: 20px;
+    }
   }
 
 /* NAV */
@@ -19,9 +23,18 @@
     display:flex;
     margin-bottom: 40px;
 
+    @media only screen and (max-width: 740px){
+      margin-bottom: 20px;
+    }
+
     li{
       font-size: 0.9rem;
       margin: 0 15px;
+
+      @media only screen and (max-width: 530px){
+        font-size: 1.2rem;
+        margin: 0 20px;
+      }
 
       a{
         text-decoration: none;
@@ -38,11 +51,20 @@
 
 /* PORDUCTS */
   .container-products{
-    display: flex;
-    justify-content: space-between;
-    height: 450px;
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
     @include product;
+
+    @media only screen and (max-width: 1040px){
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    @media only screen and (max-width: 530px){
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 20px;
+    }
   }
 
 /* SLIDER */
@@ -52,6 +74,10 @@
     justify-content: center;
     align-items: center;
     margin: 40px;
+
+    @media only screen and (max-width: 530px){
+      display: none;
+    }
   
     ul{
       display: flex;

@@ -37,6 +37,11 @@
       background-color: $white;
       transition: background-color .2s;
 
+      @media only screen and (max-width: 530px){
+        height: 40px;
+        width: 40px;
+      }
+
       &:hover{
         background-color: $light-grey;
       }
@@ -54,11 +59,44 @@
     height: 490px;
     width: 100%;
 
+    @media only screen and (max-width: 1040px){
+      align-items: center;
+      flex-direction: column;
+      height: 1000px;
+    }
+
+    @media only screen and (max-width: 530px){
+      height: 800px;
+    }
+
     .first-container-banner{
       width: 490px;
       background: url(../img/new-textures.jpg) no-repeat;
       background-size: cover;
       background-position: center;
+
+      @media only screen and (max-width: 1040px){
+        height: 490px;
+      }
+
+      @media only screen and (max-width: 530px){
+        height: 390px;
+        width: 390px;
+      }
+
+      a:after{
+        display: none;
+        content:'';
+        position: absolute;
+        right: -15px;
+        bottom: -15px;
+        height: 390px;
+        width: 390px;
+
+        @media only screen and (max-width: 530px){
+          display: block;
+        }
+      }
     }
 
     .second-container-banner{
@@ -66,17 +104,48 @@
       justify-content: space-between;
       width: 490px;
 
+      @media only screen and (max-width: 1040px){
+        height: 490px;
+      }
+
+      @media only screen and (max-width: 530px){
+        height: 390px;
+        width: 390px;
+      }
+
       .second-container-banner-left{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         width: 235px;
 
+        @media only screen and (max-width: 530px){
+          width: 185px;
+        }
+
         .second-container-banner-left-top{
           height: 235px;
           background: url(../img/summer-hats.jpg) no-repeat;
           background-size: cover;
           background-position: center;
+
+          @media only screen and (max-width: 530px){
+            height: 185px;
+          }
+
+          a:after{
+            display: none;
+            content:'';
+            position: absolute;
+            right: -15px;
+            bottom: -15px;
+            height: 185px;
+            width: 185px;
+
+            @media only screen and (max-width: 530px){
+              display: block;
+            }
+          }
         }
 
         .second-container-banner-left-bot{
@@ -84,6 +153,24 @@
           background: url(../img/party-shoes.jpg) no-repeat;
           background-size: cover;
           background-position: center;
+
+          @media only screen and (max-width: 530px){
+            height: 185px;
+          }
+
+          a:after{
+            display: none;
+            content:'';
+            position: absolute;
+            right: -15px;
+            bottom: -15px;
+            height: 185px;
+            width: 185px;
+
+            @media only screen and (max-width: 530px){
+              display: block;
+            }
+          }
         }
       }
 
@@ -92,6 +179,24 @@
         background: url(../img/natural-fibers.jpg) no-repeat;
         background-size: cover;
         background-position: center;
+
+        @media only screen and (max-width: 530px){
+          width: 185px;
+        }
+
+        a:after{
+          display: none;
+          content:'';
+          position: absolute;
+          right: -15px;
+          bottom: -15px;
+          height: 390px;
+          width: 185px;
+
+          @media only screen and (max-width: 530px){
+            display: block;
+          }
+        }
       }
     }
   }
@@ -103,5 +208,13 @@
     text-align: center;
     line-height: 20px;
     margin: 80px 140px;
+
+    @media only screen and (max-width: 1040px){
+      margin: 40px 100px;
+    }
+
+    @media only screen and (max-width: 700px){
+      margin: 40px;
+    }
   }
 }
