@@ -19,6 +19,11 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     margin: 0 auto 40px;
+
+    @media only screen and (max-width: 1040px){
+      padding: 0 20px;
+      grid-template-columns: repeat(2, 1fr);
+    }
     
     fieldset{
       position: relative;
@@ -39,6 +44,14 @@
         font-size: 0.9rem;
         border-radius: 0;
         padding-left: 20px;
+
+        @media only screen and (max-width: 520px){
+          width: 200px;
+        }
+
+        @media only screen and (max-width: 460px){
+          width: 180px;
+        }
       }
 
       .select-form:after{
@@ -63,6 +76,18 @@
     grid-gap: 20px;
     margin: 0 auto 40px;
     @include product;
+
+    @media only screen and (max-width: 1040px){
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media only screen and (max-width: 760px){
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media only screen and (max-width: 530px){
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   a{
