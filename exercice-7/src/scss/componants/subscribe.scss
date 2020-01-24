@@ -11,12 +11,9 @@
   max-width: 1000px;
   margin: 50px auto 80px; 
 
-  @media only screen and (max-width: 1040px){
-    margin-top: 20px;
-  }
-
   @media only screen and (max-width: 740px){
     height: 200px;
+    margin: 20px auto;
   }
 
   h2{

@@ -9,12 +9,20 @@ footer{
   padding-top: 30px;
   border-top: 1px solid $light-grey;
 
+  @media only screen and (max-width: 740px){
+    padding-top: 20px;
+  }
+
 /* ENDER */
   ul{
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
     transition: border-bottom .3s;
+
+    @media only screen and (max-width: 740px){
+      margin-bottom: 20px;
+    }
     
     li:not(last-child){
       margin-right: 40px;
