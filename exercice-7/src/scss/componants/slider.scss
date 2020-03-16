@@ -1,33 +1,66 @@
 @import '../common/variables';
 @import '../common/mixins';
 
-.slider-picture{
+.slider{
   position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: url(../img/slide-1.jpeg) no-repeat;
-  background-size: cover;
-  background-position: center;
   height: 400px;
+  max-width: 1000px;
   font-family: poppins, arial ,sans-serif;
   color: $white;
-  max-width: 1000px;
   margin: 0 auto;
+  overflow: hidden;
 
   @media only screen and (max-width: 1040px){
     width: calc(100% - 40px);
   }
 
+  @media only screen and (max-width: 750px){
+    height: 300px;
+  }
+
+  H2{
+    z-index: 3;
+    position: absolute;
+    width: 300px;
+    bottom: calc(50% - 1.25rem);
+    left: calc(50% - 150px);
+  }
+
   a{
+    z-index: 3;
     position: absolute;
     @include button($black, $white);
     font-weight: 400;
     bottom: calc(100% / 5);
+    left: calc(50% - 70px);
 
     &:hover{
       background-color: $light-grey;
+    }
+
+    @media only screen and (max-width: 750px){
+      bottom: calc(100% / 6);
+    }
+  }
+
+  .slider-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 400px;
+  
+    .slider-picture{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      max-width: 1000px;
+      
+      img{
+        max-height: 600px;
+      }
     }
   }
 }
