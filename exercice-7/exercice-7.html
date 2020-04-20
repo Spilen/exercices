@@ -6,7 +6,6 @@
     <meta name="viewport">
     <link rel="stylesheet" href="dist/css/home.min.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
-    <script src="js/componants/main.js" async></script>
     <title>SHILA</title>
   </head>
 
@@ -67,35 +66,21 @@
     <div class="slider">
       <h2>New collection</h2>
       <a href="#">Shop Now</a>
-      <div class="slider-container">
-        <div class="slider-picture">
-          <img src="dist/img/slide-1.jpeg" alt="Slide-1">
-        </div>
-        <div class="slider-picture">
-          <img src="dist/img/slide-2.jpg" alt="Slide-2">
-        </div>
-        <div class="slider-picture">
-          <img src="dist/img/slide-3.jpeg" alt="Slide-3">
-        </div>
+      <div class="slider-picture">
+        <img src="dist/img/slide-1.jpg" alt="Slide-1">
       </div>
-    </div>
-
-    <form class="slider-dot">
-      <ul>
-        <li>
-          <input id="slide-banner-1" type="radio" name="hero" checked="checked"/>
-          <label for="slide-banner-1"></label>
-        </li>
-        <li>
-          <input id="slide-banner-2" type="radio" name="hero"/>
-          <label for="slide-banner-2"></label>
-        </li>
-        <li>
-          <input id="slide-banner-3" type="radio" name="hero"/>
-          <label for="slide-banner-3"></label>
-        </li>
+      <div class="slider-picture">
+        <img src="dist/img/slide-2.jpg" alt="Slide-2">
+      </div>
+      <div class="slider-picture">
+        <img src="dist/img/slide-3.jpg" alt="Slide-3">
+      </div>
+      <ul class="slider-select">
+        <li id="slide1" class="slider-dot">1</li>
+        <li id="slide2" class="slider-dot">2</li>
+        <li id="slide3" class="slider-dot">3</li>
       </ul>
-    </form>
+    </div>
 
 <!-- BANNERS -->
     <div class="banners">
@@ -283,5 +268,7 @@
         <span>© 2018 SHILA</span>
       </div>
     </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/componants/main.js"></script>
   </body>
 </html>
