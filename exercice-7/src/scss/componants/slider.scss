@@ -72,6 +72,10 @@
       margin: 0 15px;
     }
 
+    .slider-dot.active{
+      background-color: $grey;
+    }
+
     .slider-dot:after{
       content:'';
       position: absolute;
