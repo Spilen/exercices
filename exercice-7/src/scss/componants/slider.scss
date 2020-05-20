@@ -4,25 +4,18 @@
 .slider{
   position: relative;
   display: flex;
-  height: 400px;
+  flex-direction: column;
+  align-items: center;
   max-width: 1000px;
   font-family: poppins, arial ,sans-serif;
   color: $white;
-  margin: 0 auto 80px;
+  margin: 0 auto 40px;
 
-  @media only screen and (max-width: 1040px){
-    width: calc(100% - 40px);
-  }
-
-  @media only screen and (max-width: 750px){
-    height: 300px;
-  }
-
-  H2{
+  h2{
     z-index: 3;
     position: absolute;
     width: 300px;
-    bottom: calc(50% - 1.25rem);
+    bottom: 50%;
     left: calc(50% - 150px);
   }
 
@@ -31,37 +24,54 @@
     position: absolute;
     @include button($black, $white);
     font-weight: 400;
-    bottom: calc(100% / 5);
+    bottom: 25%;
     left: calc(50% - 70px);
 
     &:hover{
       background-color: $light-grey;
     }
-
-    @media only screen and (max-width: 750px){
-      bottom: calc(100% / 6);
-    }
   }
 
-  .slider-picture{
-    img{
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 400px;
-      max-width: 1000px;
+  .slider-box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+
+    @media only screen and (max-width: 1040px){
+      width: calc(100% - 40px);
+    }
+
+    @media only screen and (max-width: 750px){
+      height: 300px;
+    }
+
+    .slider-picture{
+      img{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -500px;
+        height: 100%;
+
+        @media only screen and (max-width: 750px){
+          margin-left: -375px;
+        }
+      }
     }
   }
 
   .slider-select{
-    position: absolute;
-    bottom: -42px;
-    left: calc(50% - 120px);
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin-top: 40px;
+    
     .slider-dot{
+      position: relative;
       cursor: pointer;
       display: block;
       height: 4px;
@@ -72,17 +82,18 @@
       margin: 0 15px;
     }
 
-    .slider-dot.active{
-      background-color: $grey;
-    }
-
     .slider-dot:after{
       content:'';
       position: absolute;
       top: -13px;
+      left: -10px;
       height: 30px;
-      width: 50px;
+      width: 70px;
       border-radius: 200px;
+    }
+
+    .slider-dot.active{
+      background-color: $grey;
     }
   }
 }

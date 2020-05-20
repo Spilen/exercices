@@ -88,6 +88,7 @@
     }
   
     label{
+        position: relative;
         cursor: pointer;
         display: block;
         height: 4px;
@@ -101,6 +102,7 @@
       content:'';
       position: absolute;
       top: -13px;
+      left: -10px;
       height: 30px;
       width: 50px;
       border-radius: 200px;
