@@ -1,3 +1,35 @@
+//MENU RESPONSIVE
+
+var content = document.querySelector('nav');
+var sidebarBody = document.querySelector('.hamburger-sidebar');
+var button = document.querySelector('.hamburger-button');
+var overlay = document.querySelector('.hamburger-overlay');
+var activatedClass = 'hamburger-activated'
+
+sidebarBody.innerHTML = content.innerHTML;
+
+button.addEventListener('click', function(e) {
+  e.preventDefault();
+
+  this.parentNode.classList.add(activatedClass);
+
+});
+
+button.addEventListener('keydown', function(e) {
+  if (this.parentNode.classList.contains(activatedClass)) {
+    if (e.repeat == false && e.which == 27)
+      this.parentNode.classList.remove(activatedClass);
+  }
+});
+
+overlay.addEventListener('click', function(e) {
+  e.preventDefault();
+
+  this.parentNode.classList.remove(activatedClass);
+});
+
+//CARROUSEL
+
 var carrousel = {
 
   nbSlide: 0,
@@ -52,7 +84,7 @@ var carrousel = {
     this.elem.find('.slider-box .slider-picture:eq(' + (num - 1) + ')').animate({'top':0, 'left':0}, 500);
     this.elemCurrent.animate(this.ccsEnd, 500);*/
 
-    //Transition de la pagination
+    //Pagination
     this.elem.find('.slider-select .slider-dot').removeClass('active');
     this.elem.find('.slider-select .slider-dot:eq(' + (num - 1) + ')').addClass('active');
     this.nbCurrent = num;
@@ -76,12 +108,12 @@ var carrousel = {
     this.gotoSlide(num);
   },*/
 
-  //Fonction stop défilement
+  //Fonction arrêter le défilement
   stop: function () {
     window.clearInterval(carrousel.timer);
   },
 
-  //Fonction play défilement
+  //Fonction activer le défilement
   play: function () {
     window.clearInterval(carrousel.timer);
     this.timer = window.setInterval('carrousel.next()',5000);
