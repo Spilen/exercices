@@ -38,6 +38,7 @@
       width: 40px;
       color: $white;
       margin: 0 30px 0 0;
+      transition: color .3s ease-in-out;
 
       &:after{
         display: none;
@@ -51,6 +52,11 @@
         @media only screen and (max-width: 530px){
           display: block;
         }
+      }
+
+      svg{
+        height: 40px;
+        width: 40px;
       }
     }
 
@@ -71,7 +77,7 @@
     }
 
     .q:checked + label{
-      color: rgba(0, 0, 0, 0);
+      color: transparent;
     }
 
     .q:checked + label + .question > .answer{
