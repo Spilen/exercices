@@ -2,7 +2,7 @@
 
 var content = document.querySelector('nav');
 var sidebarBody = document.querySelector('.hamburger-sidebar');
-var button = document.querySelector('.hamburger-button');
+var button = document.querySelector('.hamburger');
 var overlay = document.querySelector('.hamburger-overlay');
 var activatedClass = 'hamburger-activated'
 
@@ -10,7 +10,6 @@ sidebarBody.innerHTML = content.innerHTML;
 
 button.addEventListener('click', function(e) {
   e.preventDefault();
-
   this.parentNode.classList.add(activatedClass);
 
 });
@@ -27,6 +26,10 @@ overlay.addEventListener('click', function(e) {
 
   this.parentNode.classList.remove(activatedClass);
 });
+
+//animation du boutton hamburger
+
+const burger = document.querySelector('.hamburger-button');
 
 //CARROUSEL
 
