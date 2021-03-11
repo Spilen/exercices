@@ -1,0 +1,17 @@
+@import '../common/variables';
+
+footer{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+
+  .copyright{
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.6rem;
+    font-weight: lighter;
+    color: $white;
+  }
+}
