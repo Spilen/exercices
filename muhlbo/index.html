@@ -8,6 +8,7 @@
     <meta name="description" content="Fabien Muhlbauer, compositeur et interprète"/>
     <link rel="stylesheet" href="dist/css/home.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet"> 
   </head>
 
   <body>
@@ -34,69 +35,70 @@
       </symbol>
     </svg>
 
-<!-- NAVBAR -->
-    <nav>
-      <ul id="navbar">
+<!-- HEADER -->
+    <header class="header">
+      <ul class="navbar">
         <li><a href="#">à propos</a></li>
         <li><a href="#">écouter</a></li>
         <li><a href="#">contacter</a></li>
       </ul>
 
-      <ul id="social_network">
-        <li>
-          <a href="https://www.facebook.com/fabmuhlbauer">
-            <svg>
-              <use href="#facebook"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/muhlbo_music/">
-            <svg>
-              <use href="#instagram"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="https://music.apple.com/us/artist/baron-solitaire/1506603618">
-            <svg>
-              <use href="#itunes"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <svg>
-              <use href="#deezer"></use>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <svg>
-              <use href="#spotify"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
+      <div class="menu">
+        <ul class="social_network">
+          <li>
+            <a href="https://www.facebook.com/fabmuhlbauer" target:"_blank">
+              <svg title="facebook">
+                <use href="#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/muhlbo_music/" target:"_blank">
+              <svg title="instagram">
+                <use href="#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://music.apple.com/us/artist/baron-solitaire/1506603618" target:"_blank">
+              <svg title="itunes">
+                <use href="#itunes"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" target:"_blank">
+              <svg title="deezer">
+                <use href="#deezer"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#" target:"_blank">
+              <svg title="spotify">
+                <use href="#spotify"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
 
-      <section id="language">
-        <input type="radio" name="affichage" id="english" checked>
-        <label for="english"><img src="dist/img/england-flag.png" alt="English"></label>
-        <input type="radio" name="affichage" id="french">
-        <label for="french"><img src="dist/img/france-flag.png" alt="Français"></label>
-      </section>
-    </nav>
-
-<!-- HEADER -->
-    <header>
-      <img src="dist/img/themes-album.jpg" alt"pochette album themes">
-      <span class="title-muhlbo album-themes">muhl<em>bo</em></span>
-      <img src="dist/img/themes.png" alt"titre album themes" class="title-themes">
+        <div class="language">
+          <input type="radio" name="affichage" id="english" checked>
+          <label for="english"><img src="dist/img/england-flag.png" alt="English"></label>
+          <input type="radio" name="affichage" id="french">
+          <label for="french"><img src="dist/img/france-flag.png" alt="Français"></label>
+        </div>
+      </div>
     </header>
 
+<!-- POCHETTE -->
+    <section class="pochette">
+      <img src="dist/img/themes-album.jpg" alt"pochette album themes">
+      <span class="title-muhlbo album-themes">muhl<em>bo</em></span>
+    </section>
+
 <!-- FOOTER -->
-    <footer>
+    <footer class="footer">
       <span class="copyright">Copyright F.Muhlbauer 2021</span>
     </footer>
 
@@ -106,12 +108,10 @@
 </html>
 
 <!--
-  logo muhlbo,
-  moulin,
-  effet neon sur album (besoin image sans + police)
-  theme = siffon outline
+  logo muhlbo moulin,
   muhl = agrandir narrow thin
-  bo = megrim,
+  bo = megrim
+  inclure police agrandir dans le chargement de la page,
   contenu a propos,
   ecouter,
   contenu contact,

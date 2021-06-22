@@ -1,16 +1,12 @@
-const signs = document.querySelectorAll('.album-themes')
-const randomIn = (min, max) => (
-  Math.floor(Math.random() * (max - min + 1) + min)
-)
+var neon = document.querySelector('.title-muhlbo');
 
-const mixupInterval = el => {
-  const ms = randomIn(2000, 4000)
-  el.style.setProperty('--interval', `${ms}ms`)
+function setProperty(duration) {
+  neon.style.setProperty('--animation-time', duration +'s');
 }
 
-signs.forEach(el => {
-  mixupInterval(el)
-  el.addEventListener('webkitAnimationIteration', () => {
-    mixupInterval(el)
-  })
-})
+function changeAnimationTime() {
+  var animationDuration = Math.random();
+  setProperty(animationDuration);
+}
+
+setInterval(changeAnimationTime, 1000);

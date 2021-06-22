@@ -8,3 +8,8 @@ $dark-grey      : #1E1E1E;
 $blue           : #43B6E7;
 $neon           : #FB8CDD;
 $background     : #000617;
+
+$randomNumber: random(5);
+.thing {
+  animation-duration: $randomNumber + s;
+}
