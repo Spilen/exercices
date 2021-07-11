@@ -112,9 +112,9 @@ var carrousel = {
   },*/
 
   //Fonction arrêter le défilement
-  stop: function () {
+  /*stop: function () {
     window.clearInterval(carrousel.timer);
-  },
+  },*/
 
   //Fonction activer le défilement
   play: function () {
