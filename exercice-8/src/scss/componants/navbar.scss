@@ -1,1 +1,26 @@
 @import '../common/variables';
+
+.navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  
+  li{
+    font-size: 1rem;
+    margin-right: 20px;
+
+    a{
+      border-bottom: 1px solid rgba(255, 255, 255, 0);
+      transition: border-bottom .4s ease-out;
+
+      &:hover{
+        border-bottom: 1px solid $black;
+      }
+    }
+  }
+
+  li:last-child{
+    margin-right: 0;
+  }
+}

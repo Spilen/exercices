@@ -1,1 +1,76 @@
 @import '../common/variables';
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+
+  svg{
+    height: 20px;
+    width: 20px;
+  }
+
+// Champ de recherche
+  .search-product{
+    display: flex;
+    flex: 1 1;
+    align-items: center;
+
+    form{
+      position: relative;
+      height: 40px;
+      max-width: 280px;
+      width: 100%;
+      border-radius: 50px;
+      border: 1px solid $black;
+
+      input{
+        height: 40px;
+        width: 100%;
+        padding: 0 20px;
+        font-size: 1rem;
+        border: none;
+        outline: none;
+        border-radius: 50px;
+      }
+  
+      .loupe{
+        position: absolute;
+        top: 0;
+        right: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 20px;
+      }
+    }
+  }
+}
+
+// Logo
+
+h1{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+// Interface Utilisateur
+
+.utilisateur{
+  display: flex;
+  flex: 1 1;
+  justify-content: end;
+  align-items: center;
+
+  li{
+    height: 20px;
+    width: 20px;
+    margin: 0 10px;
+  }
+}
