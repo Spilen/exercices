@@ -5,6 +5,14 @@ body{
   font-family: roboto, arial, sans-serif;
   text-transform: uppercase;
   width: 1200px;
+
+  h2{
+    font-size: 2rem;
+  }
+
+  h3{
+    font-size: 1.2rem;
+  }
   
   a{
     color: $black;

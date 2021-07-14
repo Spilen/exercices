@@ -1,1 +1,41 @@
 @import '../common/variables';
+
+.avantages{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  box-sizing: border-box;
+  color: $white;
+  background-color: $black;
+
+  .avantages-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+
+    li{
+      display: flex;
+      flex: 1 1;
+      flex-direction: column;
+      max-width: 200px;
+      margin-right: 50px;
+      height: 100%;
+      line-height: 1.6;
+      text-align: center;
+
+      p{
+        margin-top: 10px;
+        font-size: 0.8rem;
+      }
+    }
+
+    li:last-child{
+      margin-right: 0;
+    }
+  }
+
+
+}

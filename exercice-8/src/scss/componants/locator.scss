@@ -1,6 +1,56 @@
 @import '../common/variables';
 
-svg{
-  height: 20px;
-  width: 20px;
+.store-locator{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  overflow: hidden;
+
+  .store-map{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+  }
+
+  svg{
+    height: 20px;
+    width: 20px;
+  }
+
+// Champ de recherche
+  .search-store{
+    position: relative;
+    height: 60px;
+    max-width: 280px;
+    width: 100%;
+    margin-top: 40px;
+    border-radius: 50px;
+    border: 1px solid $black;
+
+    input{
+      height:100%;
+      width: 100%;
+      padding: 0 20px;
+      font-size: 1rem;
+      border: none;
+      outline: none;
+      border-radius: 50px;
+    }
+
+    .loupe{
+      position: absolute;
+      top: 0;
+      right: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 20px;
+    }
+  }
 }
